@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - water
   - death
+=======
+  - Cube
+>>>>>>> feature/Moveable_cubes
   layers:
   - Default
   - TransparentFX
