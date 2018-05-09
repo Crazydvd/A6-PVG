@@ -15,6 +15,7 @@ public class ShootingScript : MonoBehaviour
         ICE
     }
 
+    [Header("References")]
     public GameObject FireBall;
     public GameObject WaterBall;
     public GameObject IceCone;
@@ -24,18 +25,31 @@ public class ShootingScript : MonoBehaviour
 
     WeaponMode _weaponMode;
 
+    [SerializeField] private float _suctionPower = 1000f;
 
-    private KeyCode[] actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
 
+<<<<<<< HEAD:test project/Assets/Scripts/ShootingScript.cs
 
     void Update()
     {
+=======
+    private KeyCode[] actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
+	
+	// Update is called once per frame
+	void Update () {
+        // check if the player is shooting
+>>>>>>> 644cf1841cd76711015f6655ec46f2f41f30a6d8:test project/Assets/ShootingScript.cs
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
 
+<<<<<<< HEAD:test project/Assets/Scripts/ShootingScript.cs
         foreach (KeyCode button in actionButtons)
+=======
+        // check if the projectile is being changed
+        foreach(KeyCode button in actionButtons)
+>>>>>>> 644cf1841cd76711015f6655ec46f2f41f30a6d8:test project/Assets/ShootingScript.cs
         {
             if (Input.GetKeyDown(button))
             {
@@ -46,6 +60,7 @@ public class ShootingScript : MonoBehaviour
 
     private void Shoot()
     {
+        // shoot projectiles
         switch (_weaponMode)
         {
             case WeaponMode.WATER:
@@ -79,8 +94,16 @@ public class ShootingScript : MonoBehaviour
                 newAirball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
                 break;
             case WeaponMode.SUCTION:
-                _weaponMode = WeaponMode.SUCTION;
-                break;
+                RaycastHit suctionHit;
+                if (Physics.Raycast(ShootingPoint.position, ShootingPoint.transform.forward, out suctionHit, 50f))
+                {
+                    Vector3 retractionDirection = (ShootingPoint.position - suctionHit.point);
+                    if (suctionHit.transform.tag == "Cube")
+                    {
+                        suctionHit.rigidbody.AddForce(retractionDirection.normalized * _suctionPower);
+                    }
+                }
+                    break;
         }
     }
 

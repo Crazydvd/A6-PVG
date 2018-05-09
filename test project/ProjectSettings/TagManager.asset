@@ -4,7 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Interactive
+=======
+<<<<<<< HEAD
+  - water
+  - death
+=======
+  - Cube
+>>>>>>> feature/Moveable_cubes
+>>>>>>> 644cf1841cd76711015f6655ec46f2f41f30a6d8
   layers:
   - Default
   - TransparentFX
