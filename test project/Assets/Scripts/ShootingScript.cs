@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingScript : MonoBehaviour {
+public class ShootingScript : MonoBehaviour
+{
 
     public enum WeaponMode
     {
@@ -26,19 +27,15 @@ public class ShootingScript : MonoBehaviour {
 
     private KeyCode[] actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    void Update()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
 
-        foreach(KeyCode button in actionButtons)
+        foreach (KeyCode button in actionButtons)
         {
             if (Input.GetKeyDown(button))
             {
@@ -65,6 +62,7 @@ public class ShootingScript : MonoBehaviour {
                 break;
             case WeaponMode.LIGHTNING:
                 RaycastHit hit;
+
                 if (Physics.Raycast(ShootingPoint.position, ShootingPoint.transform.forward, out hit, 100f))
                 {
                     Vector3 direction = (hit.point - ShootingPoint.position);
@@ -73,7 +71,6 @@ public class ShootingScript : MonoBehaviour {
                     {
                         GameObject newLightning = Instantiate(Lightning, ShootingPoint.position + direction.normalized * i, Quaternion.FromToRotation(Vector3.up, ShootingPoint.forward));
                         Destroy(newLightning, 0.5f);
-
                     }
                 }
                 break;
