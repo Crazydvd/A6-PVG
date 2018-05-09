@@ -289,10 +289,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerScript.cs" />
-    <Compile Include="Assets\ShootingScript.cs" />
-    <Compile Include="Assets\Test.cs" />
-    <Compile Include="Assets\WaterDeath.cs" />
+    <Compile Include="Assets\AirScript.cs" />
+    <Compile Include="Assets\Scripts\CreateIce.cs" />
+    <Compile Include="Assets\Scripts\IceMelt.cs" />
+    <Compile Include="Assets\Scripts\MoveWater.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\ShootingScript.cs" />
+    <Compile Include="Assets\Scripts\WaterDeath.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
