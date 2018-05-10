@@ -3,14 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
-  tags: []
-=======
   tags:
+  - ice
   - water
   - death
-  - ice
->>>>>>> 795317c1324f980bf956d9ac78aaa4f829d9727a
   layers:
   - Default
   - TransparentFX

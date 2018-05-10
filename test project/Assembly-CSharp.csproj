@@ -51,11 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AirScript.cs" />
-     <Compile Include="Assets\PlayerScript.cs" />
-     <Compile Include="Assets\ShootingScript.cs" />
-     <Compile Include="Assets\Test.cs" />
-     <Compile Include="Assets\WaterDeath.cs" />
+     <Compile Include="Assets\Scripts\AirScript.cs" />
+     <Compile Include="Assets\Scripts\CreateIce.cs" />
+     <Compile Include="Assets\Scripts\IceMelt.cs" />
+     <Compile Include="Assets\Scripts\MeltIce.cs" />
+     <Compile Include="Assets\Scripts\MoveWater.cs" />
+     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\ShootingScript.cs" />
+     <Compile Include="Assets\Scripts\WaterDeath.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

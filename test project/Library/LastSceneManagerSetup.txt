@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Test_Luuk.unity
-=======
 - path: Assets/_Scenes/Test.unity
->>>>>>> 795317c1324f980bf956d9ac78aaa4f829d9727a
   isLoaded: 1
   isActive: 1
