@@ -54,6 +54,8 @@
      <Compile Include="Assets\AirScript.cs" />
      <Compile Include="Assets\PlayerScript.cs" />
      <Compile Include="Assets\ShootingScript.cs" />
+     <Compile Include="Assets\Test.cs" />
+     <Compile Include="Assets\WaterDeath.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
