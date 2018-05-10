@@ -10,9 +10,9 @@ public class CreateIce : MonoBehaviour
     {
         if (other.tag == "water")
         {
-            Vector3 something = transform.position;
-            something.y = other.transform.position.y;
-            GameObject IcePlate = Instantiate(Ice, something, Quaternion.Euler(0, 0, 0));
+            Vector3 IcePosition = transform.position;
+            IcePosition.y = other.transform.position.y + 0.01f;
+            GameObject IcePlate = Instantiate(Ice, IcePosition, Quaternion.Euler(0, 0, 0));
             IcePlate.transform.SetParent(other.transform);
             Destroy(gameObject);
         }
@@ -20,6 +20,12 @@ public class CreateIce : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "ice")
+        {
+            IceMelt melt = collision.gameObject.GetComponent<IceMelt>();
+            melt.MeltTime *= 1.2f;
+        }
+
         if (collision.gameObject.tag != "Player")
         {
             Destroy(gameObject);

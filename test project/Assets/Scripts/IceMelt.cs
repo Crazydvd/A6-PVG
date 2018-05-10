@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class IceMelt : MonoBehaviour
 {
+    [Tooltip("If you check this, the ice will automaticly melt in [MeltTime] seconds.")]
+    public bool AutoMelt = true;
+
     [Tooltip("The time it takes for the ice to melt, in seconds")]
-    [SerializeField] private float _meltTime = 2;
+    public float MeltTime = 2;
     private float _melt;
     private float _scale = 1;
     private float _t = 0;
@@ -13,6 +16,7 @@ public class IceMelt : MonoBehaviour
 
     [Tooltip("The scale it will smoothly scale to while melting")]
     [SerializeField] private float _minScale = 0.25f;
+
 
     private void Start()
     {
@@ -22,16 +26,19 @@ public class IceMelt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _t += (1 / _meltTime) * Time.deltaTime;
-        _scale = Mathf.Lerp(1, _minScale, _t);
-
-        transform.localScale = _initalScale * _scale;
-
-        _melt += Time.deltaTime;
-
-        if (_melt >= _meltTime)
+        if (AutoMelt)
         {
-            Destroy(gameObject);
+            _t += (1 / MeltTime) * Time.deltaTime;
+            _scale = Mathf.Lerp(1, _minScale, _t);
+
+            transform.localScale = _initalScale * _scale;
+
+            _melt += Time.deltaTime;
+
+            if (_melt >= MeltTime)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

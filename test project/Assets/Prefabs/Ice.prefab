@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114672550244173002}
   m_Layer: 0
   m_Name: Ice
-  m_TagString: Untagged
+  m_TagString: ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,5 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419f749c318b3ce4788e051fb364116c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meltTime: 10
+  AutoMelt: 1
+  MeltTime: 15
   _minScale: 0.25

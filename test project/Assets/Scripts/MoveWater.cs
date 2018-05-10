@@ -13,7 +13,7 @@ public class MoveWater : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Keypad2))
         {
-            MoveWaterDown(-0.1f);
+            MoveWaterDown(0.1f);
         }
     }
 
