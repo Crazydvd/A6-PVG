@@ -47,6 +47,7 @@ public class ShootingScript : MonoBehaviour {
                 ChangeMode(button);
             }
         }
+        Debug.Log(_inLight);
     }
 
 
@@ -96,7 +97,6 @@ public class ShootingScript : MonoBehaviour {
                     {
                         GameObject newLightning = Instantiate(Lightning, ShootingPoint.position + direction.normalized * i, Quaternion.FromToRotation(Vector3.up, ShootingPoint.forward));
                         Destroy(newLightning, 0.5f);
-
                     }
                 }
                 break;
