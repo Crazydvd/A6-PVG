@@ -7,6 +7,9 @@ TagManager:
   - ice
   - water
   - death
+  - Interactive
+  - Cube
+  - Light
   layers:
   - Default
   - TransparentFX
