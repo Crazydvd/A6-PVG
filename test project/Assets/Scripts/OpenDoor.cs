@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     private bool _closed = true;
-    public bool InProgress = false;
+    [HideInInspector] public bool InProgress = false;
 
     void Update()
     {
