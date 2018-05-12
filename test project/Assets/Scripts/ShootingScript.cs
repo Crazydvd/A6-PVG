@@ -47,7 +47,7 @@ public class ShootingScript : MonoBehaviour {
                 ChangeMode(button);
             }
         }
-        Debug.Log(_inLight);
+        //Debug.Log(_inLight);
     }
 
 

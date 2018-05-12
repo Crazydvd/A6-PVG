@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4376614863847772}
   - component: {fileID: 95535868939913570}
-  - component: {fileID: 114353349186381362}
   - component: {fileID: 114083962893330958}
   - component: {fileID: 114298429778345416}
+  - component: {fileID: 114353349186381362}
   - component: {fileID: 65347767794143418}
   m_Layer: 0
   m_Name: pressure plate

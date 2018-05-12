@@ -7,27 +7,58 @@ public class Activate : MonoBehaviour
     [HideInInspector]
     public bool activated;
     public GameObject door;
-    private OpenDoor _openDoor;
+    private DoorController _door;
 
     private void Start()
     {
-        _openDoor = door.GetComponentInChildren<OpenDoor>();
+        _door = door.GetComponentInChildren<DoorController>();
     }
 
-    public void ActivateObject()
+    public void Animation()
     {
-        if (_openDoor.InProgress == false)
+        if (tag == "Lever")
+            GetComponent<LeverAnimation>().PlayAnimation(activated);
+        else
+            GetComponent<PlateAnimation>().PlayAnimation(activated);
+    }
+
+    public void OpenDoor()
+    {
+        //Check if we are using lever 
+        if (tag == "Lever")
         {
-            activated = !activated;
-            if (tag == "Lever")
-                GetComponent<LeverAnimation>().PlayAnimation(activated);
-            else
-                GetComponent<PlateAnimation>().PlayAnimation(activated);
+            //If so make a delay for using it
+            if (!_door.InProgress)
+            {
+                activated = true;
+                _door.Open();
+
+            }
+        }
+        else
+        {
+            activated = true;
+            _door.Open();
         }
     }
 
-    public void activateDoor()
+    public void CloseDoor()
     {
-        _openDoor.Open();
+        //Check if we are using lever 
+        if (tag == "Lever")
+        {
+            //If so make a delay for using it
+            if (!_door.InProgress)
+            {
+                activated = false;
+                _door.Close();
+
+            }
+        }
+        else
+        {
+            activated = false;
+            _door.Close();
+        }
     }
 }

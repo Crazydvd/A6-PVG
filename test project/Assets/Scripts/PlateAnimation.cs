@@ -6,7 +6,7 @@ public class PlateAnimation : MonoBehaviour
 {
     private Animator _animator;
 
-    void Start()
+    private void Start()
     {
         _animator = GetComponent<Animator>();
     }

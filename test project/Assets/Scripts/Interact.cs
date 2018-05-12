@@ -12,7 +12,16 @@ public class Interact : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out hit, 2f))
             {
                 if (hit.collider.tag == "Lever")
-                    hit.collider.GetComponent<Activate>().ActivateObject();
+                {
+                    Activate lever = hit.collider.GetComponent<Activate>();
+
+                    if (!lever.activated)
+                        lever.OpenDoor();
+                    else
+                        lever.CloseDoor();
+
+                    lever.Animation();
+                }
             }
         }
 

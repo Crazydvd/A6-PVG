@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33363721139161340}
   - component: {fileID: 65891863815495968}
   - component: {fileID: 23754360268409128}
-  - component: {fileID: 114333589649345468}
+  - component: {fileID: 114730642718117066}
   m_Layer: 0
   m_Name: Shatter
   m_TagString: Untagged
@@ -131,8 +131,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1888561966119730}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.89, y: 2, z: 25.27}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.63, y: 2, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4890832306537300}
@@ -380,7 +380,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114333589649345468
+--- !u!114 &114730642718117066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -388,6 +388,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369774471265798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f72ded0f9ee15b54eae3176920d07c89, type: 3}
+  m_Script: {fileID: 11500000, guid: 363d1b3912860274792554cb84dc929d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InProgress: 0

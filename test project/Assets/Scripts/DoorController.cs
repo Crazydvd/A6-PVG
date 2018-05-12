@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour
+public class DoorController : MonoBehaviour
 {
     private bool _closed = true;
     [HideInInspector] public bool InProgress = false;
@@ -37,6 +37,11 @@ public class OpenDoor : MonoBehaviour
 
     public void Open()
     {
-        _closed = !_closed;
+        _closed = false;
+    }
+
+    public void Close()
+    {
+        _closed = true;
     }
 }
