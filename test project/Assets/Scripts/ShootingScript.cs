@@ -57,8 +57,8 @@ public class ShootingScript : MonoBehaviour {
         if(other.tag == "Light")
         {
             _inLight = true;
+            ToggleMode();
         }
-        ToggleMode();
     }
 
     void OnTriggerExit(Collider other)
@@ -66,8 +66,8 @@ public class ShootingScript : MonoBehaviour {
         if (other.tag == "Light")
         {
             _inLight = false;
+            ToggleMode();
         }
-        ToggleMode();
     }
 
     private void Shoot()
@@ -122,6 +122,7 @@ public class ShootingScript : MonoBehaviour {
     // Check if the player is in the light and change the weapons mode accordingly
     private void ToggleMode()
     {
+        
         if (_inLight)
         {
             switch (_weaponMode)
