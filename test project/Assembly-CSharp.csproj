@@ -56,9 +56,13 @@
      <Compile Include="Assets\Scripts\CreateIce.cs" />
      <Compile Include="Assets\Scripts\IceMelt.cs" />
      <Compile Include="Assets\Scripts\Interact.cs" />
+     <Compile Include="Assets\Scripts\LeverAnimation.cs" />
+     <Compile Include="Assets\Scripts\LightScript.cs" />
      <Compile Include="Assets\Scripts\MeltIce.cs" />
      <Compile Include="Assets\Scripts\MoveWater.cs" />
      <Compile Include="Assets\Scripts\OpenDoor.cs" />
+     <Compile Include="Assets\Scripts\PlateAnimation.cs" />
+     <Compile Include="Assets\Scripts\PlatePress.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\ShootingScript.cs" />
      <Compile Include="Assets\Scripts\WaterDeath.cs" />

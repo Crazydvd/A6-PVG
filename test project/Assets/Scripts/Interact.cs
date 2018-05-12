@@ -6,13 +6,12 @@ public class Interact : MonoBehaviour
 {
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.E))
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, 2f))
             {
-                if (hit.collider.tag == "Interactive")
+                if (hit.collider.tag == "Lever")
                     hit.collider.GetComponent<Activate>().ActivateObject();
             }
         }

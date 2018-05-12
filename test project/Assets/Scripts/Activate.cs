@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Activate : MonoBehaviour
 {
-    private bool activated;
+    [HideInInspector]
+    public bool activated;
     public GameObject door;
     private OpenDoor _openDoor;
 
@@ -18,8 +19,10 @@ public class Activate : MonoBehaviour
         if (_openDoor.InProgress == false)
         {
             activated = !activated;
-            Debug.Log(activated);
-            GetComponent<LeverAnimation>().PlayAnimation(activated);
+            if (tag == "Lever")
+                GetComponent<LeverAnimation>().PlayAnimation(activated);
+            else
+                GetComponent<PlateAnimation>().PlayAnimation(activated);
         }
     }
 
