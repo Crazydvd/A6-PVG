@@ -571,16 +571,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 65347767794143418, guid: fd23445aea07b404295168c23987c496,
         type: 2}
-      propertyPath: m_Size.y
-      value: 0.2909193
-      objectReference: {fileID: 0}
-    - target: {fileID: 65347767794143418, guid: fd23445aea07b404295168c23987c496,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 0.16824794
-      objectReference: {fileID: 0}
-    - target: {fileID: 65347767794143418, guid: fd23445aea07b404295168c23987c496,
-        type: 2}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}

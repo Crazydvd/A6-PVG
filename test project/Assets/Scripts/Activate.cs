@@ -19,7 +19,9 @@ public class Activate : MonoBehaviour
         if (tag == "Lever")
             GetComponent<LeverAnimation>().PlayAnimation(activated);
         else
+        {
             GetComponent<PlateAnimation>().PlayAnimation(activated);
+        }
     }
 
     public void OpenDoor()
