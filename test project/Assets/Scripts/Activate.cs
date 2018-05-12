@@ -4,27 +4,63 @@ using UnityEngine;
 
 public class Activate : MonoBehaviour
 {
-    private bool activated;
+    [HideInInspector]
+    public bool activated;
     public GameObject door;
-    private OpenDoor _openDoor;
+    private DoorController _door;
 
     private void Start()
     {
-        _openDoor = door.GetComponentInChildren<OpenDoor>();
+        _door = door.GetComponentInChildren<DoorController>();
     }
 
-    public void ActivateObject()
+    public void Animation()
     {
-        if (_openDoor.InProgress == false)
-        {
-            activated = !activated;
-            Debug.Log(activated);
+        if (tag == "Lever")
             GetComponent<LeverAnimation>().PlayAnimation(activated);
+        else
+        {
+            GetComponent<PlateAnimation>().PlayAnimation(activated);
         }
     }
 
-    public void activateDoor()
+    public void OpenDoor()
     {
-        _openDoor.Open();
+        //Check if we are using lever 
+        if (tag == "Lever")
+        {
+            //If so make a delay for using it
+            if (!_door.InProgress)
+            {
+                activated = true;
+                _door.Open();
+
+            }
+        }
+        else
+        {
+            activated = true;
+            _door.Open();
+        }
+    }
+
+    public void CloseDoor()
+    {
+        //Check if we are using lever 
+        if (tag == "Lever")
+        {
+            //If so make a delay for using it
+            if (!_door.InProgress)
+            {
+                activated = false;
+                _door.Close();
+
+            }
+        }
+        else
+        {
+            activated = false;
+            _door.Close();
+        }
     }
 }
