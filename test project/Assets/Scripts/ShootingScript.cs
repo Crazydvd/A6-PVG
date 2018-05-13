@@ -6,10 +6,10 @@ public class ShootingScript : MonoBehaviour {
 
     public enum WeaponMode
     {
-        AIR,
+        SUCTION,
         WATER,
         FIRE,
-        SUCTION,
+        AIR,
         ICE,
         LIGHTNING
     }
@@ -47,7 +47,6 @@ public class ShootingScript : MonoBehaviour {
                 ChangeMode(button);
             }
         }
-        //Debug.Log(_inLight);
     }
 
 
@@ -127,8 +126,8 @@ public class ShootingScript : MonoBehaviour {
         {
             switch (_weaponMode)
             {
-                case WeaponMode.AIR:
-                    _weaponMode = WeaponMode.SUCTION;
+                case WeaponMode.SUCTION:
+                    _weaponMode = WeaponMode.AIR;
                     break;
                 case WeaponMode.WATER:
                     _weaponMode = WeaponMode.ICE;
@@ -142,8 +141,8 @@ public class ShootingScript : MonoBehaviour {
         {
             switch (_weaponMode)
             {
-                case WeaponMode.SUCTION:
-                    _weaponMode = WeaponMode.AIR;
+                case WeaponMode.AIR:
+                    _weaponMode = WeaponMode.SUCTION;
                     break;
                 case WeaponMode.ICE:
                     _weaponMode = WeaponMode.WATER;
@@ -161,7 +160,7 @@ public class ShootingScript : MonoBehaviour {
         switch (button)
         {
             case KeyCode.Alpha1:
-                _weaponMode = WeaponMode.AIR;
+                _weaponMode = WeaponMode.SUCTION;
                 break;
             case KeyCode.Alpha2:
                 _weaponMode = WeaponMode.WATER;
@@ -170,7 +169,7 @@ public class ShootingScript : MonoBehaviour {
                 _weaponMode = WeaponMode.FIRE;
                 break;
             case KeyCode.Alpha4:
-                _weaponMode = WeaponMode.SUCTION;
+                _weaponMode = WeaponMode.AIR;
                 break;
             case KeyCode.Alpha5:
                 _weaponMode = WeaponMode.ICE;

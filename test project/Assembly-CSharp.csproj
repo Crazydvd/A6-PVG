@@ -53,11 +53,14 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Activate.cs" />
      <Compile Include="Assets\Scripts\AirScript.cs" />
+     <Compile Include="Assets\Scripts\Brazier.cs" />
      <Compile Include="Assets\Scripts\CreateIce.cs" />
      <Compile Include="Assets\Scripts\DoorController.cs" />
+     <Compile Include="Assets\Scripts\ExtinguishBrazier.cs" />
      <Compile Include="Assets\Scripts\IceMelt.cs" />
      <Compile Include="Assets\Scripts\Interact.cs" />
      <Compile Include="Assets\Scripts\LeverAnimation.cs" />
+     <Compile Include="Assets\Scripts\LightBrazier.cs" />
      <Compile Include="Assets\Scripts\LightScript.cs" />
      <Compile Include="Assets\Scripts\MeltIce.cs" />
      <Compile Include="Assets\Scripts\MoveWater.cs" />
