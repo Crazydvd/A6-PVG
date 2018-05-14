@@ -9,11 +9,11 @@ public class WaterScript : MonoBehaviour {
     public void Electrocute()
     {
         Debug.Log(wood.Count);
-        foreach(GameObject woodBlock in wood)
+        for(int i = 0; i < wood.Count; i++)
         {
-            woodBlock.GetComponent<WoodScript>().Burn();
-            wood.Remove(woodBlock);
+            wood[i].GetComponent<WoodScript>().Burn();
         }
+        wood = new List<GameObject>();
     }
 
     void OnTriggerEnter(Collider other)
