@@ -17,8 +17,12 @@ public class PlatePress : MonoBehaviour
         if (other.tag == "Player" || other.tag == "Cube")
         {
             _numberOfPressure++;
-            _activate.OpenDoor();
-            _activate.Animation();
+
+            if (_numberOfPressure == 1)
+            {
+                _activate.Action();
+                _activate.Animation();
+            }
         }
     }
 
@@ -28,13 +32,11 @@ public class PlatePress : MonoBehaviour
         {
             _numberOfPressure--;
             if (_numberOfPressure <= 0)
-            {
                 _numberOfPressure = 0;
-            }
 
             if (_numberOfPressure == 0)
             {
-                _activate.CloseDoor();
+                _activate.Action();
                 _activate.Animation();
             }
         }

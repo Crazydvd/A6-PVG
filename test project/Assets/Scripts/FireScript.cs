@@ -19,9 +19,9 @@ public class FireScript : MonoBehaviour
         }
 
         // Light Brazier
-        if (collision.gameObject.tag == "brazier")
+        if (collision.gameObject.tag == "brazier" && !collision.gameObject.GetComponent<Brazier>().Lit)
         {
-            collision.gameObject.GetComponent<Brazier>().Light();
+            collision.gameObject.GetComponent<Brazier>().ToggleActive();
         }
 
         // Burn Wood
