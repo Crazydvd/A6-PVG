@@ -22,19 +22,21 @@ public class ShootingScript : MonoBehaviour
     public GameObject WaterBall;
     public Transform ShootingPoint;
 
-    WeaponMode _weaponMode;
+    WeaponMode _weaponMode = WeaponMode.SUCTION;
 
     [SerializeField] private float _suctionPower = 1000f;
 
-    private bool _inLight;
+    private bool _inLight = false;
     private int _lightLevel;
+
+    private bool DEBUGING = false;
 
 
     private KeyCode[] _actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
 
     private void Start()
     {
-        ToggleMode();
+        //ToggleMode();
     }
 
     private void FixedUpdate()
@@ -49,6 +51,11 @@ public class ShootingScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            DEBUGING = !DEBUGING;
         }
 
         // check if the projectile is being changed
@@ -132,6 +139,11 @@ public class ShootingScript : MonoBehaviour
                         GameObject newLightning = Instantiate(Lightning, ShootingPoint.position + direction.normalized * i, Quaternion.FromToRotation(Vector3.up, ShootingPoint.forward));
                         Destroy(newLightning, 0.5f);
                     }
+
+                    if(hit.transform.tag == "water")
+                    {
+                        hit.transform.GetComponent<WaterScript>().Electrocute();
+                    }
                 }
                 break;
             case WeaponMode.AIR:
@@ -165,6 +177,10 @@ public class ShootingScript : MonoBehaviour
         ///ICE
         ///LIGHTNING
         ///SUCTION
+        ///
+        if (DEBUGING)
+            return;
+
         if (_inLight)
         {
             switch (_weaponMode)
@@ -220,7 +236,5 @@ public class ShootingScript : MonoBehaviour
                 _weaponMode = WeaponMode.LIGHTNING;
                 break;
         }
-
-        ToggleMode();
     }
 }

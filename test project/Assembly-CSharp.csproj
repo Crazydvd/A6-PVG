@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FireScript.cs" />
      <Compile Include="Assets\Scripts\Activate.cs" />
      <Compile Include="Assets\Scripts\AirScript.cs" />
      <Compile Include="Assets\Scripts\BoxScript.cs" />
@@ -59,6 +58,7 @@
      <Compile Include="Assets\Scripts\CreateIce.cs" />
      <Compile Include="Assets\Scripts\DoorController.cs" />
      <Compile Include="Assets\Scripts\ExtinguishBrazier.cs" />
+     <Compile Include="Assets\Scripts\FireScript.cs" />
      <Compile Include="Assets\Scripts\IceMelt.cs" />
      <Compile Include="Assets\Scripts\Interact.cs" />
      <Compile Include="Assets\Scripts\LeverAnimation.cs" />
@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\ShootingScript.cs" />
      <Compile Include="Assets\Scripts\WaterDeath.cs" />
+     <Compile Include="Assets\Scripts\WaterScript.cs" />
      <Compile Include="Assets\Scripts\WoodScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
