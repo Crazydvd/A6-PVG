@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingScript : MonoBehaviour {
-
+public class ShootingScript : MonoBehaviour
+{
     public enum WeaponMode
     {
-        SUCTION,
-        WATER,
-        FIRE,
-        AIR,
-        ICE,
-        LIGHTNING
+        AIR,            //Light
+        WATER,          //Light
+        FIRE,           //Light
+        SUCTION,         //Dark
+        ICE,            //Dark
+        LIGHTNING,      //Dark
     }
 
     [Header("References")]
@@ -27,12 +27,24 @@ public class ShootingScript : MonoBehaviour {
     [SerializeField] private float _suctionPower = 1000f;
 
     private bool _inLight;
+    private int _lightLevel;
 
 
     private KeyCode[] _actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Start()
+    {
+        ToggleMode();
+    }
+
+    private void FixedUpdate()
+    {
+        _lightLevel = 0;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         // check if the player is shooting
         if (Input.GetMouseButtonDown(0))
         {
@@ -40,7 +52,7 @@ public class ShootingScript : MonoBehaviour {
         }
 
         // check if the projectile is being changed
-        foreach(KeyCode button in _actionButtons)
+        foreach (KeyCode button in _actionButtons)
         {
             if (Input.GetKeyDown(button))
             {
@@ -49,13 +61,36 @@ public class ShootingScript : MonoBehaviour {
         }
     }
 
+    private void LateUpdate()
+    {
+        if (_lightLevel <= 0)
+        {
+            _inLight = false;
+        }
+        else
+        {
+            _inLight = true;
+        }
+    }
+
 
     // check if the player is standing in light
     void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Light")
+        if (other.tag == "Light")
         {
-            _inLight = true;
+            RaycastHit hit;
+            if (Physics.Raycast(other.transform.position, transform.position - other.transform.position, out hit))
+            {
+                if (hit.collider.tag == "Player")
+                {
+                    _lightLevel++;
+                }
+                else
+                {
+                    _lightLevel--;
+                }
+            }
             ToggleMode();
         }
     }
@@ -114,26 +149,34 @@ public class ShootingScript : MonoBehaviour {
                         suctionHit.rigidbody.AddForce(retractionDirection.normalized * _suctionPower);
                     }
                 }
-                    break;
+                break;
         }
     }
 
     // Check if the player is in the light and change the weapons mode accordingly
     private void ToggleMode()
     {
-        
+        ///Light:
+        ///WATER
+        ///FIRE
+        ///AIR
+        ///
+        ///Dark:
+        ///ICE
+        ///LIGHTNING
+        ///SUCTION
         if (_inLight)
         {
             switch (_weaponMode)
             {
+                case WeaponMode.ICE:
+                    _weaponMode = WeaponMode.WATER;
+                    break;
+                case WeaponMode.LIGHTNING:
+                    _weaponMode = WeaponMode.FIRE;
+                    break;
                 case WeaponMode.SUCTION:
                     _weaponMode = WeaponMode.AIR;
-                    break;
-                case WeaponMode.WATER:
-                    _weaponMode = WeaponMode.ICE;
-                    break;
-                case WeaponMode.FIRE:
-                    _weaponMode = WeaponMode.LIGHTNING;
                     break;
             }
         }
@@ -141,18 +184,17 @@ public class ShootingScript : MonoBehaviour {
         {
             switch (_weaponMode)
             {
+                case WeaponMode.WATER:
+                    _weaponMode = WeaponMode.ICE;
+                    break;
+                case WeaponMode.FIRE:
+                    _weaponMode = WeaponMode.LIGHTNING;
+                    break;
                 case WeaponMode.AIR:
                     _weaponMode = WeaponMode.SUCTION;
                     break;
-                case WeaponMode.ICE:
-                    _weaponMode = WeaponMode.WATER;
-                    break;
-                case WeaponMode.LIGHTNING:
-                    _weaponMode = WeaponMode.FIRE;
-                    break;
             }
         }
-
     }
 
     private void ChangeMode(KeyCode button)
@@ -160,7 +202,7 @@ public class ShootingScript : MonoBehaviour {
         switch (button)
         {
             case KeyCode.Alpha1:
-                _weaponMode = WeaponMode.SUCTION;
+                _weaponMode = WeaponMode.AIR;
                 break;
             case KeyCode.Alpha2:
                 _weaponMode = WeaponMode.WATER;
@@ -169,7 +211,7 @@ public class ShootingScript : MonoBehaviour {
                 _weaponMode = WeaponMode.FIRE;
                 break;
             case KeyCode.Alpha4:
-                _weaponMode = WeaponMode.AIR;
+                _weaponMode = WeaponMode.SUCTION;
                 break;
             case KeyCode.Alpha5:
                 _weaponMode = WeaponMode.ICE;
@@ -178,5 +220,7 @@ public class ShootingScript : MonoBehaviour {
                 _weaponMode = WeaponMode.LIGHTNING;
                 break;
         }
+
+        ToggleMode();
     }
 }
