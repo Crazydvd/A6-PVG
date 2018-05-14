@@ -21,11 +21,13 @@ public class Brazier : MonoBehaviour
     {
         Lid = true;
         _door.Open();
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void Extinguish()
     {
         Lid = false;
         _door.Close();
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 }
