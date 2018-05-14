@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 135052413657956330}
   - component: {fileID: 23382348587053814}
   - component: {fileID: 54038960444557944}
-  - component: {fileID: 114356481253266890}
-  m_Layer: 0
+  - component: {fileID: 114729908080083076}
+  m_Layer: 8
   m_Name: Fire Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114356481253266890
+--- !u!114 &114729908080083076
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

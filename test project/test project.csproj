@@ -296,6 +296,7 @@
     <Compile Include="Assets\Scripts\CreateIce.cs" />
     <Compile Include="Assets\Scripts\DoorController.cs" />
     <Compile Include="Assets\Scripts\ExtinguishBrazier.cs" />
+    <Compile Include="Assets\Scripts\FireScript.cs" />
     <Compile Include="Assets\Scripts\IceMelt.cs" />
     <Compile Include="Assets\Scripts\Interact.cs" />
     <Compile Include="Assets\Scripts\LeverAnimation.cs" />
@@ -308,6 +309,8 @@
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\ShootingScript.cs" />
     <Compile Include="Assets\Scripts\WaterDeath.cs" />
+    <Compile Include="Assets\Scripts\WaterScript.cs" />
+    <Compile Include="Assets\Scripts\WoodScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

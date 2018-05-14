@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23645736224775606}
   - component: {fileID: 54887158183971838}
   - component: {fileID: 114137396071328924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Water Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}

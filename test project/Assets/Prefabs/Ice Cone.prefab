@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23243431331239166}
   - component: {fileID: 54134680579822200}
   - component: {fileID: 114025600047972282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ice Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 33933330816492008}
   - component: {fileID: 65830045487832508}
   - component: {fileID: 23646558679493148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

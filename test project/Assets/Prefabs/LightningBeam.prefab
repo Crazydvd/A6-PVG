@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33603941379668238}
   - component: {fileID: 136097468386918514}
   - component: {fileID: 23524596178363636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LightningBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}

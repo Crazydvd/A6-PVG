@@ -8,11 +8,13 @@ public class WaterScript : MonoBehaviour {
 
     public void Electrocute()
     {
-        Debug.Log(wood.Count);
-        foreach(GameObject woodBlock in wood)
+        if (wood.Count > 0)
         {
-            woodBlock.GetComponent<WoodScript>().Burn();
-            wood.Remove(woodBlock);
+            for (int i = 0; i < wood.Count; i++)
+            {
+                wood[i].GetComponent<WoodScript>().Burn();
+            }
+            wood = new List<GameObject>();
         }
     }
 

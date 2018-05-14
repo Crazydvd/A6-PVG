@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23988162732148748}
   - component: {fileID: 54030660110790472}
   - component: {fileID: 114889876157752798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Air Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}

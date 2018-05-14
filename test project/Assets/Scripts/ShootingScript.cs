@@ -119,42 +119,62 @@ public class ShootingScript : MonoBehaviour
             case WeaponMode.WATER:
                 GameObject newWaterball = Instantiate(WaterBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
                 newWaterball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
+                Destroy(newWaterball, 10f);
                 break;
             case WeaponMode.ICE:
-                GameObject newIceCone = Instantiate(IceCone, ShootingPoint.position, Quaternion.FromToRotation(Vector3.up, ShootingPoint.forward));
-                newIceCone.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
+                RaycastHit hitz;
+                Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+                Vector3 IceDirection = Vector3.zero;
+                if (Physics.Raycast(ray, out hitz))
+                {
+                    Debug.Log(hitz.transform.name);
+                    IceDirection = hitz.point - ShootingPoint.position;
+                }
+                else
+                {
+                    IceDirection = ray.GetPoint(100f) - ShootingPoint.position;
+                }
+                GameObject newIceCone = Instantiate(IceCone, ShootingPoint.position, Quaternion.FromToRotation(Vector3.up, IceDirection));
+                newIceCone.GetComponent<Rigidbody>().AddForce(IceDirection.normalized * 1000f);
+                Destroy(newIceCone, 10f);
                 break;
             case WeaponMode.FIRE:
                 GameObject newFireball = Instantiate(FireBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
                 newFireball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
+                Destroy(newFireball, 10f);
                 break;
             case WeaponMode.LIGHTNING:
                 RaycastHit hit;
-                if (Physics.Raycast(ShootingPoint.position, ShootingPoint.transform.forward, out hit, 100f))
+                Ray LightningRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+                if (Physics.Raycast(LightningRay, out hit, 100f))
                 {
                     Vector3 direction = (hit.point - ShootingPoint.position);
                     int distance = 2;
                     for (int i = 0; i < direction.magnitude; i += distance)
                     {
-                        GameObject newLightning = Instantiate(Lightning, ShootingPoint.position + direction.normalized * i, Quaternion.FromToRotation(Vector3.up, ShootingPoint.forward));
+                        GameObject newLightning = Instantiate(Lightning, ShootingPoint.position + direction.normalized * i, Quaternion.FromToRotation(Vector3.up, direction));
                         Destroy(newLightning, 0.5f);
                     }
 
                     if(hit.transform.tag == "water")
                     {
-                        hit.transform.GetComponent<WaterScript>().Electrocute();
+                        WaterScript wScript = hit.transform.GetComponent<WaterScript>();
+                        if (wScript != null)
+                            wScript.Electrocute();
                     }
                 }
                 break;
             case WeaponMode.AIR:
                 GameObject newAirball = Instantiate(AirBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
                 newAirball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
+                Destroy(newAirball, 10f);
                 break;
             case WeaponMode.SUCTION:
                 RaycastHit suctionHit;
-                if (Physics.Raycast(ShootingPoint.position, ShootingPoint.transform.forward, out suctionHit, 50f))
+                Ray suctionRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+                if (Physics.Raycast(suctionRay, out suctionHit, 50f))
                 {
-                    Vector3 retractionDirection = (ShootingPoint.position - suctionHit.point);
+                    Vector3 retractionDirection = (transform.position - suctionHit.point);
                     retractionDirection.y = 0; // remove upwards/downwards force
                     if (suctionHit.transform.tag == "Cube")
                     {
