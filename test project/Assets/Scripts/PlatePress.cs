@@ -14,9 +14,9 @@ public class PlatePress : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        _numberOfPressure++;
-        if (_numberOfPressure == 1 && (other.tag == "Player" || other.tag == "Cube"))
+        if (other.tag == "Player" || other.tag == "Cube")
         {
+            _numberOfPressure++;
             _activate.OpenDoor();
             _activate.Animation();
         }
@@ -24,11 +24,19 @@ public class PlatePress : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        _numberOfPressure--;
-        if (_numberOfPressure == 0 && (other.tag == "Player" || other.tag == "Cube"))
+        if (other.tag == "Player" || other.tag == "Cube")
         {
-            _activate.CloseDoor();
-            _activate.Animation();
+            _numberOfPressure--;
+            if (_numberOfPressure <= 0)
+            {
+                _numberOfPressure = 0;
+            }
+
+            if (_numberOfPressure == 0)
+            {
+                _activate.CloseDoor();
+                _activate.Animation();
+            }
         }
     }
 }

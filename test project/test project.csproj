@@ -291,6 +291,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Activate.cs" />
     <Compile Include="Assets\Scripts\AirScript.cs" />
+    <Compile Include="Assets\Scripts\BoxScript.cs" />
     <Compile Include="Assets\Scripts\Brazier.cs" />
     <Compile Include="Assets\Scripts\CreateIce.cs" />
     <Compile Include="Assets\Scripts\DoorController.cs" />
