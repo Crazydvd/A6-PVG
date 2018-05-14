@@ -15,11 +15,11 @@ public class ShootingScript : MonoBehaviour {
     }
 
     [Header("References")]
+    public GameObject IceCone;
+    public GameObject Lightning;
+    public GameObject AirBall;
     public GameObject FireBall;
     public GameObject WaterBall;
-    public GameObject IceCone;
-    public GameObject AirBall;
-    public GameObject Lightning;
     public Transform ShootingPoint;
 
     WeaponMode _weaponMode;
