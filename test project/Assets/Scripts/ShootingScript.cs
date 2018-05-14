@@ -119,6 +119,7 @@ public class ShootingScript : MonoBehaviour
             case WeaponMode.WATER:
                 GameObject newWaterball = Instantiate(WaterBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
                 newWaterball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
+                Destroy(newWaterball, 10f);
                 break;
             case WeaponMode.ICE:
                 RaycastHit hitz;
@@ -135,10 +136,12 @@ public class ShootingScript : MonoBehaviour
                 }
                 GameObject newIceCone = Instantiate(IceCone, ShootingPoint.position, Quaternion.FromToRotation(Vector3.up, IceDirection));
                 newIceCone.GetComponent<Rigidbody>().AddForce(IceDirection.normalized * 1000f);
+                Destroy(newIceCone, 10f);
                 break;
             case WeaponMode.FIRE:
                 GameObject newFireball = Instantiate(FireBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
                 newFireball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
+                Destroy(newFireball, 10f);
                 break;
             case WeaponMode.LIGHTNING:
                 RaycastHit hit;
@@ -164,6 +167,7 @@ public class ShootingScript : MonoBehaviour
             case WeaponMode.AIR:
                 GameObject newAirball = Instantiate(AirBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
                 newAirball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
+                Destroy(newAirball, 10f);
                 break;
             case WeaponMode.SUCTION:
                 RaycastHit suctionHit;

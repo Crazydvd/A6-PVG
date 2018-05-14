@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114506420311128614}
   - component: {fileID: 114224069274204338}
   - component: {fileID: 65596488359705936}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lever
   m_TagString: Interactive
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4850013006218286}
   - component: {fileID: 33395701342612494}
   - component: {fileID: 23868139351870370}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 4150233874142892}
   - component: {fileID: 33568623586311938}
   - component: {fileID: 23032181583640416}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,4 +238,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b4721c705055f4595a626d3ebf4504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activated: 0
   door: {fileID: 0}

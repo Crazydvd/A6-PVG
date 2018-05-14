@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.UI;
 
 public class Interact : MonoBehaviour
 {
     [SerializeField] float SlowedWalkingSpeed = 3;
     [SerializeField] float SlowedRunningSpeed = 4;
+
+    [SerializeField] Image Crosshair;
+    [SerializeField] Text InteractableUI;
 
     private GameObject _heldObject;
     private FirstPersonController _playerController;
@@ -18,11 +22,12 @@ public class Interact : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 2f))
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 2f))
+            if (Input.GetKeyDown(KeyCode.E))
             {
+ 
                 // LEVER
                 if (hit.collider.tag == "Lever")
                 {
@@ -44,6 +49,21 @@ public class Interact : MonoBehaviour
                     _playerController.SetSpeed(SlowedWalkingSpeed, SlowedRunningSpeed);
                 }
             }
+
+            if(hit.transform.gameObject.layer == LayerMask.NameToLayer("Interactable"))
+            {
+                InteractableUI.gameObject.SetActive(true);
+                Crosshair.gameObject.SetActive(false);
+            }
+            else
+            {
+                ResetUI();
+            }
+
+        }
+        else
+        {
+            ResetUI();
         }
 
         // Release object
@@ -57,5 +77,11 @@ public class Interact : MonoBehaviour
             }
         }
 
+    }
+
+    private void ResetUI()
+    {
+        InteractableUI.gameObject.SetActive(false);
+        Crosshair.gameObject.SetActive(true);
     }
 }
