@@ -6,9 +6,9 @@ public class ExtinguishBrazier : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "brazier")
+        if (collision.gameObject.tag == "brazier" && collision.gameObject.GetComponent<Brazier>().Lit)
         {
-            collision.gameObject.GetComponent<Brazier>().Extinguish();
+            collision.gameObject.GetComponent<Brazier>().ToggleActive();
         }
 
         if (collision.gameObject.tag != "Player")

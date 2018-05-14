@@ -33,10 +33,7 @@ public class Interact : MonoBehaviour
                 {
                     Activate lever = hit.collider.GetComponent<Activate>();
 
-                    if (!lever.activated)
-                        lever.OpenDoor();
-                    else
-                        lever.CloseDoor();
+                    lever.Action();
 
                     lever.Animation();
                 }

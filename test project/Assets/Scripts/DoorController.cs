@@ -35,13 +35,18 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    public void Open()
+    public void ToggleActive()
     {
-        _closed = false;
+        _closed = !_closed;
     }
 
-    public void Close()
-    {
-        _closed = true;
-    }
+    //public void Open()
+    //{
+    //    _closed = false;
+    //}
+
+    //public void Close()
+    //{
+    //    _closed = true;
+    //}
 }
