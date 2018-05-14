@@ -155,7 +155,9 @@ public class ShootingScript : MonoBehaviour
 
                     if(hit.transform.tag == "water")
                     {
-                        hit.transform.GetComponent<WaterScript>().Electrocute();
+                        WaterScript wScript = hit.transform.GetComponent<WaterScript>();
+                        if (wScript != null)
+                            wScript.Electrocute();
                     }
                 }
                 break;

@@ -8,12 +8,14 @@ public class WaterScript : MonoBehaviour {
 
     public void Electrocute()
     {
-        Debug.Log(wood.Count);
-        for(int i = 0; i < wood.Count; i++)
+        if (wood.Count > 0)
         {
-            wood[i].GetComponent<WoodScript>().Burn();
+            for (int i = 0; i < wood.Count; i++)
+            {
+                wood[i].GetComponent<WoodScript>().Burn();
+            }
+            wood = new List<GameObject>();
         }
-        wood = new List<GameObject>();
     }
 
     void OnTriggerEnter(Collider other)
