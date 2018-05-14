@@ -42,6 +42,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        private float m_defaultWalkingSpeed;
+        private float m_defaultRunningSpeed;
+        private float m_defaultMouseX;
+
         // Use this for initialization
         private void Start()
         {
@@ -55,6 +59,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            m_defaultWalkingSpeed = m_WalkSpeed;
+            m_defaultRunningSpeed = m_RunSpeed;
+            m_defaultMouseX = m_MouseLook.XSensitivity;
         }
 
 
@@ -254,6 +262,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+        }
+
+        public void SetSpeed(float walkingSpeed, float runningSpeed)
+        {
+            m_WalkSpeed = walkingSpeed;
+            m_RunSpeed = runningSpeed;
+            m_MouseLook.XSensitivity = 0;
+        }
+
+        public void ResetSpeed()
+        {
+            m_WalkSpeed = m_defaultWalkingSpeed;
+            m_RunSpeed = m_defaultRunningSpeed;
+            m_MouseLook.XSensitivity = m_defaultMouseX;
         }
     }
 }

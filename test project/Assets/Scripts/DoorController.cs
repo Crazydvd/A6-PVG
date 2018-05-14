@@ -13,7 +13,7 @@ public class DoorController : MonoBehaviour
         {
             if (transform.localPosition.y > 0)
             {
-                transform.SetPositionAndRotation(new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z), Quaternion.Euler(0, 0, 90));
+                transform.position = transform.position - new Vector3(0, 0.05f, 0);
                 InProgress = true;
             }
             else
@@ -25,7 +25,7 @@ public class DoorController : MonoBehaviour
         {
             if (transform.localPosition.y < 4)
             {
-                transform.SetPositionAndRotation(new Vector3(transform.position.x, transform.position.y + 0.05f, transform.position.z), Quaternion.Euler(0, 0, 90));
+                transform.position = transform.position + new Vector3(0, 0.05f, 0);
                 InProgress = true;
             }
             else
