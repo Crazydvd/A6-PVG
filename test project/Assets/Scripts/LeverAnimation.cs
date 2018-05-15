@@ -16,10 +16,13 @@ public class LeverAnimation : MonoBehaviour
         if (pActive)
         {
             _animator.Play("Lever_toActive");
+            Debug.Log(_animator.playbackTime);
+            _animator.speed = 1;
         }
         else
         {
             _animator.Play("Lever_toDeactive");
+            //_animator.speed = -1;
         }
     }
 }

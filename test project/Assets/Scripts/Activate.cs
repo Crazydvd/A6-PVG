@@ -9,7 +9,11 @@ public class Activate : MonoBehaviour
     public GameObject interactive;
     private DoorController _door;
     private ElevatorController _elevator;
+<<<<<<< HEAD
+    private float _inProgress;
+=======
     private MoveWater _water;
+>>>>>>> 185169b8ba7f00d5c4c4a5bd60f4f9c63ae7974d
 
     private void Start()
     {
@@ -17,8 +21,23 @@ public class Activate : MonoBehaviour
             _door = interactive.GetComponentInChildren<DoorController>();
         else if (interactive.tag == "Elevator")
             _elevator = interactive.GetComponent<ElevatorController>();
+<<<<<<< HEAD
+
+    }
+
+    void Update()
+    {
+        if (tag == "Lever")
+            if (_inProgress > 0)
+            {
+                _inProgress -= Time.deltaTime;
+                if (_inProgress < 0)
+                    _inProgress = 0;
+            }
+=======
         else if (interactive.tag == "water")
             _water = interactive.GetComponent<MoveWater>();
+>>>>>>> 185169b8ba7f00d5c4c4a5bd60f4f9c63ae7974d
     }
 
     public void Animation()
@@ -31,29 +50,33 @@ public class Activate : MonoBehaviour
 
     public void Action()
     {
+        if (tag == "Lever")
+        {
+            if (_inProgress > 0)
+                return;
+            _inProgress = 2;
+        }
+
+        //Door
         if (interactive.tag == "Door")
         {
-            //Check if we are using lever
-            if (tag == "Lever")
-            {
-                //If so make a delay for using it
-                if (!_door.InProgress)
-                {
-                    activated = !activated;
-                    _door.ToggleActive();
-                }
-            }
-            else
-            {
-                activated = !activated;
-                _door.ToggleActive();
-            }
+            activated = !activated;
+            _door.ToggleActive();
+
         }
+        //Elevator
         else if (interactive.tag == "Elevator")
         {
             activated = !activated;
             _elevator.ToggleACtive();
         }
+<<<<<<< HEAD
+        //Light
+        else if (interactive.tag == "Light")
+        {
+            activated = !activated;
+            interactive.gameObject.SetActive(!interactive.gameObject.activeSelf);
+=======
         else if (interactive.tag == "water")
         {
             if (tag == "Lever")
@@ -70,45 +93,7 @@ public class Activate : MonoBehaviour
                 activated = !activated;
                 _water.ToggleActive();
             }
+>>>>>>> 185169b8ba7f00d5c4c4a5bd60f4f9c63ae7974d
         }
     }
-
-
-    //public void OpenDoor()
-    //{
-    //    //Check if we are using lever 
-    //    if (tag == "Lever")
-    //    {
-    //        //If so make a delay for using it
-    //        if (!_door.InProgress)
-    //        {
-    //            activated = true;
-    //            _door.ChangeActivity();
-    //        }
-    //    }
-    //    else
-    //    {
-    //        activated = true;
-    //        _door.ChangeActivity();
-    //    }
-    //}
-
-    //public void CloseDoor()
-    //{
-    //    //Check if we are using lever 
-    //    if (tag == "Lever")
-    //    {
-    //        //If so make a delay for using it
-    //        if (!_door.InProgress)
-    //        {
-    //            activated = false;
-    //            _door.ChangeActivity();
-    //        }
-    //    }
-    //    else
-    //    {
-    //        activated = false;
-    //        _door.ChangeActivity();
-    //    }
-    //}
 }

@@ -12,7 +12,7 @@ public class Brazier : MonoBehaviour
         _activate = GetComponent<Activate>();
         if (Lit)
         {
-            _activate.Action();
+            transform.GetChild(0).gameObject.SetActive(Lit);
         }
     }
 
@@ -22,19 +22,4 @@ public class Brazier : MonoBehaviour
         _activate.Action();
         transform.GetChild(0).gameObject.SetActive(Lit);
     }
-
-
-    //public void Light()
-    //{
-    //    Lit = true;
-    //    _activate.Action();
-    //    transform.GetChild(0).gameObject.SetActive(true);
-    //}
-
-    //public void Extinguish()
-    //{
-    //    Lit = false;
-    //    _activate.Action();
-    //    transform.GetChild(0).gameObject.SetActive(false);
-    //}
 }
