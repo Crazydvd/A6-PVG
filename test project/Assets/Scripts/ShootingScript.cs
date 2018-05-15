@@ -205,21 +205,6 @@ public class ShootingScript : MonoBehaviour
         {
             switch (_weaponMode)
             {
-                case WeaponMode.ICE:
-                    _weaponMode = WeaponMode.WATER;
-                    break;
-                case WeaponMode.LIGHTNING:
-                    _weaponMode = WeaponMode.FIRE;
-                    break;
-                case WeaponMode.SUCTION:
-                    _weaponMode = WeaponMode.AIR;
-                    break;
-            }
-        }
-        else
-        {
-            switch (_weaponMode)
-            {
                 case WeaponMode.WATER:
                     _weaponMode = WeaponMode.ICE;
                     break;
@@ -230,6 +215,22 @@ public class ShootingScript : MonoBehaviour
                     _weaponMode = WeaponMode.SUCTION;
                     break;
             }
+        }
+        else
+        {
+            switch (_weaponMode)
+            {
+                case WeaponMode.ICE:
+                    _weaponMode = WeaponMode.WATER;
+                    break;
+                case WeaponMode.LIGHTNING:
+                    _weaponMode = WeaponMode.FIRE;
+                    break;
+                case WeaponMode.SUCTION:
+                    _weaponMode = WeaponMode.AIR;
+                    break;
+            }
+
         }
     }
 
