@@ -6,25 +6,25 @@ using UnityEngine;
 public class SlideDoorScript : MonoBehaviour {
 
     private float topMovement = 0f;
-    private Dictionary<Vector3, float> Doors = new Dictionary<Vector3, float>();
+    private Dictionary<Vector3, float> Wheels = new Dictionary<Vector3, float>();
 
     private void Update()
     {
         transform.localPosition = new Vector3(transform.localPosition.x, topMovement, transform.localPosition.z);
     }
 
-    public void SetDoorPosition(Vector3 door, float doorPosition)
+    public void SetDoorPosition(Vector3 wheel, float doorPosition)
     {
 
-        if (Doors.ContainsKey(door))
+        if (Wheels.ContainsKey(wheel))
         {
-            Doors[door] = doorPosition;
+            Wheels[wheel] = doorPosition;
         }
         else
         {
-            Doors.Add(door, doorPosition);
+            Wheels.Add(wheel, doorPosition);
         }
-        topMovement = Doors.Select(x => x.Value).Max();
+        topMovement = Wheels.Select(x => x.Value).Max();
 
     }
 }
