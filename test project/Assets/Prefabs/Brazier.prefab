@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 108477576756690576}
   - component: {fileID: 135410922291437878}
   - component: {fileID: 114249235002766938}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point light
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4745264100957140}
   - component: {fileID: 198599020065555728}
   - component: {fileID: 199576224317574414}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,31 +59,13 @@ GameObject:
   - component: {fileID: 114040064647925642}
   - component: {fileID: 199931172285434576}
   - component: {fileID: 198747850125207570}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FireMobile
   m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!1 &1598805127425272
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4717047641607882}
-  - component: {fileID: 108472691336589212}
-  - component: {fileID: 135742147335568418}
-  - component: {fileID: 114999468292872316}
-  m_Layer: 0
-  m_Name: Point light
-  m_TagString: Light
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1622492906895298
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +80,7 @@ GameObject:
   - component: {fileID: 136331549135806760}
   - component: {fileID: 114637747167066652}
   - component: {fileID: 114498202521221268}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Brazier
   m_TagString: brazier
   m_Icon: {fileID: 0}
@@ -115,7 +97,7 @@ GameObject:
   - component: {fileID: 4568104187958190}
   - component: {fileID: 198799660722628002}
   - component: {fileID: 199827345103302918}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +115,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4588528697822632}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4568104187958190
 Transform:
@@ -160,23 +142,9 @@ Transform:
   m_Children:
   - {fileID: 4568104187958190}
   - {fileID: 4745264100957140}
-  - {fileID: 4717047641607882}
   - {fileID: 4527930815761622}
   m_Father: {fileID: 4883275473741716}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4717047641607882
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598805127425272}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
-  m_Father: {fileID: 4588528697822632}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4745264100957140
 Transform:
@@ -198,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1622492906895298}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.1516829, y: 7.748916, z: -8.013845}
+  m_LocalPosition: {x: 1.0699999, y: 14.22, z: -10.09}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4588528697822632}
@@ -303,42 +271,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!108 &108472691336589212
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598805127425272}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 0.43448272, b: 0, a: 1}
-  m_Intensity: 5
-  m_Range: 4
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!108 &108477576756690576
 Light:
   m_ObjectHideFlags: 1
@@ -364,7 +296,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -422,18 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c3fae0f2d71ff4ebd4fb4380c8cb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lit: 0
---- !u!114 &114999468292872316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598805127425272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bf12ee2d9b715c4e8093b26d4796011, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Lit: 1
 --- !u!135 &135410922291437878
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -445,18 +366,6 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135742147335568418
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598805127425272}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136331549135806760
 CapsuleCollider:
@@ -531,7 +440,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -162969827
+  randomSeed: -1048058896
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3802,7 +3711,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1241644269
+  randomSeed: -856058520
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7119,7 +7028,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 469103882
+  randomSeed: 7511246
   InitialModule:
     serializedVersion: 3
     enabled: 1
