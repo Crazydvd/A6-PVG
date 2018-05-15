@@ -70,11 +70,11 @@
      <Compile Include="Assets\Scripts\PlatePress.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\ShootingScript.cs" />
+     <Compile Include="Assets\Scripts\SlideDoorScript.cs" />
      <Compile Include="Assets\Scripts\WaterDeath.cs" />
      <Compile Include="Assets\Scripts\WaterScript.cs" />
+     <Compile Include="Assets\Scripts\WaterWheelScript.cs" />
      <Compile Include="Assets\Scripts\WoodScript.cs" />
-     <Compile Include="Assets\SlideDoorScript.cs" />
-     <Compile Include="Assets\WaterWheelScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

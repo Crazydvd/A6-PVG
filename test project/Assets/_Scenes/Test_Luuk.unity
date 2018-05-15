@@ -369,57 +369,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1421138184290566, guid: 183dea1f4e5fef0448058532de1908d7,
     type: 2}
   m_PrefabInternal: {fileID: 1691848305}
---- !u!1001 &476218663
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 14.935914
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 12.413073
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604184240394952, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_Name
-      value: Waterwheel (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114256512066334934, guid: 693c1a5600ad1b04d80eb815f45e04eb,
-        type: 2}
-      propertyPath: SlideDoor
-      value: 
-      objectReference: {fileID: 364891441}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &515532498
 Prefab:
   m_ObjectHideFlags: 0
@@ -568,53 +517,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 920fa54e8ca352e478d5b839f095ef2e, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &713676650
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 12.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437720187600270, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114256512066334934, guid: 693c1a5600ad1b04d80eb815f45e04eb,
-        type: 2}
-      propertyPath: SlideDoor
-      value: 
-      objectReference: {fileID: 364891441}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 693c1a5600ad1b04d80eb815f45e04eb, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &867024204
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +629,53 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 071bca00d6b41c14b9d168e274373ea2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &900281294
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4915620992422742, guid: 6a8abe7b524f388498561d77df0d549f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.786958
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915620992422742, guid: 6a8abe7b524f388498561d77df0d549f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915620992422742, guid: 6a8abe7b524f388498561d77df0d549f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 12.632118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915620992422742, guid: 6a8abe7b524f388498561d77df0d549f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915620992422742, guid: 6a8abe7b524f388498561d77df0d549f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915620992422742, guid: 6a8abe7b524f388498561d77df0d549f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915620992422742, guid: 6a8abe7b524f388498561d77df0d549f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915620992422742, guid: 6a8abe7b524f388498561d77df0d549f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950765224529152, guid: 6a8abe7b524f388498561d77df0d549f,
+        type: 2}
+      propertyPath: SlideDoor
+      value: 
+      objectReference: {fileID: 364891441}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6a8abe7b524f388498561d77df0d549f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &903989412
 Prefab:
