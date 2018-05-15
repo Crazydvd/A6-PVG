@@ -9,6 +9,7 @@ public class Activate : MonoBehaviour
     public GameObject interactive;
     private DoorController _door;
     private ElevatorController _elevator;
+    private MoveWater _water;
 
     private void Start()
     {
@@ -16,6 +17,8 @@ public class Activate : MonoBehaviour
             _door = interactive.GetComponentInChildren<DoorController>();
         else if (interactive.tag == "Elevator")
             _elevator = interactive.GetComponent<ElevatorController>();
+        else if (interactive.tag == "water")
+            _water = interactive.GetComponent<MoveWater>();
     }
 
     public void Animation()
@@ -50,6 +53,23 @@ public class Activate : MonoBehaviour
         {
             activated = !activated;
             _elevator.ToggleACtive();
+        }
+        else if (interactive.tag == "water")
+        {
+            if (tag == "Lever")
+            {
+                //If so make a delay for using it
+                if (!_water.InProgress)
+                {
+                    activated = !activated;
+                    _water.ToggleActive();
+                }
+            }
+            else
+            {
+                activated = !activated;
+                _water.ToggleActive();
+            }
         }
     }
 
