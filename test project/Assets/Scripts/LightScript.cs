@@ -8,12 +8,4 @@ public class LightScript : MonoBehaviour
     {
         GetComponent<SphereCollider>().radius = GetComponent<Light>().range/2;
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            Debug.Log("LightScript (Point light): you are lit");
-        }
-    }
 }

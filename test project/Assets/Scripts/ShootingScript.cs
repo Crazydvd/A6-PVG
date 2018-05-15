@@ -86,17 +86,12 @@ public class ShootingScript : MonoBehaviour
     {
         if (other.tag == "Light")
         {
+            _lightLevel++;
             RaycastHit hit;
-            if (Physics.Raycast(other.transform.position, transform.position - other.transform.position, out hit))
+            if (Physics.Linecast(other.transform.position, transform.position, out hit))
             {
-                if (hit.collider.tag == "Player")
-                {
-                    _lightLevel++;
-                }
-                else
-                {
+                if(hit.transform.tag != "Player")
                     _lightLevel--;
-                }
             }
             ToggleMode();
         }
@@ -127,7 +122,7 @@ public class ShootingScript : MonoBehaviour
                 Vector3 IceDirection = Vector3.zero;
                 if (Physics.Raycast(ray, out hitz))
                 {
-                    Debug.Log(hitz.transform.name);
+                    //Debug.Log(hitz.transform.name);
                     IceDirection = hitz.point - ShootingPoint.position;
                 }
                 else
@@ -205,21 +200,6 @@ public class ShootingScript : MonoBehaviour
         {
             switch (_weaponMode)
             {
-                case WeaponMode.WATER:
-                    _weaponMode = WeaponMode.ICE;
-                    break;
-                case WeaponMode.FIRE:
-                    _weaponMode = WeaponMode.LIGHTNING;
-                    break;
-                case WeaponMode.AIR:
-                    _weaponMode = WeaponMode.SUCTION;
-                    break;
-            }
-        }
-        else
-        {
-            switch (_weaponMode)
-            {
                 case WeaponMode.ICE:
                     _weaponMode = WeaponMode.WATER;
                     break;
@@ -230,7 +210,21 @@ public class ShootingScript : MonoBehaviour
                     _weaponMode = WeaponMode.AIR;
                     break;
             }
-
+        }
+        else
+        {
+            switch (_weaponMode)
+            {
+                case WeaponMode.WATER:
+                    _weaponMode = WeaponMode.ICE;
+                    break;
+                case WeaponMode.FIRE:
+                    _weaponMode = WeaponMode.LIGHTNING;
+                    break;
+                case WeaponMode.AIR:
+                    _weaponMode = WeaponMode.SUCTION;
+                    break;
+            }
         }
     }
 
