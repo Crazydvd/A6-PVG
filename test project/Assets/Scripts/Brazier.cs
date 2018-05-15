@@ -4,30 +4,37 @@ using UnityEngine;
 
 public class Brazier : MonoBehaviour
 {
-    public bool Lid;
-    public GameObject Door;
-    private DoorController _door;
+    public bool Lit;
+    private Activate _activate;
 
     private void Start()
     {
-        _door = Door.GetComponentInChildren<DoorController>();
-        if (Lid)
+        _activate = GetComponent<Activate>();
+        if (Lit)
         {
-            _door.Open();
+            _activate.Action();
         }
     }
 
-    public void Light()
+    public void ToggleActive()
     {
-        Lid = true;
-        _door.Open();
-        transform.GetChild(0).gameObject.SetActive(true);
+        Lit = !Lit;
+        _activate.Action();
+        transform.GetChild(0).gameObject.SetActive(Lit);
     }
 
-    public void Extinguish()
-    {
-        Lid = false;
-        _door.Close();
-        transform.GetChild(0).gameObject.SetActive(false);
-    }
+
+    //public void Light()
+    //{
+    //    Lit = true;
+    //    _activate.Action();
+    //    transform.GetChild(0).gameObject.SetActive(true);
+    //}
+
+    //public void Extinguish()
+    //{
+    //    Lit = false;
+    //    _activate.Action();
+    //    transform.GetChild(0).gameObject.SetActive(false);
+    //}
 }
