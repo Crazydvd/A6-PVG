@@ -16,6 +16,12 @@ public class CreateIce : MonoBehaviour
             IcePlate.transform.SetParent(other.transform);
             Destroy(gameObject);
         }
+
+        if (other.tag == "Cube")
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
