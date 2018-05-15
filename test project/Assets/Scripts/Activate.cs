@@ -9,11 +9,8 @@ public class Activate : MonoBehaviour
     public GameObject interactive;
     private DoorController _door;
     private ElevatorController _elevator;
-<<<<<<< HEAD
     private float _inProgress;
-=======
     private MoveWater _water;
->>>>>>> 185169b8ba7f00d5c4c4a5bd60f4f9c63ae7974d
 
     private void Start()
     {
@@ -21,8 +18,8 @@ public class Activate : MonoBehaviour
             _door = interactive.GetComponentInChildren<DoorController>();
         else if (interactive.tag == "Elevator")
             _elevator = interactive.GetComponent<ElevatorController>();
-<<<<<<< HEAD
-
+        else if (interactive.tag == "water")
+            _water = interactive.GetComponent<MoveWater>();
     }
 
     void Update()
@@ -34,10 +31,6 @@ public class Activate : MonoBehaviour
                 if (_inProgress < 0)
                     _inProgress = 0;
             }
-=======
-        else if (interactive.tag == "water")
-            _water = interactive.GetComponent<MoveWater>();
->>>>>>> 185169b8ba7f00d5c4c4a5bd60f4f9c63ae7974d
     }
 
     public void Animation()
@@ -70,13 +63,12 @@ public class Activate : MonoBehaviour
             activated = !activated;
             _elevator.ToggleACtive();
         }
-<<<<<<< HEAD
         //Light
         else if (interactive.tag == "Light")
         {
             activated = !activated;
             interactive.gameObject.SetActive(!interactive.gameObject.activeSelf);
-=======
+        }
         else if (interactive.tag == "water")
         {
             if (tag == "Lever")
@@ -93,7 +85,6 @@ public class Activate : MonoBehaviour
                 activated = !activated;
                 _water.ToggleActive();
             }
->>>>>>> 185169b8ba7f00d5c4c4a5bd60f4f9c63ae7974d
         }
     }
 }

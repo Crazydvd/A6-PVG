@@ -97,11 +97,7 @@ GameObject:
   - component: {fileID: 23453400443609068}
   - component: {fileID: 136331549135806760}
   - component: {fileID: 114637747167066652}
-<<<<<<< HEAD
   - component: {fileID: 114498202521221268}
-=======
-  - component: {fileID: 114160912454135802}
->>>>>>> 185169b8ba7f00d5c4c4a5bd60f4f9c63ae7974d
   m_Layer: 0
   m_Name: Brazier
   m_TagString: brazier
@@ -391,7 +387,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplier: 1
-<<<<<<< HEAD
 --- !u!114 &114249235002766938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -404,9 +399,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114498202521221268
-=======
---- !u!114 &114160912454135802
->>>>>>> 185169b8ba7f00d5c4c4a5bd60f4f9c63ae7974d
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -431,7 +423,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lit: 0
-<<<<<<< HEAD
 --- !u!114 &114999468292872316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,8 +458,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
-=======
->>>>>>> 185169b8ba7f00d5c4c4a5bd60f4f9c63ae7974d
 --- !u!136 &136331549135806760
 CapsuleCollider:
   m_ObjectHideFlags: 1
