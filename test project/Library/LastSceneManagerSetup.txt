@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/_Scenes/Test_Luuk.unity
-=======
-- path: Assets/_Scenes/Test_Jesse.unity
->>>>>>> 206a0d41026c1e93391c95676da72ccb9246b589
+- path: Assets/_Scenes/GreyBox_5thLevel.unity
   isLoaded: 1
   isActive: 1
