@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33931811127453390}
   - component: {fileID: 135290415838608696}
   - component: {fileID: 23645736224775606}
-  - component: {fileID: 54887158183971838}
+  - component: {fileID: 54105511880721484}
   - component: {fileID: 114137396071328924}
   m_Layer: 8
   m_Name: Water Ball
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826585143323758}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54887158183971838
+--- !u!54 &54105511880721484
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -99,7 +99,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &114137396071328924
 MonoBehaviour:
   m_ObjectHideFlags: 1

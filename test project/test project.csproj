@@ -311,6 +311,8 @@
     <Compile Include="Assets\Scripts\WaterDeath.cs" />
     <Compile Include="Assets\Scripts\WaterScript.cs" />
     <Compile Include="Assets\Scripts\WoodScript.cs" />
+    <Compile Include="Assets\SlideDoorScript.cs" />
+    <Compile Include="Assets\WaterWheelScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
