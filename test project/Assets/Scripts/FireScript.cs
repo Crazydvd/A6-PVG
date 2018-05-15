@@ -30,4 +30,12 @@ public class FireScript : MonoBehaviour
             collision.gameObject.GetComponent<WoodScript>().Burn();
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Cube")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
