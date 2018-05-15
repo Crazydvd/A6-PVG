@@ -15,5 +15,10 @@ public class ExtinguishBrazier : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.tag == "Waterwheel")
+        {
+            collision.transform.GetComponent<WaterWheelScript>().AddPower();
+        }
     }
 }
