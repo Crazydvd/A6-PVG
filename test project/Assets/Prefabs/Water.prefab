@@ -250,3 +250,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NewPosition: {fileID: 1339210456193248}
   _speed: 0.25
+  InProgress: 0

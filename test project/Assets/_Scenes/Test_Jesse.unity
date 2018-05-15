@@ -431,34 +431,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8149d60e4f1692f43a073d05fc0e4a6e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &447745443
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1485856730}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 447745444}
-  m_Layer: 0
-  m_Name: Missing Prefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &447745444
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1485856730}
-  m_GameObject: {fileID: 447745443}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &505379714 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -709,32 +681,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114637747167066652, guid: 97cae62320aad454daddc039db26bf39,
+    - target: {fileID: 114498202521221268, guid: 97cae62320aad454daddc039db26bf39,
         type: 2}
-      propertyPath: Door
+      propertyPath: interactive
       value: 
       objectReference: {fileID: 752637707}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97cae62320aad454daddc039db26bf39, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1394605838 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1622492906895298, guid: 97cae62320aad454daddc039db26bf39,
-    type: 2}
-  m_PrefabInternal: {fileID: 1252029588}
---- !u!114 &1394605845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1394605838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87b4721c705055f4595a626d3ebf4504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activated: 0
-  interactive: {fileID: 752637707}
 --- !u!1 &1403510697
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,60 +756,8 @@ Transform:
   - {fileID: 236605368}
   - {fileID: 752637708}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1485856730
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4583821405417804, guid: ce43f22fdb9f2614f91a3eb0b6148f6c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 4.668574
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583821405417804, guid: ce43f22fdb9f2614f91a3eb0b6148f6c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583821405417804, guid: ce43f22fdb9f2614f91a3eb0b6148f6c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 19.153633
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583821405417804, guid: ce43f22fdb9f2614f91a3eb0b6148f6c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583821405417804, guid: ce43f22fdb9f2614f91a3eb0b6148f6c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583821405417804, guid: ce43f22fdb9f2614f91a3eb0b6148f6c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583821405417804, guid: ce43f22fdb9f2614f91a3eb0b6148f6c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583821405417804, guid: ce43f22fdb9f2614f91a3eb0b6148f6c, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114038915685157558, guid: ce43f22fdb9f2614f91a3eb0b6148f6c,
-        type: 2}
-      propertyPath: Door
-      value: 
-      objectReference: {fileID: 752637707}
-    - target: {fileID: 114038915685157558, guid: ce43f22fdb9f2614f91a3eb0b6148f6c,
-        type: 2}
-      propertyPath: Lid
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ce43f22fdb9f2614f91a3eb0b6148f6c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1533608309
 Prefab:
   m_ObjectHideFlags: 0
