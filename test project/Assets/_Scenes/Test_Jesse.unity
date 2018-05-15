@@ -709,32 +709,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114637747167066652, guid: 97cae62320aad454daddc039db26bf39,
+    - target: {fileID: 114498202521221268, guid: 97cae62320aad454daddc039db26bf39,
         type: 2}
-      propertyPath: Door
+      propertyPath: interactive
       value: 
       objectReference: {fileID: 752637707}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97cae62320aad454daddc039db26bf39, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1394605838 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1622492906895298, guid: 97cae62320aad454daddc039db26bf39,
-    type: 2}
-  m_PrefabInternal: {fileID: 1252029588}
---- !u!114 &1394605845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1394605838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87b4721c705055f4595a626d3ebf4504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activated: 0
-  interactive: {fileID: 752637707}
 --- !u!1 &1403510697
 GameObject:
   m_ObjectHideFlags: 0
