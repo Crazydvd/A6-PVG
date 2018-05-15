@@ -49,8 +49,11 @@ public class Interact : MonoBehaviour
 
             if(hit.transform.gameObject.layer == LayerMask.NameToLayer("Interactable"))
             {
-                InteractableUI.gameObject.SetActive(true);
-                Crosshair.gameObject.SetActive(false);
+                if (InteractableUI != null && Crosshair != null)
+                {
+                    InteractableUI.gameObject.SetActive(true);
+                    Crosshair.gameObject.SetActive(false);
+                }
             }
             else
             {
@@ -78,7 +81,10 @@ public class Interact : MonoBehaviour
 
     private void ResetUI()
     {
-        InteractableUI.gameObject.SetActive(false);
-        Crosshair.gameObject.SetActive(true);
+        if (InteractableUI != null && Crosshair != null)
+        {
+            InteractableUI.gameObject.SetActive(false);
+            Crosshair.gameObject.SetActive(true);
+        }
     }
 }
