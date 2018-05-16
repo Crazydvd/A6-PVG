@@ -712,19 +712,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114713457648613092, guid: 062b6a1d6b9883b4eabca61b1ae132ad,
         type: 2}
-      propertyPath: InteractableUI
-      value: 
-      objectReference: {fileID: 1282232269}
-    - target: {fileID: 114713457648613092, guid: 062b6a1d6b9883b4eabca61b1ae132ad,
-        type: 2}
       propertyPath: Crosshair
       value: 
       objectReference: {fileID: 2040662030}
-    - target: {fileID: 114261888801823054, guid: 062b6a1d6b9883b4eabca61b1ae132ad,
+    - target: {fileID: 114713457648613092, guid: 062b6a1d6b9883b4eabca61b1ae132ad,
         type: 2}
-      propertyPath: DEBUGGING
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: InteractableUI
+      value: 
+      objectReference: {fileID: 1282232269}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 062b6a1d6b9883b4eabca61b1ae132ad, type: 2}
   m_IsPrefabParent: 0

@@ -59,8 +59,6 @@ GameObject:
   - component: {fileID: 114728025544456016}
   - component: {fileID: 114261888801823054}
   - component: {fileID: 114713457648613092}
-  - component: {fileID: 114613940002112516}
-  - component: {fileID: 114562849266217390}
   - component: {fileID: 114028970416777240}
   m_Layer: 9
   m_Name: FPSController
@@ -107,7 +105,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1364828486560750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.528561, y: 1.22, z: 11.818443}
+  m_LocalPosition: {x: 11.528561, y: 0, z: 11.818443}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4439627098838424}
@@ -352,34 +350,12 @@ MonoBehaviour:
   AirBall: {fileID: 1763827642293616, guid: c9f1590882052f441aae2563716499a3, type: 2}
   FireBall: {fileID: 1386690895006880, guid: 03da2183180f8d24fad480373a0debd8, type: 2}
   WaterBall: {fileID: 1826585143323758, guid: 4d58c910809415b4195559d1e9d96bc7, type: 2}
-  ShootingPoint: {fileID: 0}
-  _suctionPower: 1000
-  _airEnabled: 1
-  _waterEnabled: 1
-  _fireEnabled: 1
-  DEBUGGING: 0
---- !u!114 &114562849266217390
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364828486560750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bc2a0b72eb87ee499dbf97470ffcaa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IceCone: {fileID: 1339401892688778, guid: 8149d60e4f1692f43a073d05fc0e4a6e, type: 2}
-  Lightning: {fileID: 1168339322781296, guid: 430370298c176044fa728545b5c57cb0, type: 2}
-  AirBall: {fileID: 1763827642293616, guid: c9f1590882052f441aae2563716499a3, type: 2}
-  FireBall: {fileID: 1386690895006880, guid: 03da2183180f8d24fad480373a0debd8, type: 2}
-  WaterBall: {fileID: 1826585143323758, guid: 4d58c910809415b4195559d1e9d96bc7, type: 2}
   ShootingPoint: {fileID: 4275266957935812}
   _suctionPower: 1000
   _airEnabled: 1
   _waterEnabled: 1
   _fireEnabled: 1
-  DEBUGGING: 0
+  DEBUGGING: 1
 --- !u!114 &114602105860453884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -482,17 +458,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
---- !u!114 &114613940002112516
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364828486560750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c698fc6c23fd9a4498c090ef41e256d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114713457648613092
 MonoBehaviour:
   m_ObjectHideFlags: 1

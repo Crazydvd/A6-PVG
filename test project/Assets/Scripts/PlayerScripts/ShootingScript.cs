@@ -145,7 +145,6 @@ public class ShootingScript : MonoBehaviour
                 Vector3 IceDirection = Vector3.zero;
                 if (Physics.Raycast(ray, out hitz))
                 {
-                    //Debug.Log(hitz.transform.name);
                     IceDirection = hitz.point - ShootingPoint.position;
                 }
                 else
