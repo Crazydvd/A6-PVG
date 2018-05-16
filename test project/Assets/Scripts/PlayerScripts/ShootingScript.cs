@@ -113,10 +113,17 @@ public class ShootingScript : MonoBehaviour
         {
             _lightLevel++;
             RaycastHit hit;
-            if (Physics.Linecast(other.transform.position, transform.position, out hit))
+            if (Physics.Raycast(other.transform.position, transform.position - other.transform.position, out hit))
             {
                 if (hit.transform.tag != "Player")
+                {
                     _lightLevel--;
+                    Debug.DrawRay(other.transform.position, transform.position - other.transform.position, Color.red, 0, false);
+                }
+                else
+                {
+                    Debug.DrawRay(other.transform.position, transform.position - other.transform.position, Color.green, 0, true);
+                }
             }
         }
     }
