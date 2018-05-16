@@ -24,13 +24,18 @@ public class ShootingScript : MonoBehaviour
 
     WeaponMode _weaponMode = WeaponMode.SUCTION;
 
+    [Header("Powers enabled")]
     [SerializeField] private float _suctionPower = 1000f;
+
+    [SerializeField] private bool _airEnabled = true;
+    [SerializeField] private bool _waterEnabled = true;
+    [SerializeField] private bool _fireEnabled = true;
+
+    [SerializeField] private bool DEBUGGING = false;
+
 
     private bool _inLight = false;
     private int _lightLevel;
-
-    private bool DEBUGING = false;
-
 
     private KeyCode[] _actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
 
@@ -55,15 +60,33 @@ public class ShootingScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            DEBUGING = !DEBUGING;
+            DEBUGGING = !DEBUGGING;
+            Debug.Log("Debugging is: " + DEBUGGING);
         }
 
         // check if the projectile is being changed
-        foreach (KeyCode button in _actionButtons)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && _airEnabled)
         {
-            if (Input.GetKeyDown(button))
+            ChangeMode(KeyCode.Alpha1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2) && _waterEnabled)
+        {
+            ChangeMode(KeyCode.Alpha2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3) && _fireEnabled)
+        {
+            ChangeMode(KeyCode.Alpha3);
+        }
+
+        // ALLOW EVERY POWER IN DEBUG MODE
+        if (DEBUGGING)
+        {
+            foreach (KeyCode button in _actionButtons)
             {
-                ChangeMode(button);
+                if (Input.GetKeyDown(button))
+                {
+                    ChangeMode(button);
+                }
             }
         }
     }
@@ -193,7 +216,7 @@ public class ShootingScript : MonoBehaviour
         ///LIGHTNING
         ///SUCTION
         ///
-        if (DEBUGING)
+        if (DEBUGGING)
             return;
 
         if (_inLight)
@@ -251,5 +274,21 @@ public class ShootingScript : MonoBehaviour
                 _weaponMode = WeaponMode.LIGHTNING;
                 break;
         }
+        ToggleMode();
+    }
+
+    public void SetAirEnabled(bool enabled)
+    {
+        _airEnabled = enabled;
+    }
+
+    public void SetWaterEnabled(bool enabled)
+    {
+        _waterEnabled = enabled;
+    }
+
+    public void SetFireEnabled(bool enabled)
+    {
+        _fireEnabled = enabled;
     }
 }

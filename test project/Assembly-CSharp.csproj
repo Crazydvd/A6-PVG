@@ -51,30 +51,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Activate.cs" />
-     <Compile Include="Assets\Scripts\AirScript.cs" />
-     <Compile Include="Assets\Scripts\BoxScript.cs" />
-     <Compile Include="Assets\Scripts\Brazier.cs" />
-     <Compile Include="Assets\Scripts\CreateIce.cs" />
-     <Compile Include="Assets\Scripts\DoorController.cs" />
-     <Compile Include="Assets\Scripts\ElevatorController.cs" />
-     <Compile Include="Assets\Scripts\ExtinguishBrazier.cs" />
-     <Compile Include="Assets\Scripts\FireScript.cs" />
-     <Compile Include="Assets\Scripts\IceMelt.cs" />
-     <Compile Include="Assets\Scripts\Interact.cs" />
-     <Compile Include="Assets\Scripts\LeverAnimation.cs" />
-     <Compile Include="Assets\Scripts\LightScript.cs" />
-     <Compile Include="Assets\Scripts\MeltIce.cs" />
-     <Compile Include="Assets\Scripts\MoveWater.cs" />
-     <Compile Include="Assets\Scripts\PlateAnimation.cs" />
-     <Compile Include="Assets\Scripts\PlatePress.cs" />
-     <Compile Include="Assets\Scripts\PlayerScript.cs" />
-     <Compile Include="Assets\Scripts\ShootingScript.cs" />
-     <Compile Include="Assets\Scripts\SlideDoorScript.cs" />
-     <Compile Include="Assets\Scripts\WaterDeath.cs" />
-     <Compile Include="Assets\Scripts\WaterScript.cs" />
-     <Compile Include="Assets\Scripts\WaterWheelScript.cs" />
-     <Compile Include="Assets\Scripts\WoodScript.cs" />
+     <Compile Include="Assets\Scripts\Activatables\DoorController.cs" />
+     <Compile Include="Assets\Scripts\Activatables\ElevatorController.cs" />
+     <Compile Include="Assets\Scripts\Activatables\MoveWater.cs" />
+     <Compile Include="Assets\Scripts\Activatables\SlideDoorScript.cs" />
+     <Compile Include="Assets\Scripts\Animations\LeverAnimation.cs" />
+     <Compile Include="Assets\Scripts\Animations\PlateAnimation.cs" />
+     <Compile Include="Assets\Scripts\Box\BoxScript.cs" />
+     <Compile Include="Assets\Scripts\Elements\AirScript.cs" />
+     <Compile Include="Assets\Scripts\Elements\CreateIce.cs" />
+     <Compile Include="Assets\Scripts\Elements\ExtinguishBrazier.cs" />
+     <Compile Include="Assets\Scripts\Elements\FireScript.cs" />
+     <Compile Include="Assets\Scripts\Ice\IceMelt.cs" />
+     <Compile Include="Assets\Scripts\Interactives\Activate.cs" />
+     <Compile Include="Assets\Scripts\Interactives\Brazier.cs" />
+     <Compile Include="Assets\Scripts\Interactives\PlatePress.cs" />
+     <Compile Include="Assets\Scripts\Interactives\WaterWheelScript.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Light\LightScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\Interact.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\ShootingScript.cs" />
+     <Compile Include="Assets\Scripts\Water\WaterScript.cs" />
+     <Compile Include="Assets\Scripts\Wood\WoodScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
