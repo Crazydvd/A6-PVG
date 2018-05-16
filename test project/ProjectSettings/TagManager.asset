@@ -19,6 +19,8 @@ TagManager:
   - Elevator
   - Plate
   - Cubetrigger
+  - Note
+  - PowerEnabler
   layers:
   - Default
   - TransparentFX

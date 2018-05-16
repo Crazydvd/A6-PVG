@@ -6,7 +6,7 @@ public class Activate : MonoBehaviour
 {
     [HideInInspector]
     public bool activated;
-    public GameObject interactive;
+    public GameObject activatable;
     private DoorController _door;
     private ElevatorController _elevator;
     private float _inProgress;
@@ -14,14 +14,14 @@ public class Activate : MonoBehaviour
 
     private void Start()
     {
-        if (interactive != null)
+        if (activatable != null)
         {
-            if (interactive.tag == "Door")
-                _door = interactive.GetComponentInChildren<DoorController>();
-            else if (interactive.tag == "Elevator")
-                _elevator = interactive.GetComponent<ElevatorController>();
-            else if (interactive.tag == "water")
-                _water = interactive.GetComponent<MoveWater>();
+            if (activatable.tag == "Door")
+                _door = activatable.GetComponentInChildren<DoorController>();
+            else if (activatable.tag == "Elevator")
+                _elevator = activatable.GetComponent<ElevatorController>();
+            else if (activatable.tag == "water")
+                _water = activatable.GetComponent<MoveWater>();
         }
     }
 
@@ -46,7 +46,8 @@ public class Activate : MonoBehaviour
 
     public void Action()
     {
-        if (interactive == null)        
+        activated = !activated;
+        if (activatable == null)        
             return;        
 
         if (tag == "Lever")
@@ -57,28 +58,24 @@ public class Activate : MonoBehaviour
         }
 
         //Door
-        if (interactive.tag == "Door")
+        if (activatable.tag == "Door")
         {
-            activated = !activated;
             _door.ToggleActive();
 
         }
         //Elevator
-        else if (interactive.tag == "Elevator")
+        else if (activatable.tag == "Elevator")
         {
-            activated = !activated;
             _elevator.ToggleACtive();
         }
         //Light
-        else if (interactive.tag == "Light")
+        else if (activatable.tag == "Light")
         {
-            activated = !activated;
-            interactive.gameObject.SetActive(!interactive.gameObject.activeSelf);
+            activatable.gameObject.SetActive(!activatable.gameObject.activeSelf);
         }
         //Water
-        else if (interactive.tag == "water")
+        else if (activatable.tag == "water")
         {
-            activated = !activated;
             _water.ToggleActive();
         }
     }

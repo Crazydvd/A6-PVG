@@ -51,3 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 560443921b1531c42bcbcd06b1b9eb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1364828486560750, guid: 062b6a1d6b9883b4eabca61b1ae132ad, type: 2}
+  CheckPoints:
+  - {fileID: 0}
+  Next: -1
