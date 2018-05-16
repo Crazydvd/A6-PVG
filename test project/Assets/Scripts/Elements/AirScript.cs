@@ -8,7 +8,7 @@ public class AirScript : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Cubetrigger")
+        if (collision.transform.tag == "Cube")
         {
             Vector3 direction = (collision.transform.position - transform.position).normalized;
             direction.y = 0;
