@@ -20,12 +20,17 @@ public class NoteScript : MonoBehaviour {
         }
     }
 
+    private void startReading()
+    {
+        _reading = true;
+    }
+
     public void ReadNote()
     {
         if (!_reading)
         {
             Note.SetActive(true);
-            _reading = true;
+            Invoke("startReading", 0.000001f);
         }
     }
 

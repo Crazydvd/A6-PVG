@@ -59,7 +59,6 @@ GameObject:
   - component: {fileID: 114728025544456016}
   - component: {fileID: 114261888801823054}
   - component: {fileID: 114713457648613092}
-  - component: {fileID: 114028970416777240}
   m_Layer: 9
   m_Name: FPSController
   m_TagString: Player
@@ -319,21 +318,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114028970416777240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364828486560750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad03c414a2d16849914be7437197e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SlowedWalkingSpeed: 3
-  SlowedRunningSpeed: 4
-  Crosshair: {fileID: 0}
-  InteractableUI: {fileID: 0}
 --- !u!114 &114261888801823054
 MonoBehaviour:
   m_ObjectHideFlags: 1
