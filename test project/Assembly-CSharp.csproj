@@ -65,11 +65,8 @@
      <Compile Include="Assets\Scripts\Ice\IceMelt.cs" />
      <Compile Include="Assets\Scripts\Interactives\Activate.cs" />
      <Compile Include="Assets\Scripts\Interactives\Brazier.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Interactives\InteractiveSystem.cs" />
-=======
      <Compile Include="Assets\Scripts\Interactives\NoteScript.cs" />
->>>>>>> c202f13d5192528d4973bc27c1f931ccdd2a9831
      <Compile Include="Assets\Scripts\Interactives\PlatePress.cs" />
      <Compile Include="Assets\Scripts\Interactives\PowerEnablerScript.cs" />
      <Compile Include="Assets\Scripts\Interactives\WaterWheelScript.cs" />

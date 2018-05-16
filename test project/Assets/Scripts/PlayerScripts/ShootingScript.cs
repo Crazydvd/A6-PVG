@@ -26,6 +26,7 @@ public class ShootingScript : MonoBehaviour
 
     [Header("Powers enabled")]
     [SerializeField] private float _suctionPower = 1000f;
+    [SerializeField] private float _suctionRange = 5f;
 
     [SerializeField] private bool _airEnabled = true;
     [SerializeField] private bool _waterEnabled = true;
@@ -189,7 +190,7 @@ public class ShootingScript : MonoBehaviour
             case WeaponMode.SUCTION:
                 RaycastHit suctionHit;
                 Ray suctionRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-                if (Physics.Raycast(suctionRay, out suctionHit, 50f))
+                if (Physics.Raycast(suctionRay, out suctionHit, _suctionRange))
                 {
                     Vector3 retractionDirection = (transform.position - suctionHit.point);
                     retractionDirection.y = 0; // remove upwards/downwards force
