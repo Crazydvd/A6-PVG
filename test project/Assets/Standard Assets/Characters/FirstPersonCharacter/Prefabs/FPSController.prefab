@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c698fc6c23fd9a4498c090ef41e256d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Manager: {fileID: 0}
 --- !u!114 &114713301457421838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -488,6 +489,10 @@ MonoBehaviour:
   WaterBall: {fileID: 1826585143323758, guid: 4d58c910809415b4195559d1e9d96bc7, type: 2}
   ShootingPoint: {fileID: 4447560143308180}
   _suctionPower: 1000
+  _airEnabled: 1
+  _waterEnabled: 1
+  _fireEnabled: 1
+  DEBUGGING: 0
 --- !u!136 &136306279943600982
 CapsuleCollider:
   m_ObjectHideFlags: 1
