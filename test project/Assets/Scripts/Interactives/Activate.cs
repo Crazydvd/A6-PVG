@@ -23,6 +23,13 @@ public class Activate : MonoBehaviour
             else if (activatable.tag == "water")
                 _water = activatable.GetComponent<MoveWater>();
         }
+        else
+        {
+            if (tag != "brazier")
+            {
+                throw new System.Exception("You did not assign the Activatable in the Activate script on " + gameObject.name);
+            }
+        }
     }
 
     void Update()
