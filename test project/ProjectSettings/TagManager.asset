@@ -18,6 +18,7 @@ TagManager:
   - Door
   - Elevator
   - Plate
+  - Cubetrigger
   layers:
   - Default
   - TransparentFX
