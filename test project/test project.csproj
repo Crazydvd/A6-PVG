@@ -296,6 +296,7 @@
     <Compile Include="Assets\Scripts\Animations\LeverAnimation.cs" />
     <Compile Include="Assets\Scripts\Animations\PlateAnimation.cs" />
     <Compile Include="Assets\Scripts\Box\BoxScript.cs" />
+    <Compile Include="Assets\Scripts\DisableOnStart.cs" />
     <Compile Include="Assets\Scripts\Elements\AirScript.cs" />
     <Compile Include="Assets\Scripts\Elements\CreateIce.cs" />
     <Compile Include="Assets\Scripts\Elements\ExtinguishBrazier.cs" />
