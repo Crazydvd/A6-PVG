@@ -88,7 +88,7 @@ public class Interact : MonoBehaviour
             }
         }
 
-        if (_heldObject != null && (transform.position - _heldObject.transform.position).magnitude > 2f) {
+        if (_heldObject != null && (transform.position - _heldObject.transform.position).magnitude > 4f) {
             ReleaseObject();
         }
     }

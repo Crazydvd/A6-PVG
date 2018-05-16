@@ -6,6 +6,7 @@ public class ShootingScript : MonoBehaviour
 {
     public enum WeaponMode
     {
+        NONE,
         AIR,            //Light
         WATER,          //Light
         FIRE,           //Light
@@ -39,6 +40,19 @@ public class ShootingScript : MonoBehaviour
     private int _lightLevel;
 
     private KeyCode[] _actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
+
+    private void Start()
+    {
+        if (_airEnabled)
+        {
+            _weaponMode = WeaponMode.AIR;
+            ToggleMode();
+        }
+        else
+        {
+            _weaponMode = WeaponMode.NONE;
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -280,15 +294,21 @@ public class ShootingScript : MonoBehaviour
     public void SetAirEnabled(bool enabled)
     {
         _airEnabled = enabled;
+        _weaponMode = WeaponMode.AIR;
+        ToggleMode();
     }
 
     public void SetWaterEnabled(bool enabled)
     {
         _waterEnabled = enabled;
+        _weaponMode = WeaponMode.WATER;
+        ToggleMode();
     }
 
     public void SetFireEnabled(bool enabled)
     {
         _fireEnabled = enabled;
+        _weaponMode = WeaponMode.FIRE;
+        ToggleMode();
     }
 }

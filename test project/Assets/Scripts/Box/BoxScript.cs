@@ -16,6 +16,7 @@ public class BoxScript : MonoBehaviour {
         if(other.tag == "death")
         {
             transform.position = _spawnPoint;
+            transform.parent = null;
         }
     }
 }
