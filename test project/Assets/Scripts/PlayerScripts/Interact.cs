@@ -72,12 +72,20 @@ public class Interact : MonoBehaviour
         {
             if(_heldObject != null)
             {
-                _heldObject.transform.parent = null;
-                _heldObject = null;
-                _playerController.ResetSpeed();
+                ReleaseObject();
             }
         }
 
+        if (_heldObject != null && (transform.position - _heldObject.transform.position).magnitude > 2f) {
+            ReleaseObject();
+        }
+    }
+
+    private void ReleaseObject()
+    {
+        _heldObject.transform.parent = null;
+        _heldObject = null;
+        _playerController.ResetSpeed();
     }
 
     private void ResetUI()
