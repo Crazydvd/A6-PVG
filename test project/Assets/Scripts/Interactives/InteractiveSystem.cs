@@ -9,19 +9,25 @@ public class InteractiveSystem : MonoBehaviour
     private bool _opened;
 
     void Update()
-    {       
+    {
         if (!_opened)
         {
-            foreach (GameObject activatable in Activatables)
+            if (Activatables.Count > 0)
             {
-                if (!activatable.GetComponent<Activate>().activated)
-                    return;
+                foreach (GameObject activatable in Activatables)
+                {
+                    if (!activatable.GetComponent<Activate>().activated)
+                        return;
+                }
             }
 
-            foreach (GameObject deactivatable in Deactivatables)
+            if (Deactivatables.Count > 0)
             {
-                if (deactivatable.GetComponent<Activate>().activated)
-                    return;
+                foreach (GameObject deactivatable in Deactivatables)
+                {
+                    if (deactivatable.GetComponent<Activate>().activated)
+                        return;
+                }
             }
 
             GetComponent<Activate>().Action();
