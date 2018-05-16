@@ -45,12 +45,14 @@ public class ElevatorController : MonoBehaviour
                 load.Add(other.gameObject);
             }
             other.transform.parent = transform;
+            //other.transform.localScale = new Vector3(transform., 1, 1);
         }        
     }
 
     void OnTriggerExit(Collider other)
     {
         other.transform.parent = null;
+        
     }
 
 
