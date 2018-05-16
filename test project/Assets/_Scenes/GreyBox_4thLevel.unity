@@ -1078,9 +1078,10 @@ GameObject:
   m_Component:
   - component: {fileID: 729393121}
   - component: {fileID: 729393120}
+  - component: {fileID: 729393122}
   m_Layer: 0
   m_Name: Spotlight (1)
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,7 +1097,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 8
-  m_Range: 30.952398
+  m_Range: 32.26986
   m_SpotAngle: 8.785708
   m_CookieSize: 10
   m_Shadows:
@@ -1134,6 +1135,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 4.7110004, y: -269.504, z: -0.007}
+--- !u!65 &729393122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729393119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.4994423, z: 16.511934}
+  m_Center: {x: -3.5391723e-10, y: 1.2496974, z: 7.7558155}
 --- !u!1 &763376118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,7 +1764,7 @@ GameObject:
   - component: {fileID: 1035790157}
   - component: {fileID: 1035790156}
   - component: {fileID: 1035790155}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,6 +2388,11 @@ Prefab:
       propertyPath: m_Name
       value: pressure plate (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114353349186381362, guid: fd23445aea07b404295168c23987c496,
+        type: 2}
+      propertyPath: interactive
+      value: 
+      objectReference: {fileID: 729393119}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd23445aea07b404295168c23987c496, type: 2}
   m_IsPrefabParent: 0
@@ -2649,6 +2667,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114353349186381362, guid: fd23445aea07b404295168c23987c496,
+        type: 2}
+      propertyPath: interactive
+      value: 
+      objectReference: {fileID: 1793971363}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd23445aea07b404295168c23987c496, type: 2}
   m_IsPrefabParent: 0
@@ -2988,6 +3011,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1793971363 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1220495218869866, guid: e34b1d2ac92aacd4c8a4d5718bab1ded,
+    type: 2}
+  m_PrefabInternal: {fileID: 2003926962}
 --- !u!1 &1850164234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,7 +3027,7 @@ GameObject:
   - component: {fileID: 1850164237}
   - component: {fileID: 1850164236}
   - component: {fileID: 1850164235}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3085,11 +3113,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4079010302269872, guid: e34b1d2ac92aacd4c8a4d5718bab1ded, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 14.222
+      value: 14.438
       objectReference: {fileID: 0}
     - target: {fileID: 4079010302269872, guid: e34b1d2ac92aacd4c8a4d5718bab1ded, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -15.79
+      value: -15.84
       objectReference: {fileID: 0}
     - target: {fileID: 4079010302269872, guid: e34b1d2ac92aacd4c8a4d5718bab1ded, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3161,6 +3189,11 @@ Prefab:
       propertyPath: m_Name
       value: pressure plate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114353349186381362, guid: fd23445aea07b404295168c23987c496,
+        type: 2}
+      propertyPath: interactive
+      value: 
+      objectReference: {fileID: 1954226450}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd23445aea07b404295168c23987c496, type: 2}
   m_IsPrefabParent: 0
@@ -3173,9 +3206,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1954226452}
   - component: {fileID: 1954226451}
+  - component: {fileID: 1954226453}
   m_Layer: 0
   m_Name: Spotlight
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3229,6 +3263,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 4.7110004, y: -88.29, z: -0.007}
+--- !u!65 &1954226453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954226450}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.46311, z: 15.662851}
+  m_Center: {x: 0.000000009466459, y: 1.731545, z: 7.3314943}
 --- !u!1001 &2003926962
 Prefab:
   m_ObjectHideFlags: 0
@@ -3271,6 +3317,10 @@ Prefab:
     - target: {fileID: 1220495218869866, guid: e34b1d2ac92aacd4c8a4d5718bab1ded, type: 2}
       propertyPath: m_Name
       value: Cube (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220495218869866, guid: e34b1d2ac92aacd4c8a4d5718bab1ded, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e34b1d2ac92aacd4c8a4d5718bab1ded, type: 2}
