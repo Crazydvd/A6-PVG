@@ -24,7 +24,7 @@ public class ExtinguishBrazier : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Cube")
+        if (other.tag == "Cubetrigger")
         {
             Destroy(gameObject);
         }

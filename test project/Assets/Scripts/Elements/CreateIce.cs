@@ -17,7 +17,7 @@ public class CreateIce : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.tag == "Cube")
+        if (other.tag == "Cubetrigger")
         {
             Destroy(gameObject);
         }
