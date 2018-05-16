@@ -69,7 +69,8 @@
      <Compile Include="Assets\Scripts\Interactives\PlatePress.cs" />
      <Compile Include="Assets\Scripts\Interactives\PowerEnablerScript.cs" />
      <Compile Include="Assets\Scripts\Interactives\WaterWheelScript.cs" />
-     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\LevelManagement\CheckPoint.cs" />
+     <Compile Include="Assets\Scripts\LevelManagement\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Light\LightScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Interact.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerScript.cs" />
