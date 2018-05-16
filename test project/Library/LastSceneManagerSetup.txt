@@ -1,6 +1,10 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/_Scenes/TestLevels/Test_Luuk.unity
+=======
+- path: Assets/_Scenes/2nd Level.unity
+>>>>>>> 21d85cc208bd83b0c3936283c56e194efae249bf
 =======
 <<<<<<< HEAD
 - path: Assets/_Scenes/GreyBox_4thLevel.unity
