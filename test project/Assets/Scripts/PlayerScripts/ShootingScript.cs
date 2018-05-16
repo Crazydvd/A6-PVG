@@ -40,11 +40,6 @@ public class ShootingScript : MonoBehaviour
 
     private KeyCode[] _actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
 
-    private void Start()
-    {
-        //ToggleMode();
-    }
-
     private void FixedUpdate()
     {
         _lightLevel = 0;
@@ -94,6 +89,7 @@ public class ShootingScript : MonoBehaviour
 
     private void LateUpdate()
     {
+        bool light = _inLight;
         if (_lightLevel <= 0)
         {
             _inLight = false;
@@ -101,6 +97,11 @@ public class ShootingScript : MonoBehaviour
         else
         {
             _inLight = true;
+        }
+
+        if (light != _inLight)
+        {
+            ToggleMode();
         }
     }
 
@@ -114,19 +115,9 @@ public class ShootingScript : MonoBehaviour
             RaycastHit hit;
             if (Physics.Linecast(other.transform.position, transform.position, out hit))
             {
-                if(hit.transform.tag != "Player")
+                if (hit.transform.tag != "Player")
                     _lightLevel--;
             }
-            ToggleMode();
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Light")
-        {
-            _inLight = false;
-            ToggleMode();
         }
     }
 
@@ -174,7 +165,7 @@ public class ShootingScript : MonoBehaviour
                         Destroy(newLightning, 0.5f);
                     }
 
-                    if(hit.transform.tag == "water")
+                    if (hit.transform.tag == "water")
                     {
                         WaterScript wScript = hit.transform.GetComponent<WaterScript>();
                         if (wScript != null)
@@ -216,8 +207,6 @@ public class ShootingScript : MonoBehaviour
         ///LIGHTNING
         ///SUCTION
         ///
-        if (DEBUGGING)
-            return;
 
         if (_inLight)
         {
@@ -274,7 +263,11 @@ public class ShootingScript : MonoBehaviour
                 _weaponMode = WeaponMode.LIGHTNING;
                 break;
         }
-        ToggleMode();
+
+        if (!DEBUGGING)
+        {
+            ToggleMode();
+        }
     }
 
     public void SetAirEnabled(bool enabled)
