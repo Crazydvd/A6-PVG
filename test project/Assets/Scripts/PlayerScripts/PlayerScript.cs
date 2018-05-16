@@ -5,16 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
+    [Tooltip("The levelManager")]
+    public GameObject Manager;
+
+    private LevelManager _levelManager;
+
+    private void Start()
+    {
+        _levelManager = Manager.GetComponent<LevelManager>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "death")
         {
-            LevelManager.RestartLevel();
+            _levelManager.RestartLevel();
         }
 
         if (other.tag == "Finish")
         {
-            LevelManager.NextLevel();
+            _levelManager.NextLevel();
         }
     }
 }
