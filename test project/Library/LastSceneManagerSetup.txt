@@ -1,24 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/_Scenes/GreyBox_4thLevel.unity
-=======
-<<<<<<< HEAD
-- path: Assets/_Scenes/TestLevels/Test_Luuk.unity
-=======
-<<<<<<< HEAD
-- path: Assets/_Scenes/TestLevels/Test_Danny.unity
-=======
-<<<<<<< HEAD
-- path: Assets/_Scenes/TestLevels/Test_Luuk.unity
-=======
-<<<<<<< HEAD
-- path: Assets/_Scenes/2nd Level.unity
-=======
-- path: Assets/_Scenes/GreyBox_1stLevel.unity
->>>>>>> ca1f510edaaab99774d53ecea01484c44f52eb84
->>>>>>> fd857c1a8e55353616cf082fff7109e159b2ed85
->>>>>>> 6ad17403c2d4ee626458937c071062a1d1220f52
->>>>>>> 5b2cba77b23340e5cab56681f6b20a968960e5a7
->>>>>>> c202f13d5192528d4973bc27c1f931ccdd2a9831
   isLoaded: 1
   isActive: 1
