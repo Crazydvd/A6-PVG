@@ -12,7 +12,8 @@ public class WaterScript : MonoBehaviour {
         {
             for (int i = 0; i < wood.Count; i++)
             {
-                wood[i].GetComponent<WoodScript>().Burn();
+                if(wood[i] != null)
+                    wood[i].GetComponent<WoodScript>().Burn();
             }
             wood = new List<GameObject>();
         }

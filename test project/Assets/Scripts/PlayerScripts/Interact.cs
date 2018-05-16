@@ -46,6 +46,18 @@ public class Interact : MonoBehaviour
                     hit.transform.parent = transform;
                     _playerController.SetSpeed(SlowedWalkingSpeed, SlowedRunningSpeed);
                 }
+
+                if(hit.collider.tag == "Note")
+                {
+                    NoteScript noteScript = hit.collider.GetComponent<NoteScript>();
+                    noteScript.ReadNote();
+                }
+
+                if(hit.collider.tag == "PowerEnabler")
+                {
+                    PowerEnablerScript powerEnablerScript = hit.collider.GetComponent<PowerEnablerScript>();
+                    powerEnablerScript.EnablePowers();
+                }
             }
 
             if(hit.transform.gameObject.layer == LayerMask.NameToLayer("Interactable"))
