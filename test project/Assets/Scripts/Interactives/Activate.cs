@@ -33,13 +33,6 @@ public class Activate : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            if (tag != "brazier" && Activatables.Count == 0)
-            {
-                throw new System.Exception("You did not assign a Activatable in the Activate script on " + gameObject.name);
-            }
-        }
     }
 
     void Update()
