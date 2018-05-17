@@ -93,7 +93,7 @@ public class Interact : MonoBehaviour
         }
     }
 
-    private void ReleaseObject()
+    public void ReleaseObject()
     {
         _heldObject.transform.parent = null;
         _heldObject = null;
