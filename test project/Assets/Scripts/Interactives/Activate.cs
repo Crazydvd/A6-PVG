@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Activate : MonoBehaviour
 {
-    [HideInInspector]
+    //[HideInInspector]
     public bool activated;
     private float _inProgress;
 

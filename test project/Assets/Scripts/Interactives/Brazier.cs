@@ -13,6 +13,7 @@ public class Brazier : Activatable
         if (Lit)
         {
             toggleFlame();
+            _activate.Action();
         }
     }
 
