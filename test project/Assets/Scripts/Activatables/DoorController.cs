@@ -6,6 +6,12 @@ public class DoorController : MonoBehaviour
 {
     private bool _closed = true;
     [HideInInspector] public bool InProgress = false;
+    private AudioSource _audioSource;
+
+    void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -38,6 +44,20 @@ public class DoorController : MonoBehaviour
     public void ToggleActive()
     {
         _closed = !_closed;
+        playSound();
+    }
+
+    private void playSound()
+    {
+        switch (_closed)
+        {
+            case true:
+
+                break;
+            case false:
+                _audioSource.Play();
+                break;
+        }
     }
 
     //public void Open()
