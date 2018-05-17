@@ -13,22 +13,33 @@ public class Interact : MonoBehaviour
     [SerializeField] Text InteractableUI;
 
     private GameObject _heldObject;
+    private bool _holdingObject;
     private FirstPersonController _playerController;
 
     void Start()
     {
         _playerController = GetComponent<FirstPersonController>();
+        _holdingObject = false;
     }
 
     void Update()
     {
+        // Release object
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (_heldObject != null)
+            {
+                Invoke("ReleaseObject", 0.0001f);
+                ReleaseObject();
+            }
+        }
+
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         if (Physics.Raycast(ray, out hit, 2f))
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
- 
                 // LEVER
                 if (hit.collider.tag == "Lever")
                 {
@@ -40,11 +51,12 @@ public class Interact : MonoBehaviour
                 }
 
                 // CUBE
-                if (hit.collider.tag == "Cube")
+                if (hit.collider.tag == "Cube" && !_holdingObject)
                 {
                     _heldObject = hit.collider.gameObject;
                     hit.transform.parent = transform;
                     _playerController.SetSpeed(SlowedWalkingSpeed, SlowedRunningSpeed);
+                    _holdingObject = true;
                 }
 
                 if(hit.collider.tag == "Note")
@@ -79,15 +91,6 @@ public class Interact : MonoBehaviour
             ResetUI();
         }
 
-        // Release object
-        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if(_heldObject != null)
-            {
-                ReleaseObject();
-            }
-        }
-
         if (_heldObject != null && (transform.position - _heldObject.transform.position).magnitude > 4f) {
             ReleaseObject();
         }
@@ -95,9 +98,13 @@ public class Interact : MonoBehaviour
 
     public void ReleaseObject()
     {
-        _heldObject.transform.parent = null;
-        _heldObject = null;
+        if (_heldObject != null)
+        {
+            _heldObject.transform.parent = null;
+            _heldObject = null;
+        }
         _playerController.ResetSpeed();
+        _holdingObject = false;
     }
 
     private void ResetUI()

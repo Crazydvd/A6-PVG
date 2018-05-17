@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorController : Activatable
 {
     private bool _closed = true;
     [HideInInspector] public bool InProgress = false;
+    private AudioSource _audioSource;
+
+    void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -35,18 +41,27 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    public void ToggleActive()
+    override public void ToggleActive()
     {
         _closed = !_closed;
+        playSound();
     }
 
-    //public void Open()
-    //{
-    //    _closed = false;
-    //}
+    private void playSound()
+    {
+        switch (_closed)
+        {
+            case true:
 
-    //public void Close()
-    //{
-    //    _closed = true;
-    //}
+                break;
+            case false:
+                _audioSource.Play();
+                break;
+        }
+    }
+
+    override public void ToggleActive(bool pActive)
+    {
+        _closed = pActive;
+    }
 }

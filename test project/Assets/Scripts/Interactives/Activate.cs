@@ -6,28 +6,38 @@ public class Activate : MonoBehaviour
 {
     [HideInInspector]
     public bool activated;
-    public GameObject activatable;
-    private DoorController _door;
-    private ElevatorController _elevator;
     private float _inProgress;
-    private MoveWater _water;
+
+    [Tooltip("The list of activatables that this object activates")]
+    public List<Activatable> Activatables = new List<Activatable>();
+
+    public ActivateMode Mode = ActivateMode.TOGGLE;
+
+    public enum ActivateMode
+    {
+        ON,
+        OFF,
+        TOGGLE,
+        STATETOGGLE,
+    }
 
     private void Start()
     {
-        if (activatable != null)
+        if (Activatables.Contains(null))
         {
-            if (activatable.tag == "Door")
-                _door = activatable.GetComponentInChildren<DoorController>();
-            else if (activatable.tag == "Elevator")
-                _elevator = activatable.GetComponent<ElevatorController>();
-            else if (activatable.tag == "water")
-                _water = activatable.GetComponent<MoveWater>();
+            foreach (Activatable item in Activatables)
+            {
+                if (item == null)
+                {
+                    throw new System.Exception("You did not assign all Activatables in the Activate script on " + gameObject.name);
+                }
+            }
         }
         else
         {
-            if (tag != "brazier")
+            if (tag != "brazier" && Activatables.Count == 0)
             {
-                throw new System.Exception("You did not assign the Activatable in the Activate script on " + gameObject.name);
+                throw new System.Exception("You did not assign a Activatable in the Activate script on " + gameObject.name);
             }
         }
     }
@@ -54,9 +64,7 @@ public class Activate : MonoBehaviour
     public void Action()
     {
         activated = !activated;
-        if (activatable == null)        
-            return;
-        
+
         if (tag == "Lever")
         {
             if (_inProgress > 0)
@@ -69,6 +77,39 @@ public class Activate : MonoBehaviour
             Animation();
         }
 
+        if (Activatables.Count == 0)
+            return;
+
+        if (Mode == ActivateMode.TOGGLE)
+        {
+            foreach (Activatable item in Activatables)
+            {
+                item.ToggleActive();
+            }
+        }
+        else if (Mode == ActivateMode.ON)
+        {
+            foreach (Activatable item in Activatables)
+            {
+                item.ToggleActive(true);
+            }
+        }
+        else if (Mode == ActivateMode.OFF)
+        {
+            foreach (Activatable item in Activatables)
+            {
+                item.ToggleActive(false);
+            }
+        }
+        else if (Mode == ActivateMode.STATETOGGLE)
+        {
+            foreach (Activatable item in Activatables)
+            {
+                item.ToggleActive(activated);
+            }
+        }
+
+        /**
         //Door
         if (activatable.tag == "Door")
         {
@@ -90,5 +131,6 @@ public class Activate : MonoBehaviour
         {
             _water.ToggleActive();
         }
+        /**/
     }
 }
