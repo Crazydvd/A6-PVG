@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElevatorController : MonoBehaviour
+public class ElevatorController : Activatable
 {
     public float speed = 0.05f;
     public float maxHight;
@@ -59,11 +59,19 @@ public class ElevatorController : MonoBehaviour
     }
 
 
-    public void ToggleActive()
+    override public void ToggleActive()
     {
         foreach (GameObject gObject in load)
             gObject.transform.parent = null;
 
         _active = !_active;
+    }
+
+    override public void ToggleActive(bool pActive)
+    {
+        foreach (GameObject gObject in load)
+            gObject.transform.parent = null;
+
+        _active = pActive;
     }
 }
