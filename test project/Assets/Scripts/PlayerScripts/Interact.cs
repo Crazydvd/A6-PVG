@@ -36,7 +36,7 @@ public class Interact : MonoBehaviour
 
                     lever.Action();
 
-                    lever.Animation();
+                    //lever.Animation(); moved to activate
                 }
 
                 // CUBE
@@ -93,7 +93,7 @@ public class Interact : MonoBehaviour
         }
     }
 
-    private void ReleaseObject()
+    public void ReleaseObject()
     {
         _heldObject.transform.parent = null;
         _heldObject = null;

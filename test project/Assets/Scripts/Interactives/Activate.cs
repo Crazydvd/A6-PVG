@@ -55,13 +55,18 @@ public class Activate : MonoBehaviour
     {
         activated = !activated;
         if (activatable == null)        
-            return;        
-
+            return;
+        
         if (tag == "Lever")
         {
             if (_inProgress > 0)
+            {
+                activated = !activated;
                 return;
+            }
+
             _inProgress = 2;
+            Animation();
         }
 
         //Door
@@ -73,7 +78,7 @@ public class Activate : MonoBehaviour
         //Elevator
         else if (activatable.tag == "Elevator")
         {
-            _elevator.ToggleACtive();
+            _elevator.ToggleActive();
         }
         //Light
         else if (activatable.tag == "Light")
