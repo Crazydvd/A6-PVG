@@ -21,6 +21,8 @@ TagManager:
   - Cubetrigger
   - Note
   - PowerEnabler
+  - PlayerDeath
+  - Trap
   layers:
   - Default
   - TransparentFX
