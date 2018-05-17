@@ -18,7 +18,14 @@ public class BoxScript : MonoBehaviour {
         if(other.tag == "death")
         {
             transform.position = _spawnPoint;
-            transform.parent = null;
+            if(transform.parent.tag == "Player")
+            {
+                transform.parent.GetComponent<Interact>().ReleaseObject();
+            }
+            else
+            {
+                transform.parent = null;
+            }
         }
     }
 
