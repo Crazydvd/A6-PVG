@@ -36,7 +36,7 @@ public class Interact : MonoBehaviour
 
                     lever.Action();
 
-                    lever.Animation();
+                    //lever.Animation(); moved to activate
                 }
 
                 // CUBE

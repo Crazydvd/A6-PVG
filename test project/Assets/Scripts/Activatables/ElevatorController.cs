@@ -59,7 +59,7 @@ public class ElevatorController : MonoBehaviour
     }
 
 
-    public void ToggleACtive()
+    public void ToggleActive()
     {
         foreach (GameObject gObject in load)
             gObject.transform.parent = null;
