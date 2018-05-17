@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorController : Activatable
 {
     private bool _closed = true;
     [HideInInspector] public bool InProgress = false;
@@ -41,7 +41,7 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    public void ToggleActive()
+    override public void ToggleActive()
     {
         _closed = !_closed;
         playSound();
@@ -60,13 +60,8 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    //public void Open()
-    //{
-    //    _closed = false;
-    //}
-
-    //public void Close()
-    //{
-    //    _closed = true;
-    //}
+    override public void ToggleActive(bool pActive)
+    {
+        _closed = pActive;
+    }
 }
