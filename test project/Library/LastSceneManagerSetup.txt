@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/_Scenes/GreyBox_1stLevel.unity
-=======
-- path: Assets/_Scenes/TestLevels/Test_Jesse.unity
->>>>>>> 48ed24aa3379dba730a20297154dc295c32f7f91
   isLoaded: 1
   isActive: 1
