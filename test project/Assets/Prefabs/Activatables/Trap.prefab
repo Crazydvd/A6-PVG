@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4353412914487298}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DartPoint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4916098727223640}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DartPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 65844625299078400}
   - component: {fileID: 23888331834609832}
   - component: {fileID: 114806925790331310}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Trap
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4708172552323972}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DartPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
