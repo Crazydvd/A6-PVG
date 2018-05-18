@@ -26,11 +26,11 @@ public class LevelManager : MonoBehaviour
 
         if (Next > -1)
         {
-            _next = _levelNumber + 1;
+            _next = Next;
         }
         else
         {
-            _next = Next;
+            _next = _levelNumber + 1;
         }
 
         if (_next >= _sceneCount)
@@ -47,6 +47,12 @@ public class LevelManager : MonoBehaviour
         {
             Player.transform.position = CheckPoints[_checkPointNumber].transform.position;
         }
+
+        Debug.Log("Next = " + Next);
+        Debug.Log("_next = " + _next);
+        Debug.Log("_levelNumber = " + _levelNumber);
+        Debug.Log("_sceneCount = " + _sceneCount);
+        Debug.Log("_checkPointNumber = " + _checkPointNumber);
     }
 
     public static void ReachCheckPoint(int pCheckPointNumber)
