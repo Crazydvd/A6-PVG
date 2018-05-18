@@ -40,7 +40,6 @@ public class Interact : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("hey");
                 // LEVER
                 if (hit.collider.tag == "Lever")
                 {

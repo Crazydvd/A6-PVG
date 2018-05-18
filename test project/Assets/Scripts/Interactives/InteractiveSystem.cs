@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractiveSystem : MonoBehaviour
+public class InteractiveSystem : Activatable
 {
     public List<GameObject> Activatables = new List<GameObject>();
     public List<GameObject> Deactivatables = new List<GameObject>();
@@ -33,5 +33,20 @@ public class InteractiveSystem : MonoBehaviour
             GetComponent<Activate>().Action();
             _opened = !_opened;
         }
+    }
+
+    override public void ToggleActive()
+    {
+        GetComponent<Activate>().Action();
+        _opened = !_opened;
+    }
+
+    override public void ToggleActive(bool pActive)
+    {
+        if (_opened != pActive)
+        {
+            GetComponent<Activate>().Action();
+        }
+        _opened = pActive;
     }
 }

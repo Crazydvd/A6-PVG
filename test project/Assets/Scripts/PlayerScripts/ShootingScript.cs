@@ -192,6 +192,10 @@ public class ShootingScript : MonoBehaviour
                         if (wScript != null)
                             wScript.Electrocute();
                     }
+                    else if (hit.transform.tag == "LightningSwitch")
+                    {
+                        hit.collider.gameObject.GetComponent<Activate>().Action();
+                    }
                 }
                 break;
             case WeaponMode.AIR:

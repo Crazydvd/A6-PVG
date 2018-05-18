@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "death")
+        if (other.tag == "death" || other.tag == "PlayerDeath")
         {
             _levelManager.RestartLevel();
         }

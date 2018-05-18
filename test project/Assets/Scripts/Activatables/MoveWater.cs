@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveWater : MonoBehaviour
+public class MoveWater : Activatable
 {
     public GameObject NewPosition;
 
@@ -68,8 +68,13 @@ public class MoveWater : MonoBehaviour
         }
     }
 
-    public void ToggleActive()
+    override public void ToggleActive()
     {
         _raised = !_raised;
+    }
+
+    override public void ToggleActive(bool pActive)
+    {
+        _raised = pActive;
     }
 }

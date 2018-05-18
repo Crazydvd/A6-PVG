@@ -26,11 +26,11 @@ public class LevelManager : MonoBehaviour
 
         if (Next > -1)
         {
-            _next = _levelNumber + 1;
+            _next = Next;
         }
         else
         {
-            _next = Next;
+            _next = _levelNumber + 1;
         }
 
         if (_next >= _sceneCount)
@@ -38,14 +38,17 @@ public class LevelManager : MonoBehaviour
             _next = 0;
         }
 
-        for (int i = 0; i < CheckPoints.Count; i++)
+        if (Player != null)
         {
-            CheckPoints[i].GetComponent<CheckPoint>().CheckPointNumber = i;
-        }
+            for (int i = 0; i < CheckPoints.Count; i++)
+            {
+                CheckPoints[i].GetComponent<CheckPoint>().CheckPointNumber = i;
+            }
 
-        if (_checkPointNumber > -1)
-        {
-            Player.transform.position = CheckPoints[_checkPointNumber].transform.position;
+            if (_checkPointNumber > -1)
+            {
+                Player.transform.position = CheckPoints[_checkPointNumber].transform.position;
+            }
         }
     }
 

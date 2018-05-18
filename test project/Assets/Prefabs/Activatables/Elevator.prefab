@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 65221523314172428}
   - component: {fileID: 23161816043235632}
   - component: {fileID: 114547080596124630}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Platform
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976984507217134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.992936, y: 0, z: 8.365084}
+  m_LocalPosition: {x: 14.132966, y: 0.05, z: -7.157155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4873071506458302}
@@ -68,8 +68,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887504957889438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 0.1, z: 2}
+  m_LocalPosition: {x: 0.05, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4786062976673556}
   m_RootOrder: 0
@@ -165,5 +165,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eee939695721554a88fe986ea6ba574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
-  maxHight: 10
+  speed: 0.1
+  maxHight: 20
