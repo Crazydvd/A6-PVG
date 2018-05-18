@@ -66,7 +66,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1622492906895298
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1622492906895298}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.42, y: 16.49, z: -8.72}
+  m_LocalPosition: {x: -26.244402, y: 0.67, z: -6.5431433}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4588528697822632}
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c3fae0f2d71ff4ebd4fb4380c8cb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lit: 1
+  Lit: 0
 --- !u!135 &135410922291437878
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -3793,7 +3793,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 477876188
+  randomSeed: 482577631
   InitialModule:
     serializedVersion: 3
     enabled: 1

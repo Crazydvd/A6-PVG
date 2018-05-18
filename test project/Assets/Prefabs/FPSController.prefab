@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4275266957935812}
   m_Layer: 9
   m_Name: ShootingPoint
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 95273720201421316}
   m_Layer: 9
   m_Name: Gauntletv0
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1364828486560750}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10.06, y: 13.4, z: -2.4}
+  m_LocalPosition: {x: 13.17, y: 1.93, z: 0.913486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4439627098838424}
@@ -354,9 +354,9 @@ MonoBehaviour:
   ShootingPoint: {fileID: 4275266957935812}
   _suctionPower: 1000
   _suctionRange: 15
-  _airEnabled: 0
-  _waterEnabled: 0
-  _fireEnabled: 0
+  _airEnabled: 1
+  _waterEnabled: 1
+  _fireEnabled: 1
   DEBUGGING: 0
 --- !u!114 &114602105860453884
 MonoBehaviour:
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsWalking: 1
   m_WalkSpeed: 5
-  m_RunSpeed: 10
+  m_RunSpeed: 7
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 10
   m_StickToGroundForce: 10
