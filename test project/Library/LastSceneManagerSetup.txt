@@ -1,5 +1,6 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/_Scenes/TestLevels/Test_Jesse.unity
 =======
 <<<<<<< HEAD
@@ -24,5 +25,8 @@ sceneSetups:
 >>>>>>> f5d066f8e3ed5719c53ecc5515b9fb55a6d11ebd
 >>>>>>> 7452b41d5d2d66ef53659111ec01d6426fe1df8d
 >>>>>>> 4e35efd3efb3b60075db818e78edcdc05988fd7f
+=======
+- path: Assets/_Scenes/3rd_Level.unity
+>>>>>>> dd06b18490aac07e199e29190801a0530b6c0360
   isLoaded: 1
   isActive: 1

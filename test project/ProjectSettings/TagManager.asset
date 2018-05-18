@@ -23,7 +23,10 @@ TagManager:
   - PowerEnabler
   - PlayerDeath
   - Trap
+<<<<<<< HEAD
   - LightningSwitch
+=======
+>>>>>>> dd06b18490aac07e199e29190801a0530b6c0360
   layers:
   - Default
   - TransparentFX
