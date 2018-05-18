@@ -8,6 +8,7 @@ public class WoodScript : MonoBehaviour
     private WoodScript _wood;
 
     private List<GameObject> _colliders = new List<GameObject>();
+    private List<WoodScript> _toBurn = new List<WoodScript>();
 
     // Update is called once per frame
     public void Burn()
@@ -18,6 +19,7 @@ public class WoodScript : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             foreach (GameObject item in _colliders)
             {
+                Debug.Log(item.name);
                 if (item == null)
                 {
                     continue;
@@ -25,16 +27,20 @@ public class WoodScript : MonoBehaviour
                 if (item.tag == "Wood" && !item.GetComponent<WoodScript>().IsBurning)
                 {
                     _wood = item.GetComponent<WoodScript>();
-                    Invoke("burnOthers", 2);
+                    _toBurn.Add(_wood);
                 }
             }
+            Invoke("burnOthers", 2f);
             Destroy(gameObject, 3f);
         }
     }
 
     private void burnOthers()
     {
-        _wood.Burn();
+        foreach (WoodScript item in _toBurn)
+        {
+            item.Burn();
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -622,6 +622,11 @@ Prefab:
       propertyPath: Activatables.Array.data[2]
       value: 
       objectReference: {fileID: 1439916080}
+    - target: {fileID: 114498202521221268, guid: 97cae62320aad454daddc039db26bf39,
+        type: 2}
+      propertyPath: activated
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97cae62320aad454daddc039db26bf39, type: 2}
   m_IsPrefabParent: 0

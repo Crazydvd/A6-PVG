@@ -289,6 +289,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DartScript.cs" />
     <Compile Include="Assets\Scripts\Activatables\Activatable.cs" />
     <Compile Include="Assets\Scripts\Activatables\DoorController.cs" />
     <Compile Include="Assets\Scripts\Activatables\ElevatorController.cs" />
@@ -319,6 +320,7 @@
     <Compile Include="Assets\Scripts\Water\WaterScript.cs" />
     <Compile Include="Assets\Scripts\Wood\WoodScript.cs" />
     <Compile Include="Assets\ToggleOnOff.cs" />
+    <Compile Include="Assets\TrapScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
