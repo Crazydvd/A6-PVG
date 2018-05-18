@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SlideDoorScript : MonoBehaviour {
-
+public class SlideDoorScript : MonoBehaviour
+{
     private float topMovement = 0f;
     private Dictionary<Vector3, float> Wheels = new Dictionary<Vector3, float>();
 

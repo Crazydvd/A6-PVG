@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DartScript.cs" />
+     <Compile Include="Assets\Scripts\Activatables\Activatable.cs" />
      <Compile Include="Assets\Scripts\Activatables\DoorController.cs" />
      <Compile Include="Assets\Scripts\Activatables\ElevatorController.cs" />
      <Compile Include="Assets\Scripts\Activatables\MoveWater.cs" />
@@ -79,6 +81,8 @@
      <Compile Include="Assets\Scripts\PlayerScripts\ShootingScript.cs" />
      <Compile Include="Assets\Scripts\Water\WaterScript.cs" />
      <Compile Include="Assets\Scripts\Wood\WoodScript.cs" />
+     <Compile Include="Assets\ToggleOnOff.cs" />
+     <Compile Include="Assets\TrapScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
