@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114760424850046536}
   - component: {fileID: 114210816458771896}
   m_Layer: 0
-  m_Name: 'InteractiveSystem '
+  m_Name: InteractiveSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
-  activatable: {fileID: 0}
+  Activatables: []
+  Mode: 2
 --- !u!114 &114760424850046536
 MonoBehaviour:
   m_ObjectHideFlags: 1
