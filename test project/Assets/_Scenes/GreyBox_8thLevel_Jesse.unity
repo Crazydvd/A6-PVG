@@ -1099,9 +1099,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "There was 5 gods \nAll was good and all were happy \nUntil the first one
-    turned to darkness\nOther two tried to reignite his fire\nBut were betrayed by
-    the fourth god\nSo the last god united with light\nAnd thus great war has began "
+  m_Text: "There were 5 gods; \nall was good and all were happy. \nUntil the first
+    one turned to darkness.\nTwo tried to reignite his fire;\nbut were betrayed by
+    the fourth god.\nSo the last god united with light,\nand thus the great war began."
 --- !u!222 &459133184
 CanvasRenderer:
   m_ObjectHideFlags: 0
