@@ -409,14 +409,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1364828486560750}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.234503, y: 1, z: 13.35278}
+  m_LocalRotation: {x: -0, y: -0.009693734, z: -0, w: 0.99995303}
+  m_LocalPosition: {x: 4.45, y: 10.53, z: -43.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4439627098838424}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -1.1110001, z: 0}
 --- !u!4 &4371303209592558
 Transform:
   m_ObjectHideFlags: 1
@@ -1209,6 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb502da21503004c9301d2a55a6a74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lights: []
 --- !u!114 &114054622841200342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1291,6 +1292,7 @@ MonoBehaviour:
   FireBall: {fileID: 1386690895006880, guid: 03da2183180f8d24fad480373a0debd8, type: 2}
   WaterBall: {fileID: 1826585143323758, guid: 4d58c910809415b4195559d1e9d96bc7, type: 2}
   ShootingPoint: {fileID: 4275266957935812}
+  _weaponMode: 4
   _suctionPower: 1000
   _suctionRange: 15
   _airEnabled: 1
@@ -1374,8 +1376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 1
-  m_WalkSpeed: 5
-  m_RunSpeed: 7
+  m_WalkSpeed: 4
+  m_RunSpeed: 8
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 10
   m_StickToGroundForce: 10
