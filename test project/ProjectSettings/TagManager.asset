@@ -4,18 +4,22 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Cube
+  - brazier
   - ice
-  - Note
-  - Door
+  - Light
+  - Fire
+  - Interactive
   - water
   - death
-  - Trap
-  - PlayerDeath
-  - Fire
   - Wood
+  - Lever
+  - Waterwheel
+  - Door
   - Elevator
+  - Plate
   - Cubetrigger
-  - Cube
+  - Note
   - PowerEnabler
   - LightningSwitch
   layers:
@@ -27,12 +31,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bullet
+  - Player
+  - Interactable
   - 
   - 
   - 

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65146986012429188}
   - component: {fileID: 23238741287246054}
   - component: {fileID: 114672550244173002}
+  - component: {fileID: 64443992981049762}
   m_Layer: 0
   m_Name: Ice
   m_TagString: ice
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451216141702572}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.554342, y: 0.16897354, z: 5.83}
+  m_LocalPosition: {x: 14.198678, y: 0, z: 11.101839}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,6 +85,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451216141702572}
   m_Mesh: {fileID: 4300000, guid: f09b38d19cd6a464e9e73fe61e185c7f, type: 3}
+--- !u!64 &64443992981049762
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451216141702572}
+  m_Material: {fileID: 13400000, guid: 47bfcd8ebd8dc34449f19ad29f879493, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: f09b38d19cd6a464e9e73fe61e185c7f, type: 3}
 --- !u!65 &65146986012429188
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -92,7 +107,7 @@ BoxCollider:
   m_GameObject: {fileID: 1451216141702572}
   m_Material: {fileID: 13400000, guid: 47bfcd8ebd8dc34449f19ad29f879493, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.855629, y: 1, z: 3.6633973}
   m_Center: {x: -0.07218552, y: 0, z: 0.031698465}
