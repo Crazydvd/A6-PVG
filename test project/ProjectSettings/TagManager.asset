@@ -4,25 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - ice
   - Note
   - Door
-=======
->>>>>>> a486830790527b18929039ef72f43f32c074baad
-  - Fire
-  - Wood
   - water
   - death
-<<<<<<< HEAD
   - Trap
   - PlayerDeath
+  - Fire
+  - Wood
+  - Elevator
   - Cubetrigger
   - Cube
   - PowerEnabler
-=======
-  - Elevator
->>>>>>> a486830790527b18929039ef72f43f32c074baad
   - LightningSwitch
   layers:
   - Default

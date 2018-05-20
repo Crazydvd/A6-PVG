@@ -23,7 +23,7 @@ public class ShootingScript : MonoBehaviour
     public GameObject WaterBall;
     public Transform ShootingPoint;
 
-    WeaponMode _weaponMode = WeaponMode.SUCTION;
+    [HideInInspector] public WeaponMode _weaponMode = WeaponMode.SUCTION;
 
     [Header("Powers enabled")]
     [SerializeField] private float _suctionPower = 1000f;

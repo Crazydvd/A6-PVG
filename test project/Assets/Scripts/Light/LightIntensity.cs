@@ -30,4 +30,18 @@ public class LightIntensity : MonoBehaviour
         }
         _normal = !_normal;
     }
+
+    public void SetIntensity(bool pBrighter)
+    {
+        _normal = !pBrighter;
+
+        if (_normal)
+        {
+            _light.intensity = NormalIntensity;
+        }
+        else
+        {
+            _light.intensity = NewIntensity;
+        }
+    }
 }

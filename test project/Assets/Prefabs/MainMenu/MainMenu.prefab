@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4886300211115490}
   - component: {fileID: 114639294081011340}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,8 @@ GameObject:
   - component: {fileID: 4486106593211922}
   - component: {fileID: 114291758376910946}
   - component: {fileID: 114142291921434818}
-  m_Layer: 0
+  - component: {fileID: 114652671727738700}
+  m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +108,7 @@ GameObject:
   - component: {fileID: 20360863122510188}
   - component: {fileID: 124701009291337198}
   - component: {fileID: 81114589474548782}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -122,7 +123,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4445701668437988}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,6 +548,17 @@ MonoBehaviour:
   Player: {fileID: 0}
   CheckPoints: []
   Next: -1
+--- !u!114 &114652671727738700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146933752785400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1327945023, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114741566129231138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -661,7 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 77d08210df254d845885518314593544, type: 2}
+  m_Material: {fileID: 2100000, guid: 6c3b3265bf0f7e547a1ada8555f850a5, type: 2}
   m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -844,14 +856,14 @@ RectTransform:
   m_GameObject: {fileID: 1200887242646528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 72}
-  m_LocalScale: {x: 8.431148, y: 7.664673, z: 7.664673}
+  m_LocalScale: {x: 10.117377, y: 6.6107926, z: 7.664673}
   m_Children: []
   m_Father: {fileID: 224051883176247954}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -21.54895, y: 98.23401}
+  m_AnchoredPosition: {x: -105.86, y: 45.54}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224887300813678140
