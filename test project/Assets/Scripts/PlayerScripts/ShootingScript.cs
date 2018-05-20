@@ -138,6 +138,13 @@ public class ShootingScript : MonoBehaviour
                 {
                     Debug.DrawRay(other.transform.position, transform.position - other.transform.position, Color.green, 0, true);
                 }
+
+                if (Input.GetKey(KeyCode.Tab))
+                {
+                    Debug.Log("name = " + hit.collider.name);
+                    Debug.Log("tag = " + hit.collider.tag);
+                    Debug.Log("position = " + hit.collider.transform.position);
+                }
             }
         }
     }

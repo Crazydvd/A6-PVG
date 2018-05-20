@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/Menu/MainMenu.unity
+=======
+- path: Assets/_Scenes/GreyBox_8thLevel_Jesse.unity
+>>>>>>> a486830790527b18929039ef72f43f32c074baad
   isLoaded: 1
   isActive: 1
