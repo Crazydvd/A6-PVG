@@ -300,6 +300,7 @@
     <Compile Include="Assets\Scripts\DartScript.cs" />
     <Compile Include="Assets\Scripts\DisableOnStart.cs" />
     <Compile Include="Assets\Scripts\Elements\AirScript.cs" />
+    <Compile Include="Assets\Scripts\Elements\BulletScript.cs" />
     <Compile Include="Assets\Scripts\Elements\CreateIce.cs" />
     <Compile Include="Assets\Scripts\Elements\ExtinguishBrazier.cs" />
     <Compile Include="Assets\Scripts\Elements\FireScript.cs" />
