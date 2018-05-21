@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 33786460012767518}
   - component: {fileID: 23544893011814916}
   - component: {fileID: 95518135529525012}
-  - component: {fileID: 65209900073697700}
+  - component: {fileID: 64265306889543506}
   m_Layer: 0
   m_Name: Wall with hole
   m_TagString: Untagged
@@ -65,13 +65,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907205204694908}
   m_LocalRotation: {x: -0.49999985, y: 0.5000002, z: -0.5000002, w: -0.49999988}
-  m_LocalPosition: {x: -10, y: 15.11, z: -2.55}
+  m_LocalPosition: {x: 21.545261, y: 11.79, z: -4.4615693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4424962190089042}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90.00001, y: 90, z: -179.99998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23544893011814916
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -113,8 +113,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907205204694908}
   m_Mesh: {fileID: 4300000, guid: 169860eee1d204a4b94e13b7f98d4481, type: 3}
---- !u!65 &65209900073697700
-BoxCollider:
+--- !u!64 &64265306889543506
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,9 +122,11 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 30.000002, y: 1.0000043, z: 28.00001}
-  m_Center: {x: 0.000000044703484, y: 0.5, z: 0.000000029802322}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 169860eee1d204a4b94e13b7f98d4481, type: 3}
 --- !u!95 &95518135529525012
 Animator:
   serializedVersion: 3
