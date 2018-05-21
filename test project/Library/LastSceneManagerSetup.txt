@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/TestLevels/Test_Luuk.unity
+- path: Assets/_Scenes/Menu/MainMenu.unity
   isLoaded: 1
   isActive: 1
