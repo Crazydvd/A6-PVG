@@ -23,7 +23,7 @@ public class ShootingScript : MonoBehaviour
     public GameObject WaterBall;
     public Transform ShootingPoint;
 
-    WeaponMode _weaponMode = WeaponMode.SUCTION;
+    [HideInInspector] public WeaponMode _weaponMode = WeaponMode.SUCTION;
 
     [Header("Powers enabled")]
     [SerializeField] private float _suctionPower = 1000f;
@@ -34,6 +34,8 @@ public class ShootingScript : MonoBehaviour
     [SerializeField] private bool _fireEnabled = true;
 
     [SerializeField] private bool DEBUGGING = false;
+
+    public GemLighting[] _gems;
 
 
     private bool _inLight = false;
@@ -138,6 +140,13 @@ public class ShootingScript : MonoBehaviour
                 {
                     Debug.DrawRay(other.transform.position, transform.position - other.transform.position, Color.green, 0, true);
                 }
+
+                if (Input.GetKey(KeyCode.Tab))
+                {
+                    Debug.Log("name = " + hit.collider.name);
+                    Debug.Log("tag = " + hit.collider.tag);
+                    Debug.Log("position = " + hit.collider.transform.position);
+                }
             }
         }
     }
@@ -148,7 +157,7 @@ public class ShootingScript : MonoBehaviour
         switch (_weaponMode)
         {
             case WeaponMode.WATER:
-                GameObject newWaterball = Instantiate(WaterBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
+                GameObject newWaterball = Instantiate(WaterBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.right, ShootingPoint.transform.forward));
                 newWaterball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
                 Destroy(newWaterball, 10f);
                 break;
@@ -164,12 +173,12 @@ public class ShootingScript : MonoBehaviour
                 {
                     IceDirection = ray.GetPoint(100f) - ShootingPoint.position;
                 }
-                GameObject newIceCone = Instantiate(IceCone, ShootingPoint.position, Quaternion.FromToRotation(Vector3.up, IceDirection));
+                GameObject newIceCone = Instantiate(IceCone, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, IceDirection));
                 newIceCone.GetComponent<Rigidbody>().AddForce(IceDirection.normalized * 1000f);
                 Destroy(newIceCone, 10f);
                 break;
             case WeaponMode.FIRE:
-                GameObject newFireball = Instantiate(FireBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
+                GameObject newFireball = Instantiate(FireBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.right, ShootingPoint.transform.forward));
                 newFireball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
                 Destroy(newFireball, 10f);
                 break;
@@ -191,6 +200,10 @@ public class ShootingScript : MonoBehaviour
                         WaterScript wScript = hit.transform.GetComponent<WaterScript>();
                         if (wScript != null)
                             wScript.Electrocute();
+                    }
+                    else if (hit.transform.tag == "LightningSwitch")
+                    {
+                        hit.collider.gameObject.GetComponent<Activate>().Action();
                     }
                 }
                 break;
@@ -259,6 +272,11 @@ public class ShootingScript : MonoBehaviour
                     break;
             }
         }
+
+        foreach (GemLighting item in _gems)
+        {
+            item.SetLight(_weaponMode);
+        }
     }
 
     private void ChangeMode(KeyCode button)
@@ -310,5 +328,25 @@ public class ShootingScript : MonoBehaviour
         _fireEnabled = enabled;
         _weaponMode = WeaponMode.FIRE;
         ToggleMode();
+    }
+
+    public bool Air()
+    {
+        return _airEnabled;
+    }
+
+    public bool Water()
+    {
+        return _waterEnabled;
+    }
+
+    public bool Fire()
+    {
+        return _fireEnabled;
+    }
+
+    public bool Lit()
+    {
+        return _inLight;
     }
 }

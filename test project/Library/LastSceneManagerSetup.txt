@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/GreyBox_9thLevel_Jesse.unity
+=======
+- path: Assets/_Scenes/3rd_Level.unity
+>>>>>>> 9e4d183db0f5448e3cb74d022ca1697da542188b
   isLoaded: 1
   isActive: 1

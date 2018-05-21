@@ -38,21 +38,18 @@ public class LevelManager : MonoBehaviour
             _next = 0;
         }
 
-        for (int i = 0; i < CheckPoints.Count; i++)
+        if (Player != null)
         {
-            CheckPoints[i].GetComponent<CheckPoint>().CheckPointNumber = i;
-        }
+            for (int i = 0; i < CheckPoints.Count; i++)
+            {
+                CheckPoints[i].GetComponent<CheckPoint>().CheckPointNumber = i;
+            }
 
-        if (_checkPointNumber > -1)
-        {
-            Player.transform.position = CheckPoints[_checkPointNumber].transform.position;
+            if (_checkPointNumber > -1)
+            {
+                Player.transform.position = CheckPoints[_checkPointNumber].transform.position;
+            }
         }
-
-        Debug.Log("Next = " + Next);
-        Debug.Log("_next = " + _next);
-        Debug.Log("_levelNumber = " + _levelNumber);
-        Debug.Log("_sceneCount = " + _sceneCount);
-        Debug.Log("_checkPointNumber = " + _checkPointNumber);
     }
 
     public static void ReachCheckPoint(int pCheckPointNumber)

@@ -4,38 +4,57 @@ using UnityEngine;
 
 public class ElevatorController : Activatable
 {
-    public float speed = 0.05f;
-    public float maxHight;
-    private float minHight;
     private bool _active;
     private Transform _container;
+
+    [Tooltip("The time in seconds it takes to reach the new position")]
+    public float Seconds = 1f;
+    private Vector3 _oldPosition;
+    private Vector3 _direction;
+
+    public GameObject NewPosition;
+
+    private float _value;
 
     List<GameObject> load = new List<GameObject>();
 
     void Start()
     {
-        minHight = transform.parent.position.y;
         _container = transform.parent.transform;
+
+        _oldPosition = _container.position;
+        Vector3 newPosition = NewPosition.transform.position;
+        _direction = newPosition - _oldPosition;
     }
 
 
     void Update()
     {
-        if (_active)
-        {
-            if (_container.localPosition.y < maxHight)
+            if (_active)
             {
-                _container.position = _container.position + new Vector3(0, speed, 0);
+                if (_value < 1)
+                {
+                    _value += (1 / Seconds) * Time.deltaTime;
+                }
+                else
+                {
+                    _value = 1;
+                }
             }
-        }
-        else
-        {
-            if (_container.localPosition.y > minHight)
+            else
             {
-                _container.position = _container.position - new Vector3(0, speed, 0);
+                if (_value > 0)
+                {
+                    _value -= (1 / Seconds) * Time.deltaTime;
+                }
+                else
+                {
+                    _value = 0;
+                }
             }
-        }
 
+            float t = Mathf.Lerp(0, 1, _value);
+            _container.position = _oldPosition + (_direction * t);
     }
 
     void OnTriggerStay(Collider other)

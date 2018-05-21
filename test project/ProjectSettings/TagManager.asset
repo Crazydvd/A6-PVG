@@ -21,8 +21,7 @@ TagManager:
   - Cubetrigger
   - Note
   - PowerEnabler
-  - PlayerDeath
-  - Trap
+  - LightningSwitch
   layers:
   - Default
   - TransparentFX
@@ -35,9 +34,6 @@ TagManager:
   - Bullet
   - Player
   - Interactable
-  - 
-  - 
-  - 
   - 
   - 
   - 

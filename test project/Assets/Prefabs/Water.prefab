@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65461506093156878}
   - component: {fileID: 114869897508267370}
   - component: {fileID: 114685365797968458}
+  - component: {fileID: 114730150974717674}
   m_Layer: 0
   m_Name: Water
   m_TagString: water
@@ -85,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1167437341322896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.59, y: 0.02, z: -2.14}
+  m_LocalPosition: {x: 29.59, y: 1.3, z: 10.11}
   m_LocalScale: {x: 0.9921514, y: 1, z: 1}
   m_Children:
   - {fileID: 4906503620577780}
@@ -120,7 +121,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c55afdc4a8a3b4890b07cc7d176510bb, type: 2}
+  - {fileID: 2100000, guid: e633a20421c47426aa04444234225b69, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -237,6 +238,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addb16f891f18364c904a62a6a13e4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114730150974717674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167437341322896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d3ef1a5bbfb4e0a910fbbe5830b1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterMode: 1
+  disablePixelLights: 1
+  textureSize: 256
+  clipPlaneOffset: 0.07
+  reflectLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  refractLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &114869897508267370
 MonoBehaviour:
   m_ObjectHideFlags: 1

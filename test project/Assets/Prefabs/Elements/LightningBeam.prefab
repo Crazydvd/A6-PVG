@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4745294624816952}
   - component: {fileID: 33603941379668238}
-  - component: {fileID: 136097468386918514}
   - component: {fileID: 23524596178363636}
   m_Layer: 8
   m_Name: LightningBeam
@@ -83,16 +82,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168339322781296}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!136 &136097468386918514
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168339322781296}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
