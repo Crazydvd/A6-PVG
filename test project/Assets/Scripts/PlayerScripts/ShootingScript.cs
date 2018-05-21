@@ -25,7 +25,7 @@ public class ShootingScript : MonoBehaviour
 
     [HideInInspector] public WeaponMode _weaponMode = WeaponMode.SUCTION;
 
-    [Header("Powers enabled")]
+    [Header("Powers Enabled")]
     [SerializeField] private float _suctionPower = 1000f;
     [SerializeField] private float _suctionRange = 5f;
 
@@ -35,16 +35,30 @@ public class ShootingScript : MonoBehaviour
 
     [SerializeField] private bool DEBUGGING = false;
 
-    public GemLighting[] _gems;
+    [Header("Sound Effects")]
+    [SerializeField] private AudioClip _airBlowSound;
+    [SerializeField] private AudioClip _waterSound;
+    [SerializeField] private AudioClip _fireSound;
 
+    [SerializeField] private AudioClip _airPullSound;
+    [SerializeField] private AudioClip _iceSound;
+    [SerializeField] private AudioClip _lightningSound;
+
+    [SerializeField] private AudioClip _lightToggleSound;
+
+
+    public GemLighting[] _gems;
 
     private bool _inLight = false;
     private int _lightLevel;
 
+    private AudioSource _audioSource;
     private KeyCode[] _actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
 
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
+
         if (_airEnabled)
         {
             _weaponMode = WeaponMode.AIR;
@@ -226,6 +240,7 @@ public class ShootingScript : MonoBehaviour
                 }
                 break;
         }
+        playSound();
     }
 
     // Check if the player is in the light and change the weapons mode accordingly
@@ -277,6 +292,8 @@ public class ShootingScript : MonoBehaviour
         {
             item.SetLight(_weaponMode);
         }
+
+        _audioSource.PlayOneShot(_lightToggleSound);
     }
 
     private void ChangeMode(KeyCode button)
@@ -307,6 +324,31 @@ public class ShootingScript : MonoBehaviour
         {
             ToggleMode();
         }
+    }
+
+    private void playSound()
+    {
+        switch (_weaponMode)
+        {
+            case WeaponMode.WATER:
+                _audioSource.PlayOneShot(_waterSound);
+                break;
+            case WeaponMode.FIRE:
+                _audioSource.PlayOneShot(_fireSound);
+                break;
+            case WeaponMode.AIR:
+                _audioSource.PlayOneShot(_airBlowSound);
+                break;
+            case WeaponMode.ICE:
+                _audioSource.PlayOneShot(_iceSound);
+                break;
+            case WeaponMode.LIGHTNING:
+                _audioSource.PlayOneShot(_lightningSound);
+                break;
+            case WeaponMode.SUCTION:
+                _audioSource.PlayOneShot(_airPullSound);
+                break;
+            }
     }
 
     public void SetAirEnabled(bool enabled)

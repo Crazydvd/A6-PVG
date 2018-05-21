@@ -411,7 +411,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1364828486560750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24395752, y: 0, z: -0.5432863}
+  m_LocalPosition: {x: 2.52, y: 19.53, z: -20.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4439627098838424}
@@ -678,7 +678,8 @@ AudioSource:
   m_GameObject: {fileID: 1364828486560750}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243532606466009582, guid: 05706661e0b2c9f4ca5a925207d68927,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1306,6 +1307,13 @@ MonoBehaviour:
   _waterEnabled: 1
   _fireEnabled: 1
   DEBUGGING: 0
+  _airBlowSound: {fileID: 8300000, guid: 9ff91c03cd722bb46a439d881981ce04, type: 3}
+  _waterSound: {fileID: 8300000, guid: 3ff14565d88b9024ba914e18a3c3c9fd, type: 3}
+  _fireSound: {fileID: 8300000, guid: b77c4c4cb39c99a46aa1a4f021da9bcd, type: 3}
+  _airPullSound: {fileID: 8300000, guid: 0590a3736dadfb240bd664f6214c98be, type: 3}
+  _iceSound: {fileID: 8300000, guid: d46bbd3a87f780e4da283e2b9ccf9f57, type: 3}
+  _lightningSound: {fileID: 8300000, guid: cdf45491df05a9b4396304cccba34198, type: 3}
+  _lightToggleSound: {fileID: 8300000, guid: 35cdbdd77b5bd9d498dbf7ff68535ee6, type: 3}
   _gems:
   - {fileID: 114017069858417960}
   - {fileID: 114735733020169306}
