@@ -32,25 +32,17 @@ public class ElevatorController : Activatable
     {
             if (_active)
             {
-                if (_value < 1)
-                {
-                    _value += (1 / Seconds) * Time.deltaTime;
-                }
-                else
-                {
-                    _value = 1;
-                }
+                if (_value < 1)                
+                    _value += (1 / Seconds) * Time.deltaTime;                
+                else                
+                    _value = 1;                
             }
             else
             {
-                if (_value > 0)
-                {
-                    _value -= (1 / Seconds) * Time.deltaTime;
-                }
-                else
-                {
-                    _value = 0;
-                }
+                if (_value > 0)                
+                    _value -= (1 / Seconds) * Time.deltaTime;                
+                else                
+                    _value = 0;                
             }
 
             float t = Mathf.Lerp(0, 1, _value);

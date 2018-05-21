@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorController : Activatable
 {
-    private bool _closed = true;
+    public bool _closed = true;
     [HideInInspector] public bool InProgress = false;
     private AudioSource _audioSource;
 

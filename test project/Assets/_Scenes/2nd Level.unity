@@ -1244,6 +1244,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &249742514 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114730642718117066, guid: 1e28b83e681cf6d41ab3748b04cee232,
+    type: 2}
+  m_PrefabInternal: {fileID: 1728663428}
+  m_Script: {fileID: 11500000, guid: 363d1b3912860274792554cb84dc929d, type: 3}
 --- !u!1 &259505852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,12 +2828,17 @@ Prefab:
     - target: {fileID: 114760424850046536, guid: 936524e8e1bd5b242b41f47c35089da9,
         type: 2}
       propertyPath: Activatables.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114210816458771896, guid: 936524e8e1bd5b242b41f47c35089da9,
+        type: 2}
+      propertyPath: Activatables.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114760424850046536, guid: 936524e8e1bd5b242b41f47c35089da9,
         type: 2}
       propertyPath: Deactivatables.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4669562935878086, guid: 936524e8e1bd5b242b41f47c35089da9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2875,17 +2886,22 @@ Prefab:
         type: 2}
       propertyPath: Deactivatables.Array.data[0]
       value: 
-      objectReference: {fileID: 1194926639}
+      objectReference: {fileID: 238050808}
     - target: {fileID: 114760424850046536, guid: 936524e8e1bd5b242b41f47c35089da9,
         type: 2}
       propertyPath: Deactivatables.Array.data[1]
       value: 
-      objectReference: {fileID: 238050808}
+      objectReference: {fileID: 1194926639}
     - target: {fileID: 114210816458771896, guid: 936524e8e1bd5b242b41f47c35089da9,
         type: 2}
       propertyPath: activatable
       value: 
       objectReference: {fileID: 594310013}
+    - target: {fileID: 114210816458771896, guid: 936524e8e1bd5b242b41f47c35089da9,
+        type: 2}
+      propertyPath: Activatables.Array.data[0]
+      value: 
+      objectReference: {fileID: 249742514}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 936524e8e1bd5b242b41f47c35089da9, type: 2}
   m_IsPrefabParent: 0
@@ -9843,7 +9859,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4730990615761858, guid: 1e28b83e681cf6d41ab3748b04cee232, type: 2}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e28b83e681cf6d41ab3748b04cee232, type: 2}
@@ -9988,7 +10004,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4376614863847772, guid: fd23445aea07b404295168c23987c496, type: 2}
       propertyPath: m_RootOrder
-      value: 49
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114353349186381362, guid: fd23445aea07b404295168c23987c496,
         type: 2}
