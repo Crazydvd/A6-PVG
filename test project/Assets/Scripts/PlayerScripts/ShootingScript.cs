@@ -157,7 +157,7 @@ public class ShootingScript : MonoBehaviour
         switch (_weaponMode)
         {
             case WeaponMode.WATER:
-                GameObject newWaterball = Instantiate(WaterBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
+                GameObject newWaterball = Instantiate(WaterBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.right, ShootingPoint.transform.forward));
                 newWaterball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
                 Destroy(newWaterball, 10f);
                 break;
@@ -173,12 +173,12 @@ public class ShootingScript : MonoBehaviour
                 {
                     IceDirection = ray.GetPoint(100f) - ShootingPoint.position;
                 }
-                GameObject newIceCone = Instantiate(IceCone, ShootingPoint.position, Quaternion.FromToRotation(Vector3.up, IceDirection));
+                GameObject newIceCone = Instantiate(IceCone, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, IceDirection));
                 newIceCone.GetComponent<Rigidbody>().AddForce(IceDirection.normalized * 1000f);
                 Destroy(newIceCone, 10f);
                 break;
             case WeaponMode.FIRE:
-                GameObject newFireball = Instantiate(FireBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
+                GameObject newFireball = Instantiate(FireBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.right, ShootingPoint.transform.forward));
                 newFireball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
                 Destroy(newFireball, 10f);
                 break;

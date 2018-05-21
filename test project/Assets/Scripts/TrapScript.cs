@@ -16,7 +16,7 @@ public class TrapScript : Activatable {
             foreach(Transform child in transform.GetComponentInChildren<Transform>())
             {
                 GameObject dart = Instantiate(_dart, child.position, Quaternion.FromToRotation(Vector3.up, transform.forward));
-                dart.GetComponent<Rigidbody>().AddForce(transform.forward * 1000f);
+                dart.GetComponent<Rigidbody>().AddForce(transform.forward * _speed);
                 Destroy(dart, 5f);
             }
             _active = false;
