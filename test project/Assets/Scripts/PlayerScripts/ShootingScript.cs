@@ -35,6 +35,8 @@ public class ShootingScript : MonoBehaviour
 
     [SerializeField] private bool DEBUGGING = false;
 
+    public GemLighting[] _gems;
+
 
     private bool _inLight = false;
     private int _lightLevel;
@@ -270,6 +272,11 @@ public class ShootingScript : MonoBehaviour
                     break;
             }
         }
+
+        foreach (GemLighting item in _gems)
+        {
+            item.SetLight(_weaponMode);
+        }
     }
 
     private void ChangeMode(KeyCode button)
@@ -321,5 +328,25 @@ public class ShootingScript : MonoBehaviour
         _fireEnabled = enabled;
         _weaponMode = WeaponMode.FIRE;
         ToggleMode();
+    }
+
+    public bool Air()
+    {
+        return _airEnabled;
+    }
+
+    public bool Water()
+    {
+        return _waterEnabled;
+    }
+
+    public bool Fire()
+    {
+        return _fireEnabled;
+    }
+
+    public bool Lit()
+    {
+        return _inLight;
     }
 }

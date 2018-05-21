@@ -35,6 +35,11 @@ public class LightIntensity : MonoBehaviour
     {
         _normal = !pBrighter;
 
+        if (_light == null)
+        {
+            _light = GetComponent<Light>();
+        }
+
         if (_normal)
         {
             _light.intensity = NormalIntensity;

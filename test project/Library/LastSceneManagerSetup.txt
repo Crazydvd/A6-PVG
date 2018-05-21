@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/2nd Level.unity
+=======
+- path: Assets/_Scenes/Menu/MainMenu.unity
+>>>>>>> b982cd9efe2d1959e54401204d51c9afadd957ce
   isLoaded: 1
   isActive: 1
