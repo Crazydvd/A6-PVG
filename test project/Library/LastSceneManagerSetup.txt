@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/GreyBox_1stLevel.unity
+- path: Assets/_Scenes/TestLevels/Test_Jesse.unity
   isLoaded: 1
   isActive: 1

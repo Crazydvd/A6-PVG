@@ -20,6 +20,7 @@ public class ElevatorController : Activatable
 
     [Tooltip("If this is true the platform will keep going back and forth until it's deactivated")]
     public bool KeepGoing = false;
+    private bool _back = false;
 
     void Start()
     {
@@ -33,23 +34,46 @@ public class ElevatorController : Activatable
 
     void Update()
     {
-            if (_active)
+        if (KeepGoing && _active)
+        {
+            if (!_back)
             {
-                if (_value < 1)                
-                    _value += (1 / Seconds) * Time.deltaTime;                
-                else                
-                    _value = 1;                
+                if (_value < 1)
+                    _value += (1 / Seconds) * Time.deltaTime;
+                else
+                    _back = true;
             }
             else
             {
-                if (_value > 0)                
-                    _value -= (1 / Seconds) * Time.deltaTime;                
-                else                
-                    _value = 0;                
+                if (_value > 0)
+                    _value -= (1 / Seconds) * Time.deltaTime;
+                else
+                    _back = false;
             }
 
             float t = Mathf.Lerp(0, 1, _value);
             _container.position = _oldPosition + (_direction * t);
+        }
+        else
+        {
+            if (_active)
+            {
+                if (_value < 1)
+                    _value += (1 / Seconds) * Time.deltaTime;
+                else
+                    _value = 1;
+            }
+            else
+            {
+                if (_value > 0)
+                    _value -= (1 / Seconds) * Time.deltaTime;
+                else
+                    _value = 0;
+            }
+
+            float t = Mathf.Lerp(0, 1, _value);
+            _container.position = _oldPosition + (_direction * t);
+        }
     }
 
     void OnTriggerStay(Collider other)
