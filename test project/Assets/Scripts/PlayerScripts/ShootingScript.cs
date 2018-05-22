@@ -54,8 +54,9 @@ public class ShootingScript : MonoBehaviour
     private bool _inLight = false;
     private int _lightLevel;
 
-    private int _abilityIndex = 0;
-    private int _maxInt = 0;
+    private int _abilityIndex = -1;
+    private int _maxIndex = -1;
+    private bool _isSwitching = false;
 
     private AudioSource _audioSource;
     private KeyCode[] _actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
@@ -64,16 +65,19 @@ public class ShootingScript : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
 
-        if (_airEnabled)
+        if (Air())
         {
             _weaponMode = WeaponMode.AIR;
-            _maxInt++;
+            IncreaseIndex();
             ToggleMode();
         }
         else
         {
             _weaponMode = WeaponMode.NONE;
         }
+
+        if (Water()){ IncreaseIndex(); }
+        if (Fire()){ IncreaseIndex(); }
     }
 
     private void FixedUpdate()
@@ -96,18 +100,46 @@ public class ShootingScript : MonoBehaviour
             Debug.Log("Debugging is: " + DEBUGGING);
         }
 
-        // check if the projectile is being changed
-        if (Input.GetKeyDown(KeyCode.Alpha1) && _airEnabled)
+        if (!_isSwitching)
         {
-            ChangeMode(KeyCode.Alpha1);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && _waterEnabled)
-        {
-            ChangeMode(KeyCode.Alpha2);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && _fireEnabled)
-        {
-            ChangeMode(KeyCode.Alpha3);
+            // check if the projectile is being changed
+            if (Input.GetKeyDown(KeyCode.Alpha1) && _airEnabled)
+            {
+                ChangeMode(KeyCode.Alpha1);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2) && _waterEnabled)
+            {
+                ChangeMode(KeyCode.Alpha2);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3) && _fireEnabled)
+            {
+                ChangeMode(KeyCode.Alpha3);
+            }
+
+            // Scrolling
+            if (_maxIndex > 0)
+            {
+                if (Input.GetAxis("Mouse ScrollWheel") < 0)
+                {
+
+                    _abilityIndex++;
+                    if (_abilityIndex > _maxIndex)
+                    {
+                        _abilityIndex = 0;
+                    }
+                    StartCoroutine(switchAfterDelay());
+                }
+                if (Input.GetAxis("Mouse ScrollWheel") > 0)
+                {
+                    _abilityIndex--;
+
+                    if (_abilityIndex < 0)
+                    {
+                        _abilityIndex = _maxIndex;
+                    }
+                    StartCoroutine(switchAfterDelay());
+                }
+            }
         }
 
         // ALLOW EVERY POWER IN DEBUG MODE
@@ -313,21 +345,27 @@ public class ShootingScript : MonoBehaviour
         {
             case KeyCode.Alpha1:
                 _weaponMode = WeaponMode.AIR;
+                _abilityIndex = 0;
                 break;
             case KeyCode.Alpha2:
                 _weaponMode = WeaponMode.WATER;
+                _abilityIndex = 1;
                 break;
             case KeyCode.Alpha3:
                 _weaponMode = WeaponMode.FIRE;
+                _abilityIndex = 2;
                 break;
             case KeyCode.Alpha4:
                 _weaponMode = WeaponMode.SUCTION;
+                _abilityIndex = 0;
                 break;
             case KeyCode.Alpha5:
                 _weaponMode = WeaponMode.ICE;
+                _abilityIndex = 1;
                 break;
             case KeyCode.Alpha6:
                 _weaponMode = WeaponMode.LIGHTNING;
+                _abilityIndex = 2;
                 break;
         }
 
@@ -362,10 +400,40 @@ public class ShootingScript : MonoBehaviour
             }
     }
 
+    private void IncreaseIndex()
+    {
+        _abilityIndex++;
+        _maxIndex++;
+        if (_abilityIndex > _maxIndex) _abilityIndex = _maxIndex;
+    }
+
+    // Switch mode after delay
+    private IEnumerator switchAfterDelay()
+    {
+
+        _isSwitching = true;
+        yield return new WaitForSeconds(0.1f);
+
+        _isSwitching = false;
+        ChangeMode(TranslateKeycode(_abilityIndex));
+    }
+
+    private KeyCode TranslateKeycode(int number)
+    {
+        switch (number)
+        {
+            case 0: return KeyCode.Alpha1;
+            case 1: return KeyCode.Alpha2;
+            case 2: return KeyCode.Alpha3;
+            default: return KeyCode.Alpha1;
+        }
+    }
+
     public void SetAirEnabled(bool enabled)
     {
         _airEnabled = enabled;
         _weaponMode = WeaponMode.AIR;
+        IncreaseIndex();
         ToggleMode();
     }
 
@@ -373,6 +441,7 @@ public class ShootingScript : MonoBehaviour
     {
         _waterEnabled = enabled;
         _weaponMode = WeaponMode.WATER;
+        IncreaseIndex();
         ToggleMode();
     }
 
@@ -380,6 +449,7 @@ public class ShootingScript : MonoBehaviour
     {
         _fireEnabled = enabled;
         _weaponMode = WeaponMode.FIRE;
+        IncreaseIndex();
         ToggleMode();
     }
 
