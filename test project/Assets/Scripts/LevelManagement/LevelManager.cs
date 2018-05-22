@@ -10,6 +10,11 @@ public class LevelManager : MonoBehaviour
     private int _next;
     private static int _checkPointNumber = -1;
 
+    private static bool _air;
+    private static bool _water;
+    private static bool _fire;
+    private static ShootingScript _player;
+
     [Tooltip("The player")]
     public GameObject Player;
 
@@ -19,11 +24,11 @@ public class LevelManager : MonoBehaviour
     [Tooltip("Optionally: the next level to load (buildIndex)\n(leave at -1 to go to next level by default)")]
     public int Next = -1;
 
+
     private void Start()
     {
         _levelNumber = SceneManager.GetActiveScene().buildIndex;
         _sceneCount = SceneManager.sceneCountInBuildSettings;
-
         if (Next > -1)
         {
             _next = Next;
@@ -45,8 +50,19 @@ public class LevelManager : MonoBehaviour
                 CheckPoints[i].GetComponent<CheckPoint>().CheckPointNumber = i;
             }
 
+            _player = Player.gameObject.GetComponent<ShootingScript>();
+
             if (_checkPointNumber > -1)
             {
+                _player.SetAir(_air);
+                _player.SetWater(_water);
+                _player.SetFire(_fire);
+
+                if (_air)
+                {
+                    _player.SetAirEnabled(true);
+                }
+
                 Player.transform.position = CheckPoints[_checkPointNumber].transform.position;
             }
         }
@@ -55,12 +71,18 @@ public class LevelManager : MonoBehaviour
     public static void ReachCheckPoint(int pCheckPointNumber)
     {
         _checkPointNumber = pCheckPointNumber;
+        _air = _player.Air();
+        _water = _player.Water();
+        _fire = _player.Fire();
     }
 
     public void NextLevel()
     {
         SceneManager.LoadScene(_next, LoadSceneMode.Single);
         _checkPointNumber = -1;
+        _air = false;
+        _water = false;
+        _fire = false;
     }
 
     public void RestartLevel()
