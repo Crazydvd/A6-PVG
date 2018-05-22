@@ -23,6 +23,8 @@ public class ShootingScript : MonoBehaviour
     public GameObject WaterBall;
     public Transform ShootingPoint;
 
+    [SerializeField] private GameObject lightningHitParticles;
+
     [HideInInspector] public WeaponMode _weaponMode = WeaponMode.SUCTION;
 
     [Header("Powers Enabled")]
@@ -167,6 +169,7 @@ public class ShootingScript : MonoBehaviour
 
     private void Shoot()
     {
+
         // shoot projectiles
         switch (_weaponMode)
         {
@@ -205,9 +208,13 @@ public class ShootingScript : MonoBehaviour
                     int distance = 2;
                     for (int i = 0; i < direction.magnitude; i += distance)
                     {
-                        GameObject newLightning = Instantiate(Lightning, ShootingPoint.position + direction.normalized * i, Quaternion.FromToRotation(Vector3.up, direction));
+                        GameObject newLightning = Instantiate(Lightning, ShootingPoint.position + direction.normalized * i, Quaternion.FromToRotation(Vector3.up, -direction));
                         Destroy(newLightning, 0.5f);
                     }
+
+                    // Create particle on hit
+                    GameObject hitParticleEffect = Instantiate(lightningHitParticles, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                    Destroy(hitParticleEffect, 0.5f);
 
                     if (hit.transform.tag == "water")
                     {
@@ -390,5 +397,20 @@ public class ShootingScript : MonoBehaviour
     public bool Lit()
     {
         return _inLight;
+    }
+
+    public void SetAir(bool enabled)
+    {
+        _airEnabled = enabled;
+    }
+
+    public void SetWater(bool enabled)
+    {
+        _waterEnabled = enabled;
+    }
+
+    public void SetFire(bool enabled)
+    {
+        _fireEnabled = enabled;
     }
 }
