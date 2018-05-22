@@ -9243,6 +9243,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 114584961873001986, guid: 062b6a1d6b9883b4eabca61b1ae132ad, type: 2}
     - {fileID: 20437085835470490, guid: 062b6a1d6b9883b4eabca61b1ae132ad, type: 2}
+    - {fileID: 114896969171194706, guid: 062b6a1d6b9883b4eabca61b1ae132ad, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 062b6a1d6b9883b4eabca61b1ae132ad, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1277359806
