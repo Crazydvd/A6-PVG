@@ -20,6 +20,10 @@ public class PowerEnablerScript : MonoBehaviour {
         if (_enableFire)
             shootingScript.SetFireEnabled(true);
 
+        if (GetComponent<ActivateGod>() != null)        
+            GetComponent<ActivateGod>().ActivateVoice();
+        
+
         Destroy(gameObject);
     }
 }
