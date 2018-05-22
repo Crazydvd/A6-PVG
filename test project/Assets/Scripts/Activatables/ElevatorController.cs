@@ -18,6 +18,9 @@ public class ElevatorController : Activatable
 
     List<GameObject> load = new List<GameObject>();
 
+    [Tooltip("If this is true the platform will keep going back and forth until it's deactivated")]
+    public bool KeepGoing = false;
+
     void Start()
     {
         _container = transform.parent.transform;
