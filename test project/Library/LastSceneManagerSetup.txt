@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/_Scenes/3rd_Level.unity
-=======
-- path: Assets/_Scenes/GreyBox_3rdLevel_new.unity
->>>>>>> c682d00999478912a82f6aea54b862ee6944ca13
+- path: Assets/_Scenes/TestLevels/Test_Danny.unity
   isLoaded: 1
   isActive: 1
