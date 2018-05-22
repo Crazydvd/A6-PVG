@@ -54,6 +54,9 @@ public class ShootingScript : MonoBehaviour
     private bool _inLight = false;
     private int _lightLevel;
 
+    private int _abilityIndex = 0;
+    private int _maxInt = 0;
+
     private AudioSource _audioSource;
     private KeyCode[] _actionButtons = new KeyCode[] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
 
@@ -64,6 +67,7 @@ public class ShootingScript : MonoBehaviour
         if (_airEnabled)
         {
             _weaponMode = WeaponMode.AIR;
+            _maxInt++;
             ToggleMode();
         }
         else

@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Activatables\Activatable.cs" />
      <Compile Include="Assets\Scripts\Activatables\DoorController.cs" />
      <Compile Include="Assets\Scripts\Activatables\ElevatorController.cs" />
+     <Compile Include="Assets\Scripts\Activatables\FireTrap.cs" />
      <Compile Include="Assets\Scripts\Activatables\MoveWater.cs" />
      <Compile Include="Assets\Scripts\Activatables\SlideDoorScript.cs" />
      <Compile Include="Assets\Scripts\Animations\LeverAnimation.cs" />
