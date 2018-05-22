@@ -398,4 +398,19 @@ public class ShootingScript : MonoBehaviour
     {
         return _inLight;
     }
+
+    public void SetAir(bool enabled)
+    {
+        _airEnabled = enabled;
+    }
+
+    public void SetWater(bool enabled)
+    {
+        _waterEnabled = enabled;
+    }
+
+    public void SetFire(bool enabled)
+    {
+        _fireEnabled = enabled;
+    }
 }
