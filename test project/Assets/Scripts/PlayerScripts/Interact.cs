@@ -8,7 +8,6 @@ public class Interact : MonoBehaviour
 {
     [SerializeField] float SlowedWalkingSpeed = 3;
     [SerializeField] float SlowedRunningSpeed = 4;
-
     [SerializeField] Image Crosshair;
     [SerializeField] Text InteractableUI;
 
