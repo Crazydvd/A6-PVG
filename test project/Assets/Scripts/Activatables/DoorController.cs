@@ -8,16 +8,19 @@ public class DoorController : Activatable
     [HideInInspector] public bool InProgress = false;
     private AudioSource _audioSource;
 
+    private float _originalYposition;
+
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        _originalYposition = transform.localPosition.y;
     }
 
     void Update()
     {
         if (_closed)
         {
-            if (transform.localPosition.y > 0)
+            if (transform.localPosition.y > _originalYposition)
             {
                 transform.position = transform.position - new Vector3(0, 0.05f, 0);
                 InProgress = true;
