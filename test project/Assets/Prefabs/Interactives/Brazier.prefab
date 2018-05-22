@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 4681732667432416}
   - component: {fileID: 33651772302787984}
   - component: {fileID: 23133239918841516}
-  - component: {fileID: 114243832988199712}
   - component: {fileID: 114535211873153168}
   - component: {fileID: 199370279024115488}
   - component: {fileID: 198726977261259456}
@@ -282,7 +281,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9558824, g: 0.6433302, b: 0.084342584, a: 1}
-  m_Intensity: 8
+  m_Intensity: 2
   m_Range: 5
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -308,19 +307,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114243832988199712
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1895244889163954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29014cd42b6d273408e0ceefd336c0b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minDuration: 15
-  maxDuration: 20
 --- !u!114 &114470694209996734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3765,7 +3751,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 2130186616
+  randomSeed: -689074212
   InitialModule:
     serializedVersion: 3
     enabled: 1
