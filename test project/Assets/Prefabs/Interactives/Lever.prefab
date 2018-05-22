@@ -239,4 +239,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
-  activatable: {fileID: 0}
+  Activatables: []
+  Mode: 2
