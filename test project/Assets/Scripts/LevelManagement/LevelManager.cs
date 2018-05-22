@@ -85,6 +85,15 @@ public class LevelManager : MonoBehaviour
         _fire = false;
     }
 
+    public void NextLevel(int pLevelNumber)
+    {
+        SceneManager.LoadScene(pLevelNumber, LoadSceneMode.Single);
+        _checkPointNumber = -1;
+        _air = false;
+        _water = false;
+        _fire = false;
+    }
+
     public void RestartLevel()
     {
         SceneManager.LoadScene(_levelNumber);
