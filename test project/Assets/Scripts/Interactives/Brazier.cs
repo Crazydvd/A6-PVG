@@ -12,9 +12,10 @@ public class Brazier : Activatable
         _activate = GetComponent<Activate>();
         if (Lit)
         {
-            toggleFlame();
             _activate.activated = true;
         }
+
+        toggleFlame();
     }
 
     override public void ToggleActive()
@@ -38,7 +39,7 @@ public class Brazier : Activatable
     {
         transform.GetChild(0).gameObject.SetActive(Lit);
     }
-    
+
     private void setFlame(bool pActive)
     {
         transform.GetChild(0).gameObject.SetActive(pActive);
