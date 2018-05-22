@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/_Scenes/3rd_Level.unity
-=======
-- path: Assets/_Scenes/TestLevels/Test_Jesse.unity
->>>>>>> 06fb2fabf3e267e59a242d9e4807db4ac36061ee
   isLoaded: 1
   isActive: 1
