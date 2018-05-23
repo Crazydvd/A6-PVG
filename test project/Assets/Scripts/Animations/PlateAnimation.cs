@@ -13,6 +13,11 @@ public class PlateAnimation : MonoBehaviour
 
     public void PlayAnimation(bool pActive)
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         if (!pActive)
         {
             _animator.Play("unpressed"); 
