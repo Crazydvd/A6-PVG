@@ -7,15 +7,6 @@ public class OptionsScript : MonoBehaviour {
 
     [SerializeField] private AudioMixer _audioMixer;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void SetMasterVolume(float volume)
     {
