@@ -16,6 +16,7 @@ public class ShootingScript : MonoBehaviour
     }
 
     [Header("References")]
+    public GameObject AirPull;
     public GameObject IceCone;
     public GameObject Lightning;
     public GameObject AirBall;
@@ -265,7 +266,8 @@ public class ShootingScript : MonoBehaviour
                 }
                 break;
             case WeaponMode.AIR:
-                GameObject newAirball = Instantiate(AirBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.forward, Vector3.forward));
+                Vector3 flatDirection = new Vector3(ShootingPoint.position.x, ShootingPoint.position.y, 0f);
+                GameObject newAirball = Instantiate(AirBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.up, ShootingPoint.forward));
                 newAirball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
                 Destroy(newAirball, 10f);
                 break;
@@ -274,6 +276,8 @@ public class ShootingScript : MonoBehaviour
                 Ray suctionRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
                 if (Physics.Raycast(suctionRay, out suctionHit, _suctionRange))
                 {
+                    GameObject newAirPull = Instantiate(AirPull, ShootingPoint.position + ShootingPoint.forward.normalized * 0.1f, Quaternion.FromToRotation(-Vector3.forward, ShootingPoint.forward), transform);
+                    Destroy(newAirPull, 0.2f);
                     Vector3 retractionDirection = (transform.position - suctionHit.point);
                     retractionDirection.y = 0; // remove upwards/downwards force
                     if (suctionHit.transform.tag == "Cube")

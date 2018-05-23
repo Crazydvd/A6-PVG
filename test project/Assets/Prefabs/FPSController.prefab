@@ -1295,9 +1295,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc2a0b72eb87ee499dbf97470ffcaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AirPull: {fileID: 1197417073378804, guid: 21c60f992a558b4478944773c1d90727, type: 2}
   IceCone: {fileID: 1339401892688778, guid: 8149d60e4f1692f43a073d05fc0e4a6e, type: 2}
   Lightning: {fileID: 1199075435079794, guid: 0d1471b8abcb8384b8ffdddafee3d686, type: 2}
-  AirBall: {fileID: 1763827642293616, guid: c9f1590882052f441aae2563716499a3, type: 2}
+  AirBall: {fileID: 1094639039174854, guid: 2440e1fef7c555c4ca56f706db9fb7f6, type: 2}
   FireBall: {fileID: 1386690895006880, guid: 03da2183180f8d24fad480373a0debd8, type: 2}
   WaterBall: {fileID: 1826585143323758, guid: 4d58c910809415b4195559d1e9d96bc7, type: 2}
   ShootingPoint: {fileID: 4275266957935812}
