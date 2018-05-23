@@ -10,8 +10,11 @@ ModelImporter:
     400000: //RootNode
     400002: Wall_20_16
     2100000: lambert1
+    2100002: lambert2
     2300000: Wall_20_16
+    2300002: //RootNode
     3300000: Wall_20_16
+    3300002: //RootNode
     4300000: Wall_20_16
     9500000: //RootNode
   externalObjects: {}
