@@ -11,6 +11,9 @@ public class TrapScript : Activatable {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Time.timeScale == 0)
+            return;
+
         if (_active)
         {
             foreach(Transform child in transform.GetComponentInChildren<Transform>())

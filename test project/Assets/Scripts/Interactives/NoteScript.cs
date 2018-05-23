@@ -18,6 +18,9 @@ public class NoteScript : MonoBehaviour {
 
     private void Update()
     {
+        if (Time.timeScale == 0)
+            return;
+
         if (_reading)
         {
             if (Input.GetKeyDown(KeyCode.E))

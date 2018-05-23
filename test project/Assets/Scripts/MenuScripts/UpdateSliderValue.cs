@@ -19,6 +19,10 @@ public class UpdateSliderValue : MonoBehaviour {
 
     public void SetValue(float volume)
     {
+        if(_volumeValue == null)
+        {
+            _volumeValue = GetComponent<Text>();
+        }
         _volumeValue.text = ((int)volume).ToString();
     }
 }

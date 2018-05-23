@@ -10,6 +10,9 @@ public class InteractiveSystem : Activatable
 
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
+
         if (!_opened)
         {
             if (Activatables.Count > 0)

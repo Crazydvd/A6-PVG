@@ -70,9 +70,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             if (Time.timeScale == 0)
-            {
                 return;
-            }
 
             RotateView();
             // the jump state needs to read here to make sure it is not missed
@@ -108,9 +106,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void FixedUpdate()
         {
             if (Time.timeScale == 0)
-            {
                 return;
-            }
 
             float speed;
             GetInput(out speed);
