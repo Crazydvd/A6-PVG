@@ -523,6 +523,11 @@ Prefab:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: d3232f11a4e8d2842844a332ee23587a, type: 3}
+    - target: {fileID: 114506420311128614, guid: 55c7a243dbbc9d34d883341c8ebf1d5c,
+        type: 2}
+      propertyPath: Activatables.Array.data[0]
+      value: 
+      objectReference: {fileID: 950390902}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55c7a243dbbc9d34d883341c8ebf1d5c, type: 2}
   m_IsPrefabParent: 0
@@ -790,6 +795,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1167437341322896, guid: 857cd23370f79b048b3fd2496b494783,
     type: 2}
   m_PrefabInternal: {fileID: 1567676584}
+--- !u!114 &950390902 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114869897508267370, guid: 857cd23370f79b048b3fd2496b494783,
+    type: 2}
+  m_PrefabInternal: {fileID: 1567676584}
+  m_Script: {fileID: 11500000, guid: 60f85c5fce72a564ab6ecf06e3d38a5c, type: 3}
 --- !u!1001 &995794402
 Prefab:
   m_ObjectHideFlags: 0
