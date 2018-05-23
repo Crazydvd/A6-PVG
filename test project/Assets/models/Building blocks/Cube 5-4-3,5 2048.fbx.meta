@@ -10,8 +10,11 @@ ModelImporter:
     400000: //RootNode
     400002: cube_5_4_3I5
     2100000: lambert1
+    2100002: lambert2
     2300000: cube_5_4_3I5
+    2300002: //RootNode
     3300000: cube_5_4_3I5
+    3300002: //RootNode
     4300000: cube_5_4_3I5
     9500000: //RootNode
   externalObjects: {}
