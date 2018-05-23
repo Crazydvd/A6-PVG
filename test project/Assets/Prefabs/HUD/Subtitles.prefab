@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224463190219858184}
   - component: {fileID: 82290740954988848}
+  - component: {fileID: 114457234609924356}
   m_Layer: 0
   m_Name: Subtitles
   m_TagString: Untagged
@@ -69,7 +70,8 @@ AudioSource:
   m_GameObject: {fileID: 1714168037855662}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243496344496306812, guid: 05706661e0b2c9f4ca5a925207d68927,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -141,6 +143,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114457234609924356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714168037855662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48bb5f0a056ece1409b3d33613df799c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114733311130190246
 MonoBehaviour:
   m_ObjectHideFlags: 1
