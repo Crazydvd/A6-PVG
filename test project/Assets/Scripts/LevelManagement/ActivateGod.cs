@@ -15,6 +15,6 @@ public class ActivateGod : MonoBehaviour
 
         subtitle.SetActive(true);
         subtitle.GetComponent<AudioSource>().PlayOneShot(voiceLine);
-        Destroy(subtitle, 15f);        
+        Destroy(subtitle, 20f);        
     }
 }
