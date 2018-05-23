@@ -339,6 +339,11 @@ public class ShootingScript : MonoBehaviour
             item.SetLight(_weaponMode);
         }
 
+        if (_audioSource == null)
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
+
         _audioSource.PlayOneShot(_lightToggleSound);
     }
 
