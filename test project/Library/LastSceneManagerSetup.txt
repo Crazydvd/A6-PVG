@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/TestLevels/Test_Luuk.unity
+=======
+- path: Assets/_Scenes/3rd_Level.unity
+>>>>>>> 5f7a9f2f3dc223d76331d66a263359d3a9cf6b61
   isLoaded: 1
   isActive: 1
