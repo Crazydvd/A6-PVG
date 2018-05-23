@@ -25,5 +25,10 @@ public class WaterScript : MonoBehaviour {
         {
             wood.Add(other.gameObject);
         }
+
+        if (other.tag == "brazier")
+        {
+            other.GetComponent<Brazier>().ToggleActive(false);
+        }
     }
 }
