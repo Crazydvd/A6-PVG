@@ -10,6 +10,11 @@ public class SlideDoorScript : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         transform.localPosition = new Vector3(transform.localPosition.x, topMovement, transform.localPosition.z);
     }
 

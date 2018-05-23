@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterWheelScript : MonoBehaviour {
+public class WaterWheelScript : MonoBehaviour
+{
 
     [SerializeField] private float maxSpeed = 2f;       // Maximum animation speed
     [SerializeField] private float decayRate = 0.001f;  // Power removed per frame
@@ -14,28 +15,39 @@ public class WaterWheelScript : MonoBehaviour {
     private Animator _spinAnimation;    // The animator
     private SlideDoorScript _slideDoorScript;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         _spinAnimation = GetComponent<Animator>();
         _slideDoorScript = SlideDoor.GetComponent<SlideDoorScript>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         // decay the power over frames
-		if(_spinPower > 0)
+        if (_spinPower > 0)
         {
             _spinPower -= decayRate;
             if (_spinPower < 0)
                 _spinPower = 0f;
         }
         _spinAnimation.speed = _spinPower;//SpinPower;
-        _slideDoorScript.SetDoorPosition(transform.position ,4f / maxSpeed * _spinPower);
-        
+        _slideDoorScript.SetDoorPosition(transform.position, 4f / maxSpeed * _spinPower);
     }
 
     public void AddPower()
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         // add power
         _spinPower += addPower;
         if (_spinPower > maxSpeed)
