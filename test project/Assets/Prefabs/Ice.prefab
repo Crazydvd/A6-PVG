@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23501995909810424}
   - component: {fileID: 95755462140891206}
   - component: {fileID: 65496343383436300}
-  - component: {fileID: 64122193003862680}
   - component: {fileID: 114529128088047878}
   m_Layer: 0
   m_Name: Ice
@@ -85,20 +84,6 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574401499802720}
-  m_Mesh: {fileID: 4300000, guid: f09b38d19cd6a464e9e73fe61e185c7f, type: 3}
---- !u!64 &64122193003862680
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1574401499802720}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f09b38d19cd6a464e9e73fe61e185c7f, type: 3}
 --- !u!65 &65496343383436300
 BoxCollider:
