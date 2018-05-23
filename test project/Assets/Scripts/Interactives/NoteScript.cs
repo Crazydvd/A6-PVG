@@ -7,7 +7,7 @@ public class NoteScript : MonoBehaviour {
     [Header("UI Element")]
     [SerializeField] private GameObject _note;
     [SerializeField] private AudioClip _noteSound;
-    [SerializeField] private AudioSource _audioSource;
+    private AudioSource _audioSource;
 
     private bool _reading = false;
 
