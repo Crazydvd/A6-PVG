@@ -5,9 +5,16 @@ using UnityEngine;
 public class NoteScript : MonoBehaviour {
 
     [Header("UI Element")]
-    [SerializeField] private GameObject Note;
+    [SerializeField] private GameObject _note;
+    [SerializeField] private AudioClip _noteSound;
+    [SerializeField] private AudioSource _audioSource;
 
     private bool _reading = false;
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -29,14 +36,15 @@ public class NoteScript : MonoBehaviour {
     {
         if (!_reading)
         {
-            Note.SetActive(true);
+            _note.SetActive(true);
+            _audioSource.PlayOneShot(_noteSound);
             Invoke("startReading", 0.000001f);
         }
     }
 
     public void CloseNote()
     {
-        Note.SetActive(false);
+        _note.SetActive(false);
         _reading = false;
     }
 }

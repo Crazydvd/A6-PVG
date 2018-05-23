@@ -1,4 +1,20 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/Menu/MainMenu.unity
+=======
+<<<<<<< HEAD
+- path: Assets/_Scenes/GreyBox_1stLevel (1).unity
+=======
+<<<<<<< HEAD
+- path: Assets/_Scenes/3rd_Level.unity
+=======
+<<<<<<< HEAD
+- path: Assets/_Scenes/TestLevels/Test_Danny.unity
+=======
+- path: Assets/_Scenes/GreyBox_1stLevel (1).unity
+>>>>>>> 41bd8806b01469581a72354aa2ddfc1c3470d348
+>>>>>>> 8067236296b5addaeda3f03b08fec228fac7060f
+>>>>>>> 6905d437d5142f4d67a8152e39aa8e5f085f865e
+>>>>>>> fe0956e553d0b81f1599747da01b2a176cb56536
   isLoaded: 1
   isActive: 1

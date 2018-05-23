@@ -266,7 +266,6 @@ public class ShootingScript : MonoBehaviour
                 }
                 break;
             case WeaponMode.AIR:
-                Vector3 flatDirection = new Vector3(ShootingPoint.position.x, ShootingPoint.position.y, 0f);
                 GameObject newAirball = Instantiate(AirBall, ShootingPoint.position, Quaternion.FromToRotation(Vector3.up, ShootingPoint.forward));
                 newAirball.GetComponent<Rigidbody>().AddForce(ShootingPoint.transform.forward * 1000f);
                 Destroy(newAirball, 10f);
