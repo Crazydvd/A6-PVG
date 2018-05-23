@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/_Scenes/MM_Background.unity
-=======
-- path: Assets/_Scenes/2nd Level.unity
->>>>>>> 84e08e3598a35a7c26a00e588326d3387666bcf5
+- path: Assets/_Scenes/3rd_Level.unity
   isLoaded: 1
   isActive: 1
