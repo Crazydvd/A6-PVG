@@ -66,8 +66,10 @@ public class Interact : MonoBehaviour
 
                 if(hit.collider.tag == "PowerEnabler")
                 {
+                    
                     PowerEnablerScript powerEnablerScript = hit.collider.GetComponent<PowerEnablerScript>();
                     powerEnablerScript.EnablePowers();
+                    
                 }
             }
 
