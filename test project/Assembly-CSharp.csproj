@@ -131,6 +131,7 @@
      <Compile Include="Assets\Scripts\PlayerScripts\Interact.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\ShootingScript.cs" />
+     <Compile Include="Assets\Scripts\SkipDialogue.cs" />
      <Compile Include="Assets\Scripts\ToggleOnOff.cs" />
      <Compile Include="Assets\Scripts\TrapScript.cs" />
      <Compile Include="Assets\Scripts\Water\WaterScript.cs" />
