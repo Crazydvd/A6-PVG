@@ -10,9 +10,13 @@ ModelImporter:
     400000: stap
     400002: //RootNode
     2100000: lambert1
+    2100002: lambert2
     2300000: stap
+    2300002: //RootNode
     3300000: stap
+    3300002: //RootNode
     4300000: stap
+    4300002: Floor_with_watercorner
     9500000: //RootNode
   externalObjects: {}
   materials:
