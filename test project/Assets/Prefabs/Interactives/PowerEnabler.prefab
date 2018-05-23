@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 136243918430757438}
   - component: {fileID: 23916092836460578}
   - component: {fileID: 114241772681729336}
+  - component: {fileID: 114426761343034824}
   m_Layer: 10
   m_Name: PowerEnabler
   m_TagString: PowerEnabler
@@ -99,6 +100,19 @@ MonoBehaviour:
   _enableWater: 0
   _enableFire: 0
   _player: {fileID: 0}
+--- !u!114 &114426761343034824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168859317753984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf7043ab4f01f74a89c8ec85a199f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subtitle: {fileID: 0}
+  voiceLine: {fileID: 0}
 --- !u!136 &136243918430757438
 CapsuleCollider:
   m_ObjectHideFlags: 1

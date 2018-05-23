@@ -22,7 +22,11 @@ GameObject:
   - component: {fileID: 33641309971210052}
   - component: {fileID: 23255762921729376}
   - component: {fileID: 95490894445942790}
+<<<<<<< HEAD
   - component: {fileID: 64124273424525490}
+=======
+  - component: {fileID: 64530564096395508}
+>>>>>>> c4d9f78c55780a2be611cb3b458ff23bd6eccbbe
   m_Layer: 0
   m_Name: Floor 26 12 with water 4096
   m_TagString: Untagged
@@ -84,7 +88,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1195123565181158}
   m_Mesh: {fileID: 4300000, guid: 65725e43cc44f1d4eadc259a1f94fc1c, type: 3}
+<<<<<<< HEAD
 --- !u!64 &64124273424525490
+=======
+--- !u!64 &64530564096395508
+>>>>>>> c4d9f78c55780a2be611cb3b458ff23bd6eccbbe
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
