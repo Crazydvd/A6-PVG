@@ -73,6 +73,22 @@ public class Interact : MonoBehaviour
 
             if(hit.transform.gameObject.layer == LayerMask.NameToLayer("Interactable"))
             {
+                if (hit.collider.tag == "Lever")
+                {
+                    InteractableUI.transform.GetChild(0).GetComponent<Text>().text = "Press [E] to interact";
+                }
+                else if(hit.collider.tag == "Cube")
+                {
+                    if(_holdingObject)
+                        InteractableUI.transform.GetChild(0).GetComponent<Text>().text = "Press [E] to release";
+                    else
+                        InteractableUI.transform.GetChild(0).GetComponent<Text>().text = "Press [E] to grab";
+                }
+                else if (hit.collider.tag == "Note" || hit.collider.tag == "PowerEnabler")
+                {
+                    InteractableUI.transform.GetChild(0).GetComponent<Text>().text = "Press [E] to pick-up";
+                }
+
                 if (InteractableUI != null && Crosshair != null)
                 {
                     InteractableUI.gameObject.SetActive(true);
