@@ -37,6 +37,11 @@ public class Activate : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         if (tag == "Lever")
             if (_inProgress > 0)
             {
@@ -48,6 +53,11 @@ public class Activate : MonoBehaviour
 
     public void Animation()
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         if (tag == "Lever")
             GetComponent<LeverAnimation>().PlayAnimation(activated);
         else if (tag == "Plate")
@@ -56,6 +66,11 @@ public class Activate : MonoBehaviour
 
     public void Action()
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         activated = !activated;
 
         if (tag == "Lever")

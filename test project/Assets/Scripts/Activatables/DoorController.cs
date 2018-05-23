@@ -18,6 +18,11 @@ public class DoorController : Activatable
 
     void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         if (_closed)
         {
             if (transform.localPosition.y > _originalYposition)
