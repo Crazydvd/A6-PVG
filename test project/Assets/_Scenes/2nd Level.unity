@@ -3982,6 +3982,69 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1148423540843298, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648320051044094, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_Text
+      value: "How did I get myself in this situation\u2026I got through some of Yum
+        Cimils puzzles, but I don\u2019t know how much further I can get. \r\nWriting
+        these notes are my way of saying good bye and even thoughI hope that no one
+        ever has to read them, it gives me a calm feeling."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648320051044094, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 28affb64d7fe25e478de637b227d8505,
+        type: 3}
+    - target: {fileID: 114648320051044094, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648320051044094, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224164495891551622, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -168.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 224164495891551622, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 384.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224164495891551622, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224164495891551622, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 347.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224914390057356384, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224914390057356384, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 154.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224914390057356384, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149068822818358, guid: e95ab3ff645e2f54fa8f2e5aff9eb9bd, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11919,7 +11982,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4940279526258430, guid: ec9382c8ddb5d59408590bbb4bada12d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 9.61
+      value: 9.05
       objectReference: {fileID: 0}
     - target: {fileID: 4940279526258430, guid: ec9382c8ddb5d59408590bbb4bada12d, type: 2}
       propertyPath: m_LocalRotation.x
