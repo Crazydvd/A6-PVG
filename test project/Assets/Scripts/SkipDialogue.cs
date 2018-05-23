@@ -11,7 +11,7 @@ public class SkipDialogue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (gameObject.active)
+        if (gameObject.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {

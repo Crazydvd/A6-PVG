@@ -22,6 +22,7 @@ TagManager:
   - Note
   - PowerEnabler
   - LightningSwitch
+  - SliderValue
   layers:
   - Default
   - TransparentFX
@@ -34,6 +35,9 @@ TagManager:
   - Bullet
   - Player
   - Interactable
+  - 
+  - 
+  - 
   - 
   - 
   - 
