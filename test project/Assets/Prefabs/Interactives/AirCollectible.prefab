@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 199395030217507536}
   - component: {fileID: 135508299576229410}
   - component: {fileID: 114411010265502414}
+  - component: {fileID: 114811837634048860}
   m_Layer: 10
   m_Name: AirCollectible
   m_TagString: PowerEnabler
@@ -58,6 +59,19 @@ MonoBehaviour:
   _enableWater: 0
   _enableFire: 0
   _player: {fileID: 0}
+--- !u!114 &114811837634048860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305813391416200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf7043ab4f01f74a89c8ec85a199f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subtitle: {fileID: 0}
+  voiceLine: {fileID: 8300000, guid: b62206f5a1430bf4eaf656da0e91d96b, type: 3}
 --- !u!135 &135508299576229410
 SphereCollider:
   m_ObjectHideFlags: 1
