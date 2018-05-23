@@ -26,6 +26,9 @@ public class IceMelt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
+
         if (AutoMelt)
         {
             _t += (1 / MeltTime) * Time.deltaTime;

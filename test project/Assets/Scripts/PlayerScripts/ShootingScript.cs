@@ -83,12 +83,18 @@ public class ShootingScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Time.timeScale == 0)
+            return;
+
         _lightLevel = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
+
         // check if the player is shooting
         if (Input.GetMouseButtonDown(0))
         {
@@ -158,6 +164,9 @@ public class ShootingScript : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (Time.timeScale == 0)
+            return;
+
         bool light = _inLight;
         if (_lightLevel <= 0)
         {
@@ -206,7 +215,6 @@ public class ShootingScript : MonoBehaviour
 
     private void Shoot()
     {
-
         // shoot projectiles
         switch (_weaponMode)
         {

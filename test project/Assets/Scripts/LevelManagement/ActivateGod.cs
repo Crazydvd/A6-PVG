@@ -10,7 +10,7 @@ public class ActivateGod : MonoBehaviour
     public void ActivateVoice()
     {
         for(int i = 0; i < subtitle.transform.parent.childCount; i++) {
-            //subtitle.transform.parent.GetChild(i).gameObject.SetActive(false);
+            subtitle.transform.parent.GetChild(i).gameObject.SetActive(false);
         }
 
         subtitle.SetActive(true);
