@@ -39,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1988288066288172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.529505, y: 0, z: 6.6151047}
-  m_LocalScale: {x: 0.022139944, y: 0.12652251, z: 0.026859932}
+  m_LocalPosition: {x: 14.610597, y: 1.06, z: 10.348748}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6802ca6728b05a346960eae09c10e0ac, type: 2}
+  - {fileID: 2100000, guid: 6a6363c65ec13ed44ba8bc33079cf7c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1988288066288172}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 4b1f887bdb150e2469a5d7e3b92eeaf3, type: 3}
 --- !u!54 &54703836457936820
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -100,7 +100,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &114883653357975394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,11 +120,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 1988288066288172}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.50000006
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940696}
+  m_Enabled: 0
+  m_Radius: 0.0068668625
+  m_Height: 0.22744083
+  m_Direction: 2
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.023657322}
 --- !u!136 &136939297734132520
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -134,7 +134,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.04833303
+  m_Height: 0.34016168
+  m_Direction: 2
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940696}
