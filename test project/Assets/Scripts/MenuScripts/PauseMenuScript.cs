@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PauseMenuScript : MonoBehaviour {
 
+    public GameObject PauseMenu;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -26,6 +28,7 @@ public class PauseMenuScript : MonoBehaviour {
 
     public void PauseGame()
     {
+        PauseMenu.SetActive(true);
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -33,6 +36,7 @@ public class PauseMenuScript : MonoBehaviour {
 
     public void ResumeGame()
     {
+        PauseMenu.SetActive(false);
         Time.timeScale = 1.0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
