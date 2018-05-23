@@ -26,6 +26,11 @@ public class FireTrap : Activatable
 
     private void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         if (_currentMode == Mode.TOGGLE)
         {
             if (Active)

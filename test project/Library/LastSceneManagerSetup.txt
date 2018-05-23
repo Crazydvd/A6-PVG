@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/3rd_Level.unity
+=======
+<<<<<<< HEAD
+- path: Assets/_Scenes/GreyBox_1stLevel_1.unity
+=======
+- path: Assets/_Scenes/2nd Level.unity
+>>>>>>> 611ad8d30acd0bfb8f98324ee8e9adac48b69875
+>>>>>>> d44e0285baee0cfe8a356625c744b268f301c1bf
   isLoaded: 1
   isActive: 1

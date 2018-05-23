@@ -27,6 +27,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
+
         _levelNumber = SceneManager.GetActiveScene().buildIndex;
         _sceneCount = SceneManager.sceneCountInBuildSettings;
         if (Next > -1)
@@ -78,6 +80,8 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevel()
     {
+        Time.timeScale = 1;
+
         SceneManager.LoadScene(_next, LoadSceneMode.Single);
         _checkPointNumber = -1;
         _air = false;
@@ -87,6 +91,8 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevel(int pLevelNumber)
     {
+        Time.timeScale = 1;
+
         SceneManager.LoadScene(pLevelNumber, LoadSceneMode.Single);
         _checkPointNumber = -1;
         _air = false;
@@ -96,6 +102,8 @@ public class LevelManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        Time.timeScale = 1;
+
         SceneManager.LoadScene(_levelNumber);
     }
 }
