@@ -1580,7 +1580,7 @@ Prefab:
     - target: {fileID: 224573862270027624, guid: 65acd89c2e33d9141a3d948b17c042db,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224573862270027624, guid: 65acd89c2e33d9141a3d948b17c042db,
         type: 2}
@@ -1590,7 +1590,7 @@ Prefab:
     - target: {fileID: 224573862270027624, guid: 65acd89c2e33d9141a3d948b17c042db,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224573862270027624, guid: 65acd89c2e33d9141a3d948b17c042db,
         type: 2}
@@ -1600,7 +1600,7 @@ Prefab:
     - target: {fileID: 224573862270027624, guid: 65acd89c2e33d9141a3d948b17c042db,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114264080939124136, guid: 65acd89c2e33d9141a3d948b17c042db,
         type: 2}
@@ -1610,6 +1610,15 @@ Prefab:
         you obtained the last element that fool stole from me years ago. Fire and
         lightning, so fitting for the god I am and so unfitting for the mortal you
         are."
+      objectReference: {fileID: 0}
+    - target: {fileID: 224482107088099996, guid: 65acd89c2e33d9141a3d948b17c042db,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502371169353536, guid: 65acd89c2e33d9141a3d948b17c042db, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65acd89c2e33d9141a3d948b17c042db, type: 2}
@@ -8658,11 +8667,6 @@ Prefab:
 --- !u!1 &727445101 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1714168037855662, guid: 5a0d7e77a2b9061419e8a234dea48880,
-    type: 2}
-  m_PrefabInternal: {fileID: 1640771308}
---- !u!224 &727445102 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
     type: 2}
   m_PrefabInternal: {fileID: 1640771308}
 --- !u!1001 &727813168
@@ -16435,7 +16439,6 @@ RectTransform:
   m_Children:
   - {fileID: 458859638}
   - {fileID: 151108076}
-  - {fileID: 727445102}
   - {fileID: 1112178257}
   m_Father: {fileID: 0}
   m_RootOrder: 58
@@ -17068,7 +17071,7 @@ Prefab:
     - target: {fileID: 224537841104052472, guid: 8378b7dbddde58a42a3042a84b11ea07,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224537841104052472, guid: 8378b7dbddde58a42a3042a84b11ea07,
         type: 2}
@@ -20730,7 +20733,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1228684503}
+    m_TransformParent: {fileID: 151108076}
     m_Modifications:
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
@@ -20750,17 +20753,17 @@ Prefab:
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
@@ -20770,7 +20773,7 @@ Prefab:
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
@@ -20780,7 +20783,7 @@ Prefab:
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -173
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
@@ -20800,7 +20803,7 @@ Prefab:
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
@@ -20810,7 +20813,7 @@ Prefab:
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
@@ -20820,7 +20823,7 @@ Prefab:
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114733311130190246, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
@@ -20828,6 +20831,10 @@ Prefab:
       value: "NO! No one ever escapes my temple! No one is allowed to keep my power!
         You are just a mortal fool, a nobody! \r\n\u2026alright, I will allow you
         to leave this place. But the artifact stays here with me forever.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714168037855662, guid: 5a0d7e77a2b9061419e8a234dea48880, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a0d7e77a2b9061419e8a234dea48880, type: 2}
