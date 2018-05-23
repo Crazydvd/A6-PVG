@@ -134,6 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224385405534137918}
   - component: {fileID: 114509768620151284}
+  - component: {fileID: 114370850292483808}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -259,6 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224007625688203428}
   - component: {fileID: 114465068800567652}
+  - component: {fileID: 114504421882013206}
   m_Layer: 5
   m_Name: Background Audio
   m_TagString: Untagged
@@ -712,6 +714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224833478318737644}
   - component: {fileID: 114314305558806178}
+  - component: {fileID: 114720925954624102}
   m_Layer: 5
   m_Name: Sound Effect Audio
   m_TagString: Untagged
@@ -797,6 +800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224726214956053100}
   - component: {fileID: 114958258787170950}
+  - component: {fileID: 114387489048051320}
   m_Layer: 5
   m_Name: Voices Audio
   m_TagString: Untagged
@@ -813,6 +817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224156533362028610}
   - component: {fileID: 114682419803054672}
+  - component: {fileID: 114912340012022454}
   m_Layer: 5
   m_Name: Master Audio
   m_TagString: Untagged
@@ -1444,7 +1449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224774563706350500}
   - component: {fileID: 114930118117018308}
-  - component: {fileID: 114377881146729970}
+  - component: {fileID: 114999913821101920}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1571,7 +1576,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114377881146729970}
+      - m_Target: {fileID: 0}
         m_MethodName: SetVoicesVolume
         m_Mode: 0
         m_Arguments:
@@ -1679,7 +1684,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114377881146729970}
+      - m_Target: {fileID: 0}
         m_MethodName: SetMasterVolume
         m_Mode: 0
         m_Arguments:
@@ -2201,7 +2206,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114377881146729970}
+      - m_Target: {fileID: 0}
         m_MethodName: SetEffectVolume
         m_Mode: 0
         m_Arguments:
@@ -2461,7 +2466,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114377881146729970}
+      - m_Target: {fileID: 0}
         m_MethodName: SetEffectVolume
         m_Mode: 0
         m_Arguments:
@@ -2793,12 +2798,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919b2bc6f1c254446b9b7387a439b855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114377881146729970
+--- !u!114 &114370850292483808
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1992551052242958}
+  m_GameObject: {fileID: 1101704625642368}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f06a52b492ff6b44841f2859eaa6462, type: 3}
@@ -2854,6 +2859,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Master Volume
+--- !u!114 &114387489048051320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459923162887856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68cad0612ab003448ca75c8f317b537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mixer: {fileID: 24100000, guid: 05706661e0b2c9f4ca5a925207d68927, type: 2}
+  _groupName: voicesVol
 --- !u!114 &114400145122991938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3165,7 +3183,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114377881146729970}
+      - m_Target: {fileID: 0}
         m_MethodName: SetBackgroundVolume
         m_Mode: 0
         m_Arguments:
@@ -3270,6 +3288,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114504421882013206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159410028449176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68cad0612ab003448ca75c8f317b537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mixer: {fileID: 24100000, guid: 05706661e0b2c9f4ca5a925207d68927, type: 2}
+  _groupName: backgroundVol
 --- !u!114 &114509768620151284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3596,7 +3627,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114377881146729970}
+      - m_Target: {fileID: 0}
         m_MethodName: SetMasterVolume
         m_Mode: 0
         m_Arguments:
@@ -3813,6 +3844,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114720925954624102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433002603930396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68cad0612ab003448ca75c8f317b537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mixer: {fileID: 24100000, guid: 05706661e0b2c9f4ca5a925207d68927, type: 2}
+  _groupName: effectVol
 --- !u!114 &114721365135380990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3923,7 +3967,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114377881146729970}
+      - m_Target: {fileID: 0}
         m_MethodName: SetBackgroundVolume
         m_Mode: 0
         m_Arguments:
@@ -4238,6 +4282,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114912340012022454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1462717377420258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68cad0612ab003448ca75c8f317b537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mixer: {fileID: 24100000, guid: 05706661e0b2c9f4ca5a925207d68927, type: 2}
+  _groupName: masterVol
 --- !u!114 &114917538880960630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4466,7 +4523,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114377881146729970}
+      - m_Target: {fileID: 0}
         m_MethodName: SetVoicesVolume
         m_Mode: 0
         m_Arguments:
@@ -4517,6 +4574,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114999913821101920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992551052242958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f06a52b492ff6b44841f2859eaa6462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24100000, guid: 05706661e0b2c9f4ca5a925207d68927, type: 2}
 --- !u!222 &222043249851179358
 CanvasRenderer:
   m_ObjectHideFlags: 1
