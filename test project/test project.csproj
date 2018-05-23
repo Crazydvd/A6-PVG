@@ -365,6 +365,8 @@
     <Compile Include="Assets\Scripts\Light\LightIntensity.cs" />
     <Compile Include="Assets\Scripts\Light\LightScript.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuScript.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\OptionsScript.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\UpdateSliderValue.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\GemLighting.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Interact.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerScript.cs" />
