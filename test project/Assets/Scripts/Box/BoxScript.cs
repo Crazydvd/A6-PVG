@@ -37,6 +37,8 @@ public class BoxScript : MonoBehaviour
     // prevent the box from glitching upwards
     void FixedUpdate()
     {
+        if (Time.timeScale == 0)
+            return;
 
         if (_rigidBody.velocity.y > 0f)
         {

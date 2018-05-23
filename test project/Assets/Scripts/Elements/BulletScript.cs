@@ -14,6 +14,9 @@ public class BulletScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Time.timeScale == 0)
+            return;
+
         _direction = _rigidbody.velocity;
         transform.rotation = Quaternion.FromToRotation(Vector3.right, _direction);
     }

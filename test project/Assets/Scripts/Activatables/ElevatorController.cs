@@ -35,9 +35,7 @@ public class ElevatorController : Activatable
     void Update()
     {
         if (Time.timeScale == 0)
-        {
             return;
-        }
 
         if (KeepGoing && _active)
         {
