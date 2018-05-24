@@ -13477,6 +13477,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 116
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1602217456 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114394658503862002, guid: 6fdb780b27d672c4dbbfbaa3b278c65b,
+    type: 2}
+  m_PrefabInternal: {fileID: 191801524}
+  m_Script: {fileID: 11500000, guid: f4519f6547a73b14d9fd283d2b222860, type: 3}
 --- !u!1001 &1607438674
 Prefab:
   m_ObjectHideFlags: 0
@@ -14818,6 +14824,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9575ab59ce7163f4fb7864472f30d741, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1824855783 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114628117922063034, guid: 6fdb780b27d672c4dbbfbaa3b278c65b,
+    type: 2}
+  m_PrefabInternal: {fileID: 191801524}
+  m_Script: {fileID: 11500000, guid: f4519f6547a73b14d9fd283d2b222860, type: 3}
 --- !u!1 &1832921326
 GameObject:
   m_ObjectHideFlags: 0
@@ -16350,6 +16362,8 @@ GameObject:
   - component: {fileID: 2022747676}
   - component: {fileID: 2022747680}
   - component: {fileID: 2022747679}
+  - component: {fileID: 2022747682}
+  - component: {fileID: 2022747681}
   m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
@@ -16459,6 +16473,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1906787458}
+--- !u!114 &2022747681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022747674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b4721c705055f4595a626d3ebf4504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  Activatables:
+  - {fileID: 1602217456}
+  Mode: 1
+--- !u!114 &2022747682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022747674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b4721c705055f4595a626d3ebf4504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  Activatables:
+  - {fileID: 1824855783}
+  Mode: 0
 --- !u!1001 &2045960003
 Prefab:
   m_ObjectHideFlags: 0
