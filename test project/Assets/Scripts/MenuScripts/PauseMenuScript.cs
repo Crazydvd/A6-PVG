@@ -29,6 +29,12 @@ public class PauseMenuScript : MonoBehaviour {
     public void PauseGame()
     {
         PauseMenu.SetActive(true);
+
+        foreach (Activate item in GetComponents<Activate>())
+        {
+            item.Action();
+        }
+
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

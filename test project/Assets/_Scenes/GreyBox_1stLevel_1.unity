@@ -4352,7 +4352,7 @@ Prefab:
         type: 2}
       propertyPath: voiceLine
       value: 
-      objectReference: {fileID: 8300000, guid: 1c9e8dc55304e274982645dfdef44ec0, type: 3}
+      objectReference: {fileID: 8300000, guid: caafd9db3fd9d674082aa111d36f40c8, type: 3}
     - target: {fileID: 65218381457725670, guid: b05737ebe32f7134985ceb7200e5fc75,
         type: 2}
       propertyPath: m_Size.x
