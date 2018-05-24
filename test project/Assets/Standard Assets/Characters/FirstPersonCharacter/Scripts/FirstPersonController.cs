@@ -45,6 +45,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_defaultWalkingSpeed;
         private float m_defaultRunningSpeed;
         private float m_defaultMouseX;
+        private float m_defaultMouseY;
 
         // Use this for initialization
         private void Start()
@@ -63,6 +64,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_defaultWalkingSpeed = m_WalkSpeed;
             m_defaultRunningSpeed = m_RunSpeed;
             m_defaultMouseX = m_MouseLook.XSensitivity;
+            m_defaultMouseY = m_MouseLook.YSensitivity;
         }
 
 
@@ -274,7 +276,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             m_WalkSpeed = walkingSpeed;
             m_RunSpeed = runningSpeed;
-            m_MouseLook.XSensitivity = 0;
+            m_MouseLook.XSensitivity = 0.3f;
+            m_MouseLook.YSensitivity = 0;
         }
 
         public void ResetSpeed()
@@ -282,6 +285,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_WalkSpeed = m_defaultWalkingSpeed;
             m_RunSpeed = m_defaultRunningSpeed;
             m_MouseLook.XSensitivity = m_defaultMouseX;
+            m_MouseLook.YSensitivity = m_defaultMouseY;
         }
     }
 }
