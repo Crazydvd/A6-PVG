@@ -6523,7 +6523,7 @@ Prefab:
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
@@ -7611,6 +7611,11 @@ Prefab:
         any hope to escape. You will end up like all the other explorers before you:
         Dead and unburied."
       objectReference: {fileID: 0}
+    - target: {fileID: 224482107088099996, guid: 65acd89c2e33d9141a3d948b17c042db,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65acd89c2e33d9141a3d948b17c042db, type: 2}
   m_IsPrefabParent: 0
@@ -7669,7 +7674,7 @@ Prefab:
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224463190219858184, guid: 5a0d7e77a2b9061419e8a234dea48880,
         type: 2}
@@ -7721,6 +7726,10 @@ Prefab:
       value: "Ah, I see you have found the first elemental power. One guy managed
         to steal it away from me once, but he didn\u2019t get far. Did not know how
         to use it. I doubt that you will have more luck than he did."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714168037855662, guid: 5a0d7e77a2b9061419e8a234dea48880, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a0d7e77a2b9061419e8a234dea48880, type: 2}
